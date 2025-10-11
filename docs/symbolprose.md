@@ -11,7 +11,7 @@ id: symbolprose
 ## 🧩 Purpose
 
 Symbolprose also defines the *semantics* of a frame.  
-Symbolprose returns result by executing **directed symbolic graphs**.  
+Symbolprose returns result of executing **directed symbolic graphs**.  
 This is where meaning is being represented as a result of stateful actions.  
 
 ---
