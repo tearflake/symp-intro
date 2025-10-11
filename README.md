@@ -24,11 +24,9 @@ You define **frames** — each with its own *syntax* (form) and *semantics* (mea
 
 ## 🧠 Core Components
 
-| Module | Purpose | Analogy |
-|---------|----------|----------|
-| **Symbolmatch** | PEG-like grammar engine for syntax validation. | Parser |
-| **Symbolverse** | Term rewriting and transformation engine. | Logic / Rewriting |
-| **Symbolprose** | Graph-based virtual machine for executing symbolic programs. | Executor |
+- **Symbolmatch**: PEG-like grammar engine for syntax validation.
+- **Symbolverse**: Term rewriting and transformation engine.
+- **Symbolprose** | Graph-based virtual machine for executing symbolic programs.
 
 These three systems are connected through the **Symp glue language**,  
 where you can write:
