@@ -10,8 +10,8 @@ id: symbolprose
 
 ## 🧩 Purpose
 
-`Symbolprose` also defines the *semantics* of a frame.  
-Where `Symbolverse` rewrites meaning, `Symbolprose` executes the computation through **directed symbolic graphs**.  
+Symbolprose also defines the *semantics* of a frame.  
+Symbolprose returns result by executing **directed symbolic graphs**.  
 This is where meaning is being represented as a result of stateful actions.  
 
 ---
@@ -62,5 +62,6 @@ Output:
 
 * The graph model allows conditional and sequential computation.
 * Each `ASGN` assigns symbolic values; `TEST` enables flow control.
+
 * You can invoke other computations via `(RUN name input)`.
 
