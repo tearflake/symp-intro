@@ -129,12 +129,3 @@ You can define your own frames, store them as files, and apply them dynamically.
 > Semantics decides what it means.
 > Execution is simply the dialogue between them.
 
----
-
-## 📚 See Also
-
-* [Symbolmatch](symbolmatch.md) — grammar and syntax validation.
-* [Symbolverse](symbolverse.md) — symbolic rewriting of meaning.
-* [Symbolprose](symbolprose.md) — symbolic graph execution.
-* [README](../README.md) — project introduction and vision.
-

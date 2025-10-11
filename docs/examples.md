@@ -160,14 +160,5 @@ Output:
 
 ---
 
-## 📚 See Also
-
-* [Symp Framework Overview](symp.md)
-* [Symbolmatch](symbolmatch.md)
-* [Symbolverse](symbolverse.md)
-* [Symbolprose](symbolprose.md)
-
----
-
 > **Symp** — framework from a parallel reality where symbols won.
 

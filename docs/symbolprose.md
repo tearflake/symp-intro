@@ -60,12 +60,3 @@ Output:
 * Each `ASGN` assigns symbolic values; `TEST` enables flow control.
 * `Symbolprose` is a symbolic virtual machine — programs are data.
 
----
-
-## 📘 See also
-
-* [Symbolmatch](symbolmatch.md) — define input form.
-* [Symbolverse](symbolverse.md) — transform meaning before execution.
-
-```
-

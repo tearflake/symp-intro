@@ -52,10 +52,3 @@ Input:
 * It can be reused by other frames to define their expected input shape.
 * Grammars are first-class values — you can generate them dynamically or load from files.
 
----
-
-## 📘 See also
-
-* [Symbolverse](symbolverse.md) — define *how meaning transforms*.
-* [Symbolprose](symbolprose.md) — define *how programs execute*.
-

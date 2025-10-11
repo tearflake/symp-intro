@@ -80,10 +80,13 @@ it’s a framework for building *languages of meaning*.
 
 ## 📚 Learn More
 
-* [Symbolmatch Reference](docs/symbolmatch.md)
-* [Symbolverse Reference](docs/symbolverse.md)
-* [Symbolprose Reference](docs/symbolprose.md)
+* [About Symp](docs/symp.md)
 * [The Philosophy of Symbolic Computing](docs/philosophy.md)
+* [Architecture](docs/architecture.md)
+* [Symbolmatch](docs/symbolmatch.md)
+* [Symbolverse](docs/symbolverse.md)
+* [Symbolprose](docs/symbolprose.md)
+* [Symbolprose](docs/examples.md)
 
 ---
 

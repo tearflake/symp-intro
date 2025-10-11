@@ -141,13 +141,3 @@ That we can build software that is *explorable by reason*, not hidden by syntax.
 In a world obsessed with output,
 Symp asks you to care about *meaning*.
 
----
-
-## 📚 See Also
-
-* [Symp Framework Overview](symp.md)
-* [Symbolmatch](symbolmatch.md)
-* [Symbolverse](symbolverse.md)
-* [Symbolprose](symbolprose.md)
-* [Architecture](architecture.md)
-

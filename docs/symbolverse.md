@@ -63,10 +63,3 @@ Output:
 * Think of it as a pure function between *structures of meaning*.
 * You can combine rules recursively, or invoke other frames via `(RUN name input)`.
 
----
-
-## 📘 See also
-
-* [Symbolmatch](symbolmatch.md) — syntax validation.
-* [Symbolprose](symbolprose.md) — execution engine.
-

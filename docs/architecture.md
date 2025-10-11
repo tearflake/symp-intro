@@ -160,13 +160,3 @@ is a distinct layer of that conversation, open for introspection and modificatio
 
 This is the foundation of **Symbolic Computing** in the world where symbols won.
 
----
-
-## 📚 See Also
-
-* [Symp Framework Overview](symp.md)
-* [Symbolmatch](symbolmatch.md)
-* [Symbolverse](symbolverse.md)
-* [Symbolprose](symbolprose.md)
-* [Examples](examples.md)
-
