@@ -129,7 +129,8 @@ Define a small DSL where `add`, `mul`, and `pow` become executable math.
 (APPLY
   (FRAME
     (SYNTAX
-      (APPLY symbolmatch
+      (APPLY
+        symbolmatch
         (SEXPR
           (RULES
             (FLAT <start> <expr>)
@@ -139,7 +140,8 @@ Define a small DSL where `add`, `mul`, and `pow` become executable math.
             (FLAT <expr> ATOMIC)))))
 
     (SEMANTICS
-      (APPLY symbolprose
+      (APPLY
+        symbolprose
         (SEXPR
           (GRAPH
             (EDGE
