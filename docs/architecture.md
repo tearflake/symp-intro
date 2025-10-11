@@ -66,7 +66,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
                 (ASGN RESULT ("Hello" "from" PARAMS)))
               (TARGET END)))))))
   
-  (SEXPR "Symp"))
+  (SEXPR Symp))
 ```
 
 **Execution Steps:**
