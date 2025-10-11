@@ -72,7 +72,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 **Execution Steps:**
 
 * Symbolmatch: Validate input is atomic - Pass
-* Symbolprose: Perform computation - `('Hello from' Symp))`
+* Symbolprose: Perform computation - `('Hello from' Symp)`
 
 ---
 
