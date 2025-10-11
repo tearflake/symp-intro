@@ -10,7 +10,7 @@ id: introduction
 
 ## 🧩 Overview
 
-Symp unites three symbolic subsystems into a single programmable pipeline:
+Symp organizes three symbolic subsystems into a single programmable pipeline:
 
 ```
 
