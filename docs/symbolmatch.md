@@ -14,8 +14,7 @@ id: symbolmatch
 It’s a **PEG-like parser** expressed in S-expressions.  
 Each grammar is a collection of rule definitions written entirely in symbolic notation.
 
-Where other systems hide parsing inside compilers,  
-Symbolmatch makes it an explicit, inspectable data structure.
+Where other systems hide parsing inside compilers, Symbolmatch makes it an explicit, inspectable data structure.
 
 ---
 
@@ -45,8 +44,8 @@ Validate that an expression is a single atom:
 
 Input:
 
-✅ `"hello"` → success  
-❌ `(hello world)` → parse error at position 1.  
+`"hello"` → success  
+`(hello world)` → parse error at position 1.  
 
 ---
 
