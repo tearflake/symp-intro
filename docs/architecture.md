@@ -10,7 +10,7 @@ id: architecture
 
 ## 🧩 Overview
 
-Symp is composed of three independent but composable subsystems in a two parts of a structure:
+Symp is composed of three independent but composable subsystems in two parts of a structure:
 
 ```
 
@@ -19,7 +19,7 @@ Symbolmatch  →  Symbolverse / Symbolprose
 
 ````
 
-Each subsystem is implemented as a **frame** — a symbolic interpreter that takes an input `(SEXPR …)` and produces a new symbolic result.
+Each subsystem is implemented as a **frame** — a symbolic interpreter that takes a symbolic input and produces a new symbolic result.
 
 The **glue language** `(APPLY …)` binds them into a single computation.
 
@@ -38,12 +38,12 @@ A frame is a pair of subprograms:
 
 When executed via `(APPLY <frame> <expr>)`, the following happens:
 
-1. **Syntax Stage**:  
+* **Syntax Stage**:  
    The `<expr>` is passed to the `(SYNTAX …)` subprogram. This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
    * On success → input passes unchanged to semantics.
    * On failure → returns an error path.
 
-2. **Semantics Stage**:  
+* **Semantics Stage**:  
    The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram. This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`, which transform or execute the expression.
 
 ---
@@ -74,10 +74,10 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 **Execution Steps:**
 
-1. Symbolmatch:  
-   Validate input is atomic - Pass
-2. Symbolprose:  
-   Perform computation - `('Hello from' Symp))`
+* Symbolmatch:  
+  Validate input is atomic - Pass
+* Symbolprose:  
+  Perform computation - `('Hello from' Symp))`
 
 ---
 
@@ -86,7 +86,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 All components use a shared symbolic representation:
 
 ```
-<S-EXPRESSION> = Atom | (Atom <S-EXPRESSION>)
+<s-expression> = <ATOM> | (<s-expression>+)
 ```
 
 Each `(APPLY …)` passes these symbolic structures along the pipeline:
@@ -96,7 +96,7 @@ Input
   ↓
 Symbolmatch — verifies shape
   ↓
-Symbolverse/Symbolprose — rewrites structure or executes as a graph
+Symbolverse/Symbolprose — rewrites structure or returns a graph execution result
   ↓
 Output
 ```
@@ -109,20 +109,20 @@ Because the data format is uniform, any module can be swapped or nested.
 
 Symp can act as a **backend framework** in multiple contexts:
 
-### 🧠 1. CLI or REPL Mode
+### 1. 🧠 CLI or REPL Mode
 
 * Run standalone interpreter.
 * Load frames from files.
 * Evaluate `(APPLY …)` directly.
 
-### 🌐 2. Web Service Mode
+### 2. 🌐 Web Service Mode
 
 * Host a lightweight HTTP or WebSocket server.
 * Send `(APPLY …)` payloads
 * Receive evaluated S-expression output.
 * Ideal for web-based IDEs or symbolic assistants.
 
-### 🔌 3. Embedded Library
+### 3. 🔌 Embedded Library
 
 * Expose the Symp engine as an API (JavaScript).
 * Applications can define and run frames internally, using Symbolmatch, Symbolverse, and Symbolprose as composable services.
