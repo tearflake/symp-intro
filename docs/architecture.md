@@ -91,7 +91,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 All components use a shared symbolic representation:
 
 ```
-<S-EXPRESSION> = Atom | (ATOM <S-EXPRESSION>)
+<S-EXPRESSION> = Atom | (Atom <S-EXPRESSION>)
 ```
 
 Each `(APPLY …)` passes these symbolic structures along the pipeline:
