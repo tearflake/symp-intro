@@ -4,4 +4,4 @@ plugins:
 
 
 sidebar:
-  - nav: "docs"
+  nav: "docs"
