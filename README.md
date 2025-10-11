@@ -1,4 +1,4 @@
-# Symp — A Symbolic Computation Framework
+# Symp — A Symbolic Processing Framework
 
 **Framework from a parallel reality where symbols won.**
 
