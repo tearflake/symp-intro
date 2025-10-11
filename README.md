@@ -89,7 +89,7 @@ it’s a framework for building *languages of meaning*.
 
 ## 🖤 Inspiration
 
-Symp is inspired by Lisp, PEGs, term rewriting systems, and graph flow execution
+Symp is inspired by Lisp, PEGs, term rewriting systems, and graph flow execution.
 
 ---
 
