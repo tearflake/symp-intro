@@ -51,11 +51,9 @@ During execution:
 
 ## ⚙️ Anatomy of the Pipeline
 
-| Module          | Description                                                |
-| --------------- | ---------------------------------------------------------- |
-| **Symbolmatch** | Ensures the input follows the expected grammar.            |
-| **Symbolverse** | Transforms the symbolic structure into a symbolic result.  |
-| **Symbolprose** | Interprets the graph and produces a symbolic result.       |
+- **Symbolmatch**: Ensures the input follows the expected grammar.
+- **Symbolverse**: Transforms the symbolic structure into a symbolic result.
+- **Symbolprose**: Interprets the graph and produces a symbolic result.
 
 ---
 
