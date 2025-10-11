@@ -3,7 +3,7 @@ plugins:
 - jekyll-remote-theme
 
 sidebar:
-  - about symp
+  - about-symp
   - Philosophy
   - architecture
   - symbolmatch
