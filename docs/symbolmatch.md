@@ -44,7 +44,7 @@ Validate that an expression is a single atom:
 
 Input:
 
-`"hello"` → success  
+`hello` → success  
 `(hello world)` → parse error at position 1.  
 
 ---
