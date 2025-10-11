@@ -39,24 +39,17 @@ A frame is a pair of subprograms:
 
 When executed via `(APPLY <frame> <expr>)`, the following happens:
 
-1. **input stage**
-   The syntax stage must be preceeded by the input stage.
-   
-2. **Syntax Stage**
+1. **Syntax Stage**:  
    The `<expr>` is passed to the `(SYNTAX …)` subprogram.
    This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
 
-   * ✅ On success → input passes unchanged to semantics.
-   * ❌ On failure → returns an error path `(SEXPR (ERROR …))`.
+   * On success → input passes unchanged to semantics.
+   * On failure → returns an error path.
 
-3. **Semantics Stage**
+2. **Semantics Stage**:  
    The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram.
    This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`,
    which transform or execute the expression.
-
-4. **Output Stage**
-   The semantics stage must end with a constant `(SEXPR …)` —
-   the final symbolic result of computation.
 
 ---
 
@@ -86,12 +79,10 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 **Execution Steps:**
 
-| Stage | Module                  | Action                              | Result                          |
-| ----- | ----------------------- | ----------------------------------- | ------------------------------- |
-| 1️⃣    | Input                   | Input must be applied to a frame    | `(APPLY <frame> (SEXPR "Symp"))`|
-| 2️⃣    | Symbolmatch             | Validate input is atomic            | Pass                            |
-| 3️⃣    | Symbolverse/Symbolprose | Perform computation                 | `(SEXPR ("Hello from" "Symp"))` |
-| 4️⃣    | Output                  | Return constant symbolic expression | `("Hello from" "Symp")`         |
+1. Symbolmatch:  
+   Validate input is atomic - Pass
+2. Symbolprose:  
+   Perform computation - `('Hello from' Symp))`
 
 ---
 
