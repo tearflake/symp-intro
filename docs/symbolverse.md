@@ -4,7 +4,7 @@ id: symbolverse
 
 # Symbolverse
 
-**Term rewriting and meaning transformation engine**
+**Term rewriting and transformation engine**
 
 ---
 
