@@ -1,3 +1,7 @@
+---
+id: getting-started
+---
+
 # Symp Framework
 
 **Symbolic Computing Pipeline — form, meaning, and execution**
