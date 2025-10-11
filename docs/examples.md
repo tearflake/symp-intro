@@ -121,7 +121,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
               
               (TARGET END)))))))
   
-  (SEXPR "Symp"))
+  (SEXPR Symp))
 ```
 
 **Output**:
