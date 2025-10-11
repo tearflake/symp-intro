@@ -16,17 +16,21 @@ input → syntax → semantics → output
 
 Instead of hiding these layers inside a compiler, Symp makes each stage programmable.
 
+Symp lets you experiment with how programming languages themselves think — right from the grammar to execution.
+
 You don’t define *functions*. You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
 
 ---
 
 ## 🧠 Core Components
 
-- **Symbolmatch**: PEG-like grammar engine for syntax validation.
-- **Symbolverse**: Term rewriting and transformation engine for semantic representation.
-- **Symbolprose**: Graph-based executing symbolic programs for semantic representation.
+- syntax validation:
+  - **Symbolmatch**: PEG-like grammar engine
+- semantic processing:
+  - **Symbolverse**: Term rewriting and transformation engine
+  - **Symbolprose**: graph-based execution of symbolic programs
 
-These three systems are connected through the **Symp glue language**, where you can write:
+These three systems for syntax analisys and semantic synthesis are connected through the **Symp glue language**, where you can write:
 
 ```
 (APPLY
@@ -34,7 +38,9 @@ These three systems are connected through the **Symp glue language**, where you 
     (SYNTAX (APPLY symbolmatch (SEXPR (RULES ...))))
     (SEMANTICS (APPLY symbolverse (SEXPR (REWRITE ...)))))
   (SEXPR myProgram))
-````
+```
+
+Use it to prototype symbolic languages, theorem provers, or DSLs that think in trees instead of tokens.
 
 ---
 
@@ -50,9 +56,9 @@ These three systems are connected through the **Symp glue language**, where you 
 
 ## 🚀 Getting Started (coming soon)
 
-1. Install the runtime.
-2. Run the Symp web REPL or CLI.
-3. Try examples in `/examples/`.
+* Install the runtime.
+* Run the Symp web REPL or CLI.
+* Try examples in `/examples/`.
 
 ---
 
