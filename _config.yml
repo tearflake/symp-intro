@@ -4,7 +4,7 @@ sidebar:
   - about
   - philosophy
   - architecture
-  - label: Three Pillars
+  - label: The Three Pillars
     children:
       - symbolmatch
       - symbolverse
