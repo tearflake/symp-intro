@@ -24,9 +24,10 @@ You don’t define *functions*. You define **frames** — each with its own *syn
 
 ## 🧠 Core Components
 
-- syntax validation:
+#### Syntax validation:
   - **Symbolmatch**: PEG-like grammar engine
-- semantic processing:
+
+#### Semantic processing:
   - **Symbolverse**: Term rewriting and transformation engine
   - **Symbolprose**: graph-based execution of symbolic programs
 
