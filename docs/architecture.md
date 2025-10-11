@@ -63,7 +63,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
             (EDGE
               (SOURCE BEGIN)
               (INSTR
-                (ASGN RESULT ("Hello from" PARAMS)))
+                (ASGN RESULT ("Hello" "from" PARAMS)))
               (TARGET END)))))))
   
   (SEXPR "Symp"))
@@ -72,7 +72,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 **Execution Steps:**
 
 * Symbolmatch: Validate input is atomic - Pass
-* Symbolprose: Perform computation - `('Hello from' Symp)`
+* Symbolprose: Perform computation - `(Hello from Symp)`
 
 ---
 
