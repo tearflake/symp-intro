@@ -1,7 +1,3 @@
----
-layout: sidebar
----
-
 # Symp — A Symbolic Computation Framework
 
 **Framework from a parallel reality where symbols won.**
