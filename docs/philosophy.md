@@ -4,7 +4,7 @@ id: philosophy
 
 # Philosophy
 
-**Framework from a parallel reality where symbols won.**
+**Framework from a parallel reality where symbols won**
 
 ---
 
