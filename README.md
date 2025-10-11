@@ -38,7 +38,7 @@ These three systems for syntax analisys and semantic synthesis are connected thr
   (SEXPR myProgram))
 ```
 
-Use it to prototype symbolic languages, theorem provers, or DSLs that think in trees instead of tokens.
+Use it to prototype symbolic languages, theorem provers, or DSLs.
 
 ---
 
