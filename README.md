@@ -23,8 +23,8 @@ You don’t define *functions*. You define **frames** — each with its own *syn
 ## 🧠 Core Components
 
 - **Symbolmatch**: PEG-like grammar engine for syntax validation.
-- **Symbolverse**: Term rewriting and transformation engine.
-- **Symbolprose**: Graph-based virtual machine for executing symbolic programs.
+- **Symbolverse**: Term rewriting and transformation engine for semantic representation.
+- **Symbolprose**: Graph-based executing symbolic programs for semantic representation.
 
 These three systems are connected through the **Symp glue language**, where you can write:
 
