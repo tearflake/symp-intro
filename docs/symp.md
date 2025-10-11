@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+id: about
 ---
 
 # Symp Framework
