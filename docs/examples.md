@@ -123,7 +123,7 @@ Output:
 
 ## 5️⃣ DSL Example — Custom Math Frame
 
-Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
+Define a small DSL where `add`, `mul`, and `pow` become executable math.
 
 ```
 (APPLY
