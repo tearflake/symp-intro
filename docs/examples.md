@@ -2,7 +2,7 @@
 id: examples
 ---
 
-# Symp Examples
+# Examples
 
 **A few small programs from a world where symbols won.**
 
