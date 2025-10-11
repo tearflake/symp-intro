@@ -116,7 +116,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
             (EDGE
               (SOURCE BEGIN)
               (INSTR
-                (ASGN RESULT ("Hello from" PARAMS)))
+                (ASGN RESULT ("Hello" "from" PARAMS)))
               (TARGET END)))))))
   (SEXPR "Symp"))
 ```
@@ -124,7 +124,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
 **Output**:
 
 ```
-('Hello from' Symp)
+(Hello from Symp)
 ```
 
 ---
