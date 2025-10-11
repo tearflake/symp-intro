@@ -4,7 +4,7 @@ id: architecture
 
 # Architecture
 
-**Symbolic computing pipeline for form and meaning**
+**Designing form and meaning**
 
 ---
 
