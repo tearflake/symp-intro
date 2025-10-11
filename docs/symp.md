@@ -1,5 +1,7 @@
 ---
 id: about-symp
+layout: default
+title: About Symposium
 ---
 
 # Symp Framework
