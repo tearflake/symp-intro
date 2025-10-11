@@ -10,7 +10,7 @@ id: symbolverse
 
 ## 🧩 Purpose
 
-`Symbolverse` defines the *semantics* of a frame.  
+Symbolverse defines the *semantics* of a frame.  
 It describes how one symbolic structure is rewritten into another.  
 This is where *meaning* happens — logic, inference, and transformation.
 
@@ -61,7 +61,7 @@ Output:
 
 ## 🔍 Notes
 
-* `Symbolverse` can describe any symbolic logic transformation.
+* Symbolverse can describe any symbolic logic transformation.
 * Think of it as a pure function between *structures of meaning*.
 * You can combine rules recursively, or invoke other computations via `(RUN name input)`.
 
