@@ -89,8 +89,7 @@ it’s a framework for building *languages of meaning*.
 
 ## 🖤 Inspiration
 
-Symp is inspired by Lisp, PEGs, term rewriting systems, and the spirit of Symbolics Genera —
-but reimagined as a **parallel-reality framework** that never left the world of monochrome theory.
+Symp is inspired by Lisp, PEGs, term rewriting systems, and graph flow execution
 
 ---
 

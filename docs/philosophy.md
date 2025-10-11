@@ -13,8 +13,7 @@ not *understanding what things mean*.
 
 But imagine a world where theory, not graphics, led progress.  
 Where every machine spoke in **symbols** — quiet, precise, and alive.  
-Where the screen stayed monochrome,  
-but thought itself became illuminated.
+Where the screen stayed monochrome, but thought itself became illuminated.
 
 That is the world from which **Symp** arrived.
 

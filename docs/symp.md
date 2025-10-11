@@ -6,7 +6,7 @@
 
 ## 🧩 Overview
 
-Symp unites two symbolic subsystems into a single programmable pipeline:
+Symp unites three symbolic subsystems into a single programmable pipeline:
 
 ```
 
@@ -66,7 +66,11 @@ A small end-to-end demonstration:
       (APPLY symbolmatch
         (SEXPR
           (RULES
-            (FLAT <start> ATOMIC)))))
+            (FLAT <start> <expr>)
+            (FLAT <expr> ("eq" <expr> <expr>)
+            (FLAT <expr> ("mul" <expr> <expr>)
+            (FLAT <expr> ("pow" <expr> <expr>)
+            (FLAT <expr> ATOMIC)))))
 
     (SEMANTICS
       (APPLY symbolverse
@@ -75,6 +79,7 @@ A small end-to-end demonstration:
             (RULE
               (READ ("mul" x x))
               (WRITE ("pow" x "2"))))))))
+              
   (SEXPR (eq (mul x x) (pow x 2))))
 ```
 
