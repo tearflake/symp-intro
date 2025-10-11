@@ -79,6 +79,7 @@ A symbolic computation graph that multiplies 6 × 7. To be nested within a frame
         (SOURCE BEGIN)
         (INSTR
           (ASGN RESULT (RUN stdlib (mul 6 7))))
+        
         (TARGET END)))))
 ```
 
@@ -118,6 +119,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
               (INSTR
                 (ASGN RESULT ("Hello" "from" PARAMS)))
               (TARGET END)))))))
+  
   (SEXPR "Symp"))
 ```
 
