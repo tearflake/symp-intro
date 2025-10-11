@@ -97,13 +97,13 @@ All components use a shared symbolic representation:
 Each `(APPLY …)` passes these symbolic structures along the pipeline:
 
 ```
-Input (…)
+Input
      ↓
 Symbolmatch — verifies shape
      ↓
 Symbolverse/Symbolprose — rewrites structure or executes as a graph
      ↓
-Output (…)
+Output
 ```
 
 Because the data format is uniform, any module can be swapped or nested.
