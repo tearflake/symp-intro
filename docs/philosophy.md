@@ -1,4 +1,4 @@
-# Philosophy of Symp
+# Philosophy
 
 **Framework from a parallel reality where symbols won.**
 

@@ -81,7 +81,7 @@ it’s a framework for building *languages of meaning*.
 ## 📚 Learn More
 
 * [About Symp](docs/symp.md)
-* [The Philosophy of Symbolic Computing](docs/philosophy.md)
+* [Philosophy](docs/philosophy.md)
 * [Architecture](docs/architecture.md)
 * [Symbolmatch](docs/symbolmatch.md)
 * [Symbolverse](docs/symbolverse.md)
