@@ -123,11 +123,8 @@ Symp can act as a **backend framework** in multiple contexts:
 ### 🌐 2. Web Service Mode
 
 * Host a lightweight HTTP or WebSocket server.
-* Receive `(APPLY …)` payloads as JSON:
-  ```
-  { "apply": "(APPLY <frame> (SEXPR ...))" }
-  ```
-* Respond with evaluated `(SEXPR …)` output.
+* Send `(APPLY …)` payloads
+* Receive evaluated S-expression output.
 * Ideal for web-based IDEs or symbolic assistants.
 
 ### 🔌 3. Embedded Library
