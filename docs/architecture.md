@@ -124,9 +124,8 @@ Symp can act as a **backend framework** in multiple contexts:
 
 * Host a lightweight HTTP or WebSocket server.
 * Receive `(APPLY …)` payloads as JSON:
-
-  ```json
-  { "apply": "(APPLY symbolmatch (SEXPR (RULES ...)))" }
+  ```
+  { "apply": "(APPLY <frame> (SEXPR ...))" }
   ```
 * Respond with evaluated `(SEXPR …)` output.
 * Ideal for web-based IDEs or symbolic assistants.
