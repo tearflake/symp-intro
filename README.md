@@ -53,15 +53,11 @@ where you can write:
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (coming soon)
 
-1. Install the runtime (coming soon).
+1. Install the runtime.
 2. Run the Symp web REPL or CLI.
 3. Try examples in `/examples/`:
-
-   ```
-   (APPLY symbolmatch (SEXPR (RULES (FLAT <start> ATOMIC))))
-   ```
 
 ---
 
