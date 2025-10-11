@@ -4,7 +4,9 @@ sidebar:
   - about
   - philosophy
   - architecture
-  - symbolmatch
-  - symbolverse
-  - symbolprose
+  - label: three pillars
+    children:
+      - symbolmatch
+      - symbolverse
+      - symbolprose
   - examples
