@@ -26,7 +26,7 @@ Input:
 hello
 ```
 
-✅ Passes
+**Passes**
 
 Input:
 
@@ -34,7 +34,7 @@ Input:
 (hello world)
 ```
 
-❌ Fails — not atomic.
+**Fails** — not atomic.
 
 ---
 
