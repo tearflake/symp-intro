@@ -1,3 +1,7 @@
+---
+id: symbolprose
+---
+
 # Symbolprose
 
 **The executable graph of symbolic computation**
