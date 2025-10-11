@@ -86,7 +86,7 @@ it’s a framework for building *languages of meaning*.
 * [Symbolmatch](docs/symbolmatch.md)
 * [Symbolverse](docs/symbolverse.md)
 * [Symbolprose](docs/symbolprose.md)
-* [Symbolprose](docs/examples.md)
+* [Examples](docs/examples.md)
 
 ---
 
