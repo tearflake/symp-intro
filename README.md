@@ -40,6 +40,16 @@ These three systems for syntax analisys and semantic synthesis are connected thr
 
 ---
 
+## 🔮 Why It’s Different
+
+* **Explicit meaning** – You can *see* how syntax maps to semantics.
+* **Composable** – Each frame can use others as sub-frames.
+* **Reflective** – Frames can define new frames (meta-programming built in).
+* **Minimal** – Entire core fits in a few hundred lines.
+* **Beautifully weird** – A computing system from an alternate reality where theory outran graphics.
+
+---
+
 ## 🧬 Design Philosophy
 
 Every computation in Symp passes through **form** and **meaning**.
@@ -49,16 +59,6 @@ Semantics transforms intent.
 Output becomes new input.  
 
 It’s not a conventional programming language — it’s a framework for building *languages of meaning*. Use it to prototype symbolic languages, theorem provers, or DSLs.
-
----
-
-## 🔮 Why It’s Different
-
-* **Explicit meaning** – You can *see* how syntax maps to semantics.
-* **Composable** – Each frame can use others as sub-frames.
-* **Reflective** – Frames can define new frames (meta-programming built in).
-* **Minimal** – Entire core fits in a few hundred lines.
-* **Beautifully weird** – A computing system from an alternate reality where theory outran graphics.
 
 ---
 
