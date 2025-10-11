@@ -76,7 +76,7 @@ it’s a framework for building *languages of meaning*.
 
 ## 📚 Learn More
 
-* [About Symp](docs/symp.md)
+* [About](docs/about.md)
 * [Philosophy](docs/philosophy.md)
 * [Architecture](docs/architecture.md)
 * [Symbolmatch](docs/symbolmatch.md)
