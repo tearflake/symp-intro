@@ -18,15 +18,13 @@ input → syntax → semantics → output
 
 ````
 
-Each stage is explicit, modular, and represented by its own symbolic language.  
-Together, they make up the Symp framework — a computing substrate for defining and composing **frames**.
+Each stage is explicit, modular, and represented by its own symbolic language. Together, they make up the Symp framework — a computing substrate for defining and composing **frames**.
 
 ---
 
 ## 🧠 What is a Frame?
 
-A **frame** is the fundamental computing unit in Symp.  
-It combines *form* and *meaning* into one executable definition:
+A **frame** is the fundamental computing unit in Symp. It combines *form* and *meaning* into one executable definition:
 
 ```
 (FRAME
@@ -95,10 +93,7 @@ A small end-to-end demonstration:
 
 ## 🌀 Nested and Custom Frames
 
-Frames can reference other frames, or even *generate* new frames.
-For example, a higher-order “builder” frame may output a new `(FRAME …)` definition.
-This allows **metaprogramming** within a consistent symbolic model —
-without uncontrolled self-reference.
+Frames can reference other frames, or even *generate* new frames. For example, a higher-order “builder” frame may output a new `(FRAME …)` definition. This allows **metaprogramming** within a consistent symbolic model — without uncontrolled self-reference.
 
 ---
 
