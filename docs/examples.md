@@ -169,7 +169,7 @@ Define a small DSL to simplify addition and multiplication. Complete example.
               (READ ("mul" x 1))
               (WRITE x)))))))
 
-  (SEXPR (mul (add 5 0) 1)))
+  (SEXPR (mul (add 0 5) 1)))
 ```
 
 Output:
