@@ -128,7 +128,7 @@ It stands *beneath them* — a substrate for expressing them.
 It reminds us that computation can be **transparent**, **symbolic**, and **meaningful**.
 That we can build software that is *explorable by reason*, not hidden by syntax.
 
-Symp is not a better Lisp. It is what Lisp would have been if symbols had won the hardware race.
+Symp is not a better Lisp. It is what Lisp could have been if symbols had won the hardware race.
 
 ---
 
