@@ -1,7 +1,3 @@
----
-layout: none
----
-
 # Symp Framework
 
 **Symbolic Computing Pipeline — form, meaning, and execution**
