@@ -38,13 +38,10 @@ A frame is a pair of subprograms:
 
 When executed via `(APPLY <frame> <expr>)`, the following happens:
 
-* **Syntax Stage**:  
-   The `<expr>` is passed to the `(SYNTAX …)` subprogram. This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
+* **Syntax Stage**: The `<expr>` is passed to the `(SYNTAX …)` subprogram. This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
    * On success → input passes unchanged to semantics.
    * On failure → returns an error path.
-
-* **Semantics Stage**:  
-   The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram. This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`, which transform or execute the expression.
+* **Semantics Stage**: The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram. This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`, which transform or execute the expression.
 
 ---
 
