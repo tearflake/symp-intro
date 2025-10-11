@@ -1,3 +1,7 @@
+---
+id: philosophy
+---
+
 # Philosophy
 
 **Framework from a parallel reality where symbols won.**
