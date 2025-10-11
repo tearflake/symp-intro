@@ -1,6 +1,5 @@
 ---
 layout: sidebar
-title: About
 ---
 
 # Symp — A Symbolic Computation Framework
