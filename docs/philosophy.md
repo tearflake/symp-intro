@@ -45,7 +45,7 @@ It’s how logic, language, and even mathematics work.
 - **[Symbolverse](symbolverse.md)**: stateless rewriting and transformation.
 - **[Symbolprose](symbolprose.md)**: stateful execution of processes.
 
-Together they form the **Symp Triad** — the systematically complete cycle of symbolic computation.
+Together they form the **Symp Triad** — the systematically complete elements of symbolic computation.
 
 ---
 
