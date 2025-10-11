@@ -87,7 +87,7 @@ A small end-to-end demonstration:
 
 1. `Symbolmatch` checks that the top-level input is a valid S-expression.
 2. `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
-3. Result → `(SEXPR (eq (pow x 2) (pow x 2)))`.
+3. Result → `(eq (pow x 2) (pow x 2))`.
 
 ---
 

@@ -132,9 +132,11 @@ Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
       (APPLY symbolmatch
         (SEXPR
           (RULES
-            (NORM <start> (GROUP (ADD ATOMIC ATOMIC)))
-            (NORM <start> (GROUP (MUL ATOMIC ATOMIC)))
-            (NORM <start> (GROUP (POW ATOMIC ATOMIC)))))))
+            (FLAT <start> <expr>)
+            (FLAT <expr> ("eq" <expr> <expr>)
+            (FLAT <expr> ("mul" <expr> <expr>)
+            (FLAT <expr> ("pow" <expr> <expr>)
+            (FLAT <expr> ATOMIC)))))
 
     (SEMANTICS
       (APPLY symbolprose
@@ -145,7 +147,7 @@ Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
               (INSTR
                 (ASGN RESULT (EVAL PARAMS)))
               (TARGET END)))))))
-  (SEXPR (ADD 2 3)))
+  (SEXPR (add 2 3)))
 ```
 
 Output:
