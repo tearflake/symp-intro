@@ -98,11 +98,11 @@ Each `(APPLY …)` passes these symbolic structures along the pipeline:
 
 ```
 Input
-     ↓
+  ↓
 Symbolmatch — verifies shape
-     ↓
+  ↓
 Symbolverse/Symbolprose — rewrites structure or executes as a graph
-     ↓
+  ↓
 Output
 ```
 
