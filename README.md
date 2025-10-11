@@ -52,7 +52,7 @@ These three systems are connected through the **Symp glue language**, where you 
 
 1. Install the runtime.
 2. Run the Symp web REPL or CLI.
-3. Try examples in `/examples/`
+3. Try examples in `/examples/`.
 
 ---
 
