@@ -1,7 +1,5 @@
 # Symp — A Symbolic Processing Framework
 
-**Framework from a parallel reality where symbols won.**
-
 ---
 
 ## 🧩 What Is Symp?
@@ -44,7 +42,7 @@ These three systems are connected through the **Symp glue language**, where you 
 * **Composable** – Each frame can use others as sub-frames.
 * **Reflective** – Frames can define new frames (meta-programming built in).
 * **Minimal** – Entire core fits in a few hundred lines.
-* **Beautifully weird** – A computing system from a world where theory outran graphics.
+* **Beautifully weird** – A computing system from an alternate reality where theory outran graphics.
 
 ---
 
