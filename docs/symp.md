@@ -1,5 +1,5 @@
 ---
-id: getting-started
+id: about-symp
 ---
 
 # Symp Framework
