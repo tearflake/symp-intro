@@ -1,3 +1,7 @@
+---
+id: symbolmatch
+---
+
 # Symbolmatch
 
 **Grammar and syntax engine of Symp**
