@@ -19,8 +19,7 @@ Symbolmatch  →  Symbolverse / Symbolprose
 
 ````
 
-Each subsystem is implemented as a **frame** — a symbolic interpreter that takes
-an input `(SEXPR …)` and produces a new symbolic result.
+Each subsystem is implemented as a **frame** — a symbolic interpreter that takes an input `(SEXPR …)` and produces a new symbolic result.
 
 The **glue language** `(APPLY …)` binds them into a single computation.
 
@@ -40,16 +39,12 @@ A frame is a pair of subprograms:
 When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 1. **Syntax Stage**:  
-   The `<expr>` is passed to the `(SYNTAX …)` subprogram.
-   This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
-
+   The `<expr>` is passed to the `(SYNTAX …)` subprogram. This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
    * On success → input passes unchanged to semantics.
    * On failure → returns an error path.
 
 2. **Semantics Stage**:  
-   The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram.
-   This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`,
-   which transform or execute the expression.
+   The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram. This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`, which transform or execute the expression.
 
 ---
 
@@ -130,8 +125,7 @@ Symp can act as a **backend framework** in multiple contexts:
 ### 🔌 3. Embedded Library
 
 * Expose the Symp engine as an API (JavaScript).
-* Applications can define and run frames internally,
-  using Symbolmatch, Symbolverse, and Symbolprose as composable services.
+* Applications can define and run frames internally, using Symbolmatch, Symbolverse, and Symbolprose as composable services.
 
 ---
 
@@ -154,4 +148,3 @@ Symp is fully modular:
 Grammar and meaning are distinct layers of that conversation, open for introspection and modification.
 
 This is the foundation of **Symbolic Computing** in the world where symbols won.
-
