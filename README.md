@@ -40,6 +40,18 @@ These three systems for syntax analisys and semantic synthesis are connected thr
 
 ---
 
+## 🧬 Design Philosophy
+
+Every computation in Symp passes through **form** and **meaning**.
+
+Syntax validates structure.  
+Semantics transforms intent.  
+Output becomes new input.  
+
+It’s not a conventional programming language — it’s a framework for building *languages of meaning*. Use it to prototype symbolic languages, theorem provers, or DSLs.
+
+---
+
 ## 🔮 Why It’s Different
 
 * **Explicit meaning** – You can *see* how syntax maps to semantics.
@@ -55,19 +67,6 @@ These three systems for syntax analisys and semantic synthesis are connected thr
 * Install the runtime.
 * Run the Symp web REPL or CLI.
 * Try examples in `/examples/`.
-
----
-
-## 🧬 Design Philosophy
-
-Every computation in Symp passes through **form** and **meaning**.
-
-Syntax validates structure.  
-Semantics transforms intent.  
-Output becomes new input.  
-
-It’s not a conventional programming language — it’s a framework for building *languages of meaning*.
-Use it to prototype symbolic languages, theorem provers, or DSLs.
 
 ---
 
