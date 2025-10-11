@@ -28,7 +28,7 @@ hello
 
 Passes
 
-**Input*:
+**Input**:
 
 ```
 (hello world)
