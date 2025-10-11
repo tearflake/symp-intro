@@ -10,8 +10,8 @@ Symp is composed of three independent but composable subsystems:
 
 ```
 
-Symbolmatch  →  Symbolverse  →  Symbolprose
-(form)          (meaning)       (execution)
+Symbolmatch  →  Symbolverse / Symbolprose
+(form)          (meaning or execution)
 
 ````
 
