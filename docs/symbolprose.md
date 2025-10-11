@@ -11,7 +11,8 @@ id: symbolprose
 ## 🧩 Purpose
 
 `Symbolprose` also defines the *semantics* of a frame.  
-Where `Symbolverse` rewrites meaning, `Symbolprose` executes the computation through **directed symbolic graphs**.
+Where `Symbolverse` rewrites meaning, `Symbolprose` executes the computation through **directed symbolic graphs**.  
+This is where meaning is being represented as a result of stateful actions.  
 
 ---
 
