@@ -6,8 +6,7 @@
 
 ## 🧩 What Is Symp?
 
-Symp is a **minimalist symbolic computation backend**.  
-It unifies parsing, transformation, and execution into one explicit pipeline:
+Symp is a **minimalist symbolic computation backend**. It unifies parsing, transformation, and execution into one explicit pipeline:
 
 ```
 
@@ -17,8 +16,7 @@ input → syntax → semantics → output
 
 Instead of hiding these layers inside a compiler, Symp makes each stage programmable.
 
-You don’t define *functions*.  
-You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
+You don’t define *functions*. You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
 
 ---
 
@@ -28,8 +26,7 @@ You define **frames** — each with its own *syntax* (form) and *semantics* (mea
 - **Symbolverse**: Term rewriting and transformation engine.
 - **Symbolprose**: Graph-based virtual machine for executing symbolic programs.
 
-These three systems are connected through the **Symp glue language**,  
-where you can write:
+These three systems are connected through the **Symp glue language**, where you can write:
 
 ```
 (APPLY
@@ -67,8 +64,7 @@ where you can write:
 > Semantics transforms intent.
 > Output becomes new input.
 
-It’s not a conventional programming language —
-it’s a framework for building *languages of meaning*.
+It’s not a conventional programming language — it’s a framework for building *languages of meaning*.
 
 ---
 
