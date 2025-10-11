@@ -1,4 +1,6 @@
-# Symp — A Symbolic Processing Framework
+# Symp
+
+**A symbolic processing framework**
 
 ---
 
