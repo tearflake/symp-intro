@@ -133,7 +133,7 @@ Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
         (SEXPR
           (RULES
             (FLAT <start> <expr>)
-            (FLAT <expr> ("eq" <expr> <expr>)
+            (FLAT <expr> ("add" <expr> <expr>)
             (FLAT <expr> ("mul" <expr> <expr>)
             (FLAT <expr> ("pow" <expr> <expr>)
             (FLAT <expr> ATOMIC)))))

@@ -41,8 +41,8 @@ Validate that an expression is a single atom:
 
 Input:
 
-✅ `(SEXPR "hello")` → success
-❌ `(SEXPR (hello world))` → parse error at position 1.
+✅ `(SEXPR "hello")` → success  
+❌ `(SEXPR (hello world))` → parse error at position 1.  
 
 ---
 
