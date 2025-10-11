@@ -1,8 +1,8 @@
 ---
-id: about
+id: introduction
 ---
 
-# About
+# Introduction
 
 **Symbolic Computing Pipeline — form and meaning**
 
