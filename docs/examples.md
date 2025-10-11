@@ -26,7 +26,7 @@ Validate that input consists of a single atomic token. To be nested within a fra
 hello
 ```
 
-Passes
+Passes.
 
 **Input**:
 
