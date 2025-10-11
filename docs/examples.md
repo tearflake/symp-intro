@@ -125,7 +125,7 @@ Output:
 
 ## 5️⃣ DSL Example — Custom Math Frame
 
-Define a small DSL where `add`, `mul`, and `pow` become executable math. Complete example.
+Define a small DSL to simplify addition and multiplication. Complete example.
 
 ```
 (APPLY
@@ -143,22 +143,34 @@ Define a small DSL where `add`, `mul`, and `pow` become executable math. Complet
 
     (SEMANTICS
       (APPLY
-        symbolprose
+        symbolverse
         (SEXPR
           (REWRITE
             (RULE
-              (READ ("add" x x))
-              (WRITE (RUN stdlib ("add" x x))))
+              (READ ("add" 0 x))
+              (WRITE x))
 
             (RULE
-              (READ ("mul" x x))
-              (WRITE (RUN stdlib ("mul" x x))))
+              (READ ("add" x 0))
+              (WRITE x))
 
             (RULE
-              (READ ("pow" x x))
-              (WRITE (RUN stdlib ("pow" x x)))))))))
-  
-  (SEXPR (add 2 3)))
+              (READ ("mul" 0 x))
+              (WRITE 0))
+
+            (RULE
+              (READ ("mul" x 0))
+              (WRITE 0))
+
+            (RULE
+              (READ ("mul" 1 x))
+              (WRITE x))
+
+            (RULE
+              (READ ("mul" x 1))
+              (WRITE x)))))))
+
+  (SEXPR (mul (add 5 0) 1)))
 ```
 
 Output:
