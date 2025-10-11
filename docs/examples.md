@@ -20,21 +20,21 @@ Validate that input consists of a single atomic token. To be nested within a fra
       (FLAT <start> ATOMIC))))
 ````
 
-Input:
+**Input**:
 
 ```
 hello
 ```
 
-**Passes**
+Passes
 
-Input:
+**Input*:
 
 ```
 (hello world)
 ```
 
-**Fails** — not atomic.
+Fails — not atomic.
 
 ---
 
@@ -52,13 +52,13 @@ A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`. To be nested within 
         (WRITE ("pow" x "2"))))))
 ```
 
-Input:
+**Input**:
 
 ```
 (eq (mul x x) (pow x 2))
 ```
 
-Output:
+**Output**:
 
 ```
 (eq (pow x 2) (pow x 2))
@@ -82,9 +82,11 @@ A symbolic computation graph that multiplies 6 × 7. To be nested within a frame
         (TARGET END)))))
 ```
 
-Input disregarded.
+**Input**:
 
-Output:
+disregarded.
+
+**Output**:
 
 ```
 42
@@ -119,7 +121,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
   (SEXPR "Symp"))
 ```
 
-Output:
+**Output**:
 
 ```
 ('Hello from' Symp)
@@ -176,9 +178,8 @@ Define a small DSL to simplify addition and multiplication. Complete example.
   (SEXPR (mul (add 0 5) 1)))
 ```
 
-Output:
+**Output**:
 
 ```
 5
 ```
-
