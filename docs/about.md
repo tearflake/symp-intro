@@ -40,10 +40,10 @@ A frame becomes *alive* when applied to an input:
 
 During execution:
 
-1. The **input** is passed to the system.
-2. The **syntax** part validates the input.
-3. The **semantics** part transforms or executes it.
-4. The **output** is returned as a constant.
+- The **input** is passed to the system.
+- The **syntax** part validates the input.
+- The **semantics** part transforms or executes it.
+- The **output** is returned as a constant.
 
 ---
 
@@ -85,8 +85,10 @@ A small end-to-end demonstration:
 
 🧩 **Step-by-step:**
 
-1. `Symbolmatch` checks that the top-level input is a valid S-expression.
-2. `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
+Parameters → `(eq (mul x x) (pow x 2))`
+
+- `Symbolmatch` checks that the top-level input is a valid S-expression.
+- `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
 
 Result → `(eq (pow x 2) (pow x 2))`.
 
