@@ -38,8 +38,6 @@ These three systems for syntax analisys and semantic synthesis are connected thr
   (SEXPR myProgram))
 ```
 
-Use it to prototype symbolic languages, theorem provers, or DSLs.
-
 ---
 
 ## 🔮 Why It’s Different
@@ -69,6 +67,7 @@ Semantics transforms intent.
 Output becomes new input.  
 
 It’s not a conventional programming language — it’s a framework for building *languages of meaning*.
+Use it to prototype symbolic languages, theorem provers, or DSLs.
 
 ---
 
