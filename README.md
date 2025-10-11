@@ -62,11 +62,11 @@ Use it to prototype symbolic languages, theorem provers, or DSLs.
 
 ## 🧬 Design Philosophy
 
-> Every computation in Symp passes through **form** and **meaning**.
->
-> Syntax validates structure.
-> Semantics transforms intent.
-> Output becomes new input.
+Every computation in Symp passes through **form** and **meaning**.
+
+Syntax validates structure.  
+Semantics transforms intent.  
+Output becomes new input.  
 
 It’s not a conventional programming language — it’s a framework for building *languages of meaning*.
 
