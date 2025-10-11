@@ -17,17 +17,15 @@ It’s the bridge between **syntax** and **execution**.
 ## 📘 Grammar Overview
 
 ```
-(REWRITE
-  (RULE
-    (READ ("mul" x x))
-    (WRITE ("pow" x "2"))))
-````
+<start> := <ruleset>
 
-| Form        | Description                                     |
-| ----------- | ----------------------------------------------- |
-| **RULE**    | Basic pattern-rewrite mapping.                  |
-| **VAR**     | Optional list of variables.                     |
-| **COMPUTE** | Nested rewriting scope for complex definitions. |
+<ruleset> := (REWRITE <elem>+)
+
+<elem> := (RULE (READ <S-EXPR>) (WRITE <S-EXPR>))
+        | (COMPUTE (NAME <ATOM>) <ruleset>)
+
+<compute-call> := (RUN <ATOMIC> <ANY>)
+```
 
 ---
 

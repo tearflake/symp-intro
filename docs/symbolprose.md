@@ -15,20 +15,18 @@ Where `Symbolmatch` validates structure and `Symbolverse` rewrites meaning,
 ## 📘 Grammar Overview
 
 ```
-(GRAPH
-  (EDGE
-    (SOURCE BEGIN)
-    (INSTR
-      (ASGN RESULT (mul 2 3)))
-    (TARGET END)))
-````
+<start> := <graph>
 
-| Element     | Description                                  |
-| ----------- | -------------------------------------------- |
-| **GRAPH**   | Container for execution flow.                |
-| **EDGE**    | Directed link between two nodes.             |
-| **INSTR**   | Instructions such as `ASGN` or `TEST`.       |
-| **COMPUTE** | Encapsulate subgraphs for modular execution. |
+<graph> := (GRAPH <element>+)
+
+<element> := (EDGE (SOURCE <ATOMIC>) (INSTR <instruction>+)? (TARGET <ATOMIC>))
+           | (COMPUTE (NAME <ATOMIC>) <graph>)
+
+<instruction> := (TEST <ANY> <ANY>)
+               | (ASGN <ATOMIC> <ANY>)
+
+<compute-call> := (RUN <ATOMIC> <ANY>)
+````
 
 ---
 

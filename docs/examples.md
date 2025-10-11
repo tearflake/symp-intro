@@ -19,7 +19,7 @@ Validate that input consists of a single atomic token.
 Input:
 
 ```
-(SEXPR "hello")
+"hello"
 ```
 
 ✅ Passes
@@ -27,7 +27,7 @@ Input:
 Input:
 
 ```
-(SEXPR ("hello" "world"))
+("hello" "world")
 ```
 
 ❌ Fails — not atomic.
@@ -51,13 +51,13 @@ A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`.
 Input:
 
 ```
-(SEXPR (eq (mul x x) (pow x 2)))
+(eq (mul x x) (pow x 2))
 ```
 
 Output:
 
 ```
-(SEXPR (eq (pow x 2) (pow x 2)))
+(eq (pow x 2) (pow x 2))
 ```
 
 ---
@@ -74,14 +74,14 @@ A symbolic computation graph that multiplies 6 × 7.
       (EDGE
         (SOURCE BEGIN)
         (INSTR
-          (ASGN RESULT (mul 6 7)))
+          (ASGN RESULT (RUN stdlib (mul 6 7))))
         (TARGET END)))))
 ```
 
 Output:
 
 ```
-(SEXPR 42)
+42
 ```
 
 ---
@@ -94,13 +94,15 @@ A frame that validates syntax *and* executes a symbolic computation.
 (APPLY
   (FRAME
     (SYNTAX
-      (APPLY symbolmatch
+      (APPLY
+        symbolmatch
         (SEXPR
           (RULES
             (FLAT <start> ATOMIC)))))
 
     (SEMANTICS
-      (APPLY symbolprose
+      (APPLY
+        symbolprose
         (SEXPR
           (GRAPH
             (EDGE
@@ -114,67 +116,12 @@ A frame that validates syntax *and* executes a symbolic computation.
 Output:
 
 ```
-(SEXPR ("Hello from" "Symp"))
+("Hello from" "Symp")
 ```
 
 ---
 
-## 5️⃣ Meta-Frame — The “Mirror” Example
-
-A **second-order** frame that builds a new frame dynamically.
-
-```
-(APPLY
-  (FRAME
-    (SYNTAX
-      (APPLY symbolmatch
-        (SEXPR
-          (RULES
-            (FLAT <start> ATOMIC)))))
-
-    (SEMANTICS
-      (APPLY symbolprose
-        (SEXPR
-          (GRAPH
-            (EDGE
-              (SOURCE BEGIN)
-              (INSTR
-                (ASGN RESULT
-                  ("FRAME"
-                    ("SYNTAX"
-                      ("APPLY" "symbolmatch"
-                        ("SEXPR" ("RULES" ("FLAT" "<start>" "ATOMIC")))))
-                    ("SEMANTICS"
-                      ("APPLY" "symbolprose"
-                        ("SEXPR"
-                          ("GRAPH"
-                            ("EDGE"
-                              ("SOURCE" "BEGIN")
-                              ("INSTR"
-                                ("ASGN" "RESULT"
-                                  ("Echo of" PARAMS "PARAMS")))
-                              ("TARGET" "END"))))))))
-              (TARGET END))))))))
-  (SEXPR "myMirror"))
-```
-
-Result: a **new frame** named `"myMirror"`.
-
-You can then apply it:
-
-```
-(APPLY myMirror (SEXPR "hello"))
-```
-
-Output:
-
-```
-(SEXPR ("Echo of" hello hello))
-```
-
----
-
-## 6️⃣ DSL Example — Custom Math Frame
+## 5️⃣ DSL Example — Custom Math Frame
 
 Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
 
@@ -204,19 +151,10 @@ Define a small DSL where `ADD`, `MUL`, and `POW` become executable math.
 Output:
 
 ```
-(SEXPR 5)
+5
 ```
 
 *(Example assumes `EVAL` is a helper function or extension.)*
-
----
-
-## 💡 Tips
-
-* Every frame is an `(APPLY ...)` expression.
-* Each stage can be tested independently — Symbolmatch, Symbolverse, Symbolprose.
-* You can chain them or store them in files as reusable building blocks.
-* Advanced users can use `(APPLY eval (SEXPR …))` for reflection and dynamic frame creation.
 
 ---
 

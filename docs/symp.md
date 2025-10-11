@@ -6,22 +6,15 @@
 
 ## 🧩 Overview
 
-Symp unites three symbolic subsystems into a single programmable pipeline:
+Symp unites two symbolic subsystems into a single programmable pipeline:
 
 ```
 
-input → syntax → semantics → execution → output
+input → syntax → semantics → output
 
 ````
 
-Each stage is explicit, modular, and represented by its own symbolic language:
-
-| Stage | Module | Role |
-|--------|---------|------|
-| **Syntax** | [Symbolmatch](symbolmatch.md) | Validates and parses form |
-| **Semantics** | [Symbolverse](symbolverse.md) | Defines how meaning transforms structure |
-| **Execution** | [Symbolprose](symbolprose.md) | Executes the resulting program |
-
+Each stage is explicit, modular, and represented by its own symbolic language.  
 Together, they make up the Symp framework — a computing substrate for defining and composing **frames**.
 
 ---
@@ -45,21 +38,20 @@ A frame becomes *alive* when applied to an input:
 
 During execution:
 
-1. The **syntax** part validates the input.
-2. The **semantics** part transforms or executes it.
-3. The **output** is returned as a constant `(SEXPR …)`.
+1. The **input** is passed to the system.
+2. The **syntax** part validates the input.
+3. The **semantics** part transforms or executes it.
+4. The **output** is returned as a constant `(SEXPR …)`.
 
 ---
 
 ## ⚙️ Anatomy of the Pipeline
 
-| Step | Module          | Description                                                |
-| ---- | --------------- | ---------------------------------------------------------- |
-| 1️⃣  | **Symbolmatch** | Ensures the input follows the expected grammar.            |
-| 2️⃣  | **Symbolverse** | Transforms the symbolic structure into an executable form. |
-| 3️⃣  | **Symbolprose** | Interprets the graph and produces a symbolic result.       |
-
-All stages use the same syntax — symbolic S-expressions — so they compose naturally.
+| Module          | Description                                                |
+| --------------- | ---------------------------------------------------------- |
+| **Symbolmatch** | Ensures the input follows the expected grammar.            |
+| **Symbolverse** | Transforms the symbolic structure into an executable form. |
+| **Symbolprose** | Interprets the graph and produces a symbolic result.       |
 
 ---
 
@@ -140,6 +132,4 @@ You can define your own frames, store them as files, and apply them dynamically.
 * [Symbolverse](symbolverse.md) — symbolic rewriting of meaning.
 * [Symbolprose](symbolprose.md) — symbolic graph execution.
 * [README](../README.md) — project introduction and vision.
-
-```
 

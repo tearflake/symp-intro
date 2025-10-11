@@ -11,7 +11,7 @@ Symp is composed of three independent but composable subsystems:
 ```
 
 Symbolmatch  →  Symbolverse  →  Symbolprose
-(form)         (meaning)       (execution)
+(form)          (meaning)       (execution)
 
 ````
 
@@ -29,7 +29,7 @@ The **glue language** `(APPLY …)` binds them into a single computation.
 A frame is a pair of subprograms:
 ```
 (FRAME
-  (SYNTAX   <apply>)
+  (SYNTAX <apply>)
   (SEMANTICS <apply>))
 ````
 
@@ -59,11 +59,13 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 (APPLY
   (FRAME
     (SYNTAX
-      (APPLY symbolmatch
+      (APPLY
+        symbolmatch
         (SEXPR (RULES (FLAT <start> ATOMIC)))))
 
     (SEMANTICS
-      (APPLY symbolprose
+      (APPLY
+        symbolprose
         (SEXPR
           (GRAPH
             (EDGE
@@ -78,9 +80,9 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 | Stage | Module      | Action                              | Result                          |
 | ----- | ----------- | ----------------------------------- | ------------------------------- |
-| 1️⃣   | Symbolmatch | Validate `"Symp"` is atomic         | Pass                            |
-| 2️⃣   | Symbolprose | Execute graph assigning to `RESULT` | `(SEXPR ("Hello from" "Symp"))` |
-| ✅     | Output      | Return constant symbolic expression | Final result                    |
+| 1️⃣    | Symbolmatch | Validate `"Symp"` is atomic         | Pass                            |
+| 2️⃣    | Symbolprose | Execute graph assigning to `RESULT` | `(SEXPR ("Hello from" "Symp"))` |
+| ✅    | Output      | Return constant symbolic expression | Final result                    |
 
 ---
 
@@ -99,43 +101,12 @@ Input (SEXPR …)
      ↓
 Symbolmatch — verifies shape
      ↓
-Symbolverse — rewrites structure
-     ↓
-Symbolprose — executes as a graph
+Symbolverse/Symbolprose — rewrites structure or executes as a graph
      ↓
 Output (SEXPR …)
 ```
 
 Because the data format is uniform, any module can be swapped or nested.
-
----
-
-## 🧠 Reflection and `eval`
-
-Symp is intentionally **first-order**, but includes an explicit reflective frame:
-
-```
-(APPLY eval (SEXPR (APPLY symbolverse (SEXPR ...))))
-```
-
-`eval` re-enters the pipeline with a new symbolic expression.
-This provides **controlled metaprogramming** without unbounded recursion.
-
-It allows higher-order behavior (frames creating frames)
-while preserving logical consistency and termination guarantees.
-
----
-
-## 🏗️ Frame Order and Evaluation
-
-| Order | Meaning                    | Example                            |
-| ----- | -------------------------- | ---------------------------------- |
-| **0** | Constant expression (data) | `(SEXPR "hello")`                  |
-| **1** | Executable frame           | `(FRAME (SYNTAX …) (SEMANTICS …))` |
-| **2** | Frame that builds a frame  | Meta-frame (see mirror example)    |
-
-The grammar restricts automatic evaluation beyond order 2.
-Higher-order constructs are possible but must pass explicitly through `eval`.
 
 ---
 
@@ -162,38 +133,9 @@ Symp can act as a **backend framework** in multiple contexts:
 
 ### 🔌 3. Embedded Library
 
-* Expose the Symp engine as an API (JavaScript, Python, etc.).
+* Expose the Symp engine as an API (JavaScript).
 * Applications can define and run frames internally,
   using Symbolmatch, Symbolverse, and Symbolprose as composable services.
-
----
-
-## 🧰 Runtime Responsibilities
-
-| Component      | Role                                                     |
-| -------------- | -------------------------------------------------------- |
-| **Parser**     | Converts source S-expressions into in-memory structures. |
-| **Dispatcher** | Routes each `(APPLY …)` call to its target frame.        |
-| **Evaluator**  | Executes the frame’s syntax and semantics subframes.     |
-| **Serializer** | Converts result back to `(SEXPR …)` for transport.       |
-
----
-
-## 📊 Example Integration Architecture
-
-```
-[ Web REPL ] → (APPLY …) → [ Symp Server ]
-                         ↓
-                  Symbolmatch (syntax)
-                         ↓
-                  Symbolverse (rewrite)
-                         ↓
-                  Symbolprose (execute)
-                         ↓
-                     (SEXPR result)
-                         ↑
-[ Browser Console ] ← response ← [ JSON API ]
-```
 
 ---
 
@@ -202,7 +144,7 @@ Symp can act as a **backend framework** in multiple contexts:
 Symp is fully modular:
 
 * Define new frames using the same `(FRAME (SYNTAX …) (SEMANTICS …))` pattern.
-* Store them as `.symp` files.
+* Store them as `.frame` files.
 * Load dynamically into the runtime.
 * Build DSLs, symbolic assistants, or logic engines without modifying the core.
 

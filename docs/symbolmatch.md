@@ -8,7 +8,7 @@
 
 `Symbolmatch` defines the *form* of valid input.  
 It’s a **PEG-like parser** expressed in S-expressions.  
-Each grammar is a collection of `(RULE …)` definitions written entirely in symbolic notation.
+Each grammar is a collection of rule definitions written entirely in symbolic notation.
 
 Where other systems hide parsing inside compilers,  
 Symbolmatch makes it an explicit, inspectable data structure.
@@ -18,17 +18,12 @@ Symbolmatch makes it an explicit, inspectable data structure.
 ## 📘 Grammar Overview
 
 ```
-(RULES
-    (FLAT <start> (ATOMIC))
-    (NORM <rule> (GROUP (MUL "RULE" ATOMIC <expr>)))
-    (ATOM <token> "identifier") )
-````
+<start> := (RULES <rule>+)
 
-| Rule type | Description                             |
-| --------- | --------------------------------------- |
-| **FLAT**  | Match the rule inline, without nesting. |
-| **NORM**  | Match a normal tree structure.          |
-| **ATOM**  | Match a literal atom or token.          |
+<rule> := (FLAT <IDENTIFIER> <S-EXPRESSION>)
+        | (NORM <IDENTIFIER> <S-EXPRESSION>)
+        | (ATOM <IDENTIFIER> <S-EXPRESSION>)
+```
 
 ---
 
@@ -46,11 +41,7 @@ Validate that an expression is a single atom:
 
 Input:
 
-```
-(SEXPR "hello")
-```
-
-✅ Result → success
+✅ `(SEXPR "hello")` → success
 ❌ `(SEXPR (hello world))` → parse error at position 1.
 
 ---
