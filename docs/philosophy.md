@@ -27,8 +27,8 @@ That is the world from which **Symp** arrived.
 
 In Symp, every computation passes through two sacred stages:
 
-1. **Form** — the *syntax*, the shape of expression.  
-2. **Meaning** — the *semantics*, the transformation of that shape.
+* **Form** — the *syntax*, the shape of expression.  
+* **Meaning** — the *semantics*, the transformation of that shape.
 
 This ritual — of checking form, then assigning meaning —  
 is the essence of all symbolic reasoning.  
@@ -43,9 +43,9 @@ It’s how logic, language, and even mathematics work.
 
 - **[Symbolmatch](symbolmatch.md)**: grammar and recognition.
 - **[Symbolverse](symbolverse.md)**: stateless rewriting and transformation.
-- **[Symbolprose](symbolprose.md)**: stateful realization.
+- **[Symbolprose](symbolprose.md)**: stateful execution of processes.
 
-Together they form the **Symp Triad** — the full cycle of symbolic computation.
+Together they form the **Symp Triad** — the complete cycle of symbolic computation.
 
 ---
 
@@ -55,7 +55,7 @@ Every piece of computation in Symp is expressed as a **frame**:
 
 ```
 (FRAME
-  (SYNTAX    <form>)
+  (SYNTAX <form>)
   (SEMANTICS <meaning>))
 ````
 
@@ -88,8 +88,7 @@ Not by accident — but by intention.
 The system’s minimalism is its theology:
 to let *form* and *meaning* be visible, editable, and debuggable by thought alone.
 
-> Symp does not hide the machine.
-> It invites you to see how it thinks.
+Symp does not hide the machine. It invites you to see how it thinks.
 
 ---
 
@@ -129,8 +128,7 @@ It stands *beneath them* — a substrate for expressing them.
 It reminds us that computation can be **transparent**, **symbolic**, and **meaningful**.
 That we can build software that is *explorable by reason*, not hidden by syntax.
 
-> Symp is not a better Lisp.
-> It is what Lisp would have been if symbols had won the hardware race.
+Symp is not a better Lisp. It is what Lisp would have been if symbols had won the hardware race.
 
 ---
 
