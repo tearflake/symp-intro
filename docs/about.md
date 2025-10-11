@@ -2,7 +2,7 @@
 id: about
 ---
 
-# About Symp Framework
+# About
 
 **Symbolic Computing Pipeline — form, meaning, and execution**
 
