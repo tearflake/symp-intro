@@ -1,3 +1,7 @@
+---
+id: symbolverse
+---
+
 # Symbolverse
 
 **Term rewriting and meaning transformation engine**
