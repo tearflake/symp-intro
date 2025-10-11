@@ -19,7 +19,7 @@ Validate that input consists of a single atomic token. To be nested within a fra
 Input:
 
 ```
-"hello"
+hello
 ```
 
 ✅ Passes
@@ -27,7 +27,7 @@ Input:
 Input:
 
 ```
-("hello" "world")
+(hello world)
 ```
 
 ❌ Fails — not atomic.
@@ -118,7 +118,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
 Output:
 
 ```
-("Hello from" "Symp")
+('Hello from' Symp)
 ```
 
 ---
