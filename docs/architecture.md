@@ -1,17 +1,17 @@
 # Symp Architecture
 
-**Symbolic computing pipeline for form, meaning, and execution**
+**Symbolic computing pipeline for form, and meaning**
 
 ---
 
 ## 🧩 Overview
 
-Symp is composed of three independent but composable subsystems:
+Symp is composed of three independent but composable subsystems in a two parts of a structure:
 
 ```
 
 Symbolmatch  →  Symbolverse / Symbolprose
-(form)          (meaning or execution)
+(form)                  (meaning)
 
 ````
 
@@ -35,19 +35,22 @@ A frame is a pair of subprograms:
 
 When executed via `(APPLY <frame> <expr>)`, the following happens:
 
-1. **Syntax Stage**
+1. **input stage**
+   The syntax stage must be preceeded by the input stage.
+   
+2. **Syntax Stage**
    The `<expr>` is passed to the `(SYNTAX …)` subprogram.
    This is typically an `(APPLY symbolmatch …)` expression that validates grammar.
 
    * ✅ On success → input passes unchanged to semantics.
    * ❌ On failure → returns an error path `(SEXPR (ERROR …))`.
 
-2. **Semantics Stage**
+3. **Semantics Stage**
    The validated `<expr>` is then passed to the `(SEMANTICS …)` subprogram.
    This is typically `(APPLY symbolverse …)` or `(APPLY symbolprose …)`,
    which transform or execute the expression.
 
-3. **Output Stage**
+4. **Output Stage**
    The semantics stage must end with a constant `(SEXPR …)` —
    the final symbolic result of computation.
 
@@ -73,16 +76,18 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
               (INSTR
                 (ASGN RESULT ("Hello from" PARAMS)))
               (TARGET END)))))))
+  
   (SEXPR "Symp"))
 ```
 
 **Execution Steps:**
 
-| Stage | Module      | Action                              | Result                          |
-| ----- | ----------- | ----------------------------------- | ------------------------------- |
-| 1️⃣    | Symbolmatch | Validate `"Symp"` is atomic         | Pass                            |
-| 2️⃣    | Symbolprose | Execute graph assigning to `RESULT` | `(SEXPR ("Hello from" "Symp"))` |
-| ✅    | Output      | Return constant symbolic expression | Final result                    |
+| Stage | Module                  | Action                              | Result                          |
+| ----- | ----------------------- | ----------------------------------- | ------------------------------- |
+| 1️⃣    | Input                   | Input must be applied to a frame    | `(APPLY <frame> (SEXPR "Symp"))`|
+| 2️⃣    | Symbolmatch             | Validate input is atomic            | Pass                            |
+| 3️⃣    | Symbolverse/Symbolprose | Perform computation                 | `(SEXPR ("Hello from" "Symp"))` |
+| 4️⃣    | Output                  | Return constant symbolic expression | `("Hello from" "Symp")`         |
 
 ---
 
@@ -97,13 +102,13 @@ S-EXPRESSION = Atom | [S-EXPRESSION]
 Each `(APPLY …)` passes these symbolic structures along the pipeline:
 
 ```
-Input (SEXPR …)
+Input (…)
      ↓
 Symbolmatch — verifies shape
      ↓
 Symbolverse/Symbolprose — rewrites structure or executes as a graph
      ↓
-Output (SEXPR …)
+Output (…)
 ```
 
 Because the data format is uniform, any module can be swapped or nested.
@@ -155,8 +160,7 @@ Symp is fully modular:
 > Symp is not a compiler.
 > It’s a *conversation between symbols.*
 
-Every stage — from grammar to meaning to execution —
-is a distinct layer of that conversation, open for introspection and modification.
+Grammar and meaning are distinct layers of that conversation, open for introspection and modification.
 
 This is the foundation of **Symbolic Computing** in the world where symbols won.
 

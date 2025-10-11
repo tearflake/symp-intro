@@ -6,7 +6,7 @@
 
 ## 1️⃣ Grammar Checker — Symbolmatch
 
-Validate that input consists of a single atomic token.
+Validate that input consists of a single atomic token. To be nested within a frame.
 
 ```
 (APPLY
@@ -36,7 +36,7 @@ Input:
 
 ## 2️⃣ Rewriter — Symbolverse
 
-A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`.
+A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`. To be nested within a frame.
 
 ```
 (APPLY
@@ -64,7 +64,7 @@ Output:
 
 ## 3️⃣ Executor — Symbolprose
 
-A symbolic computation graph that multiplies 6 × 7.
+A symbolic computation graph that multiplies 6 × 7. To be nested within a frame.
 
 ```
 (APPLY
@@ -78,6 +78,8 @@ A symbolic computation graph that multiplies 6 × 7.
         (TARGET END)))))
 ```
 
+Input disregarded.
+
 Output:
 
 ```
@@ -88,7 +90,7 @@ Output:
 
 ## 4️⃣ Combined Frame — Syntax + Semantics
 
-A frame that validates syntax *and* executes a symbolic computation.
+A frame that validates syntax *and* executes a symbolic computation. Complete example.
 
 ```
 (APPLY
@@ -123,7 +125,7 @@ Output:
 
 ## 5️⃣ DSL Example — Custom Math Frame
 
-Define a small DSL where `add`, `mul`, and `pow` become executable math.
+Define a small DSL where `add`, `mul`, and `pow` become executable math. Complete example.
 
 ```
 (APPLY
@@ -137,18 +139,25 @@ Define a small DSL where `add`, `mul`, and `pow` become executable math.
             (FLAT <expr> ("add" <expr> <expr>)
             (FLAT <expr> ("mul" <expr> <expr>)
             (FLAT <expr> ("pow" <expr> <expr>)
-            (FLAT <expr> ATOMIC)))))
+            (FLAT <expr> ATOMIC))))))))
 
     (SEMANTICS
       (APPLY
         symbolprose
         (SEXPR
-          (GRAPH
-            (EDGE
-              (SOURCE BEGIN)
-              (INSTR
-                (ASGN RESULT (EVAL PARAMS)))
-              (TARGET END)))))))
+          (REWRITE
+            (RULE
+              (READ ("add" x x))
+              (WRITE (RUN stdlib ("add" x x))))
+
+            (RULE
+              (READ ("mul" x x))
+              (WRITE (RUN stdlib ("mul" x x))))
+
+            (RULE
+              (READ ("pow" x x))
+              (WRITE (RUN stdlib ("pow" x x)))))))))
+  
   (SEXPR (add 2 3)))
 ```
 
@@ -157,10 +166,4 @@ Output:
 ```
 5
 ```
-
-*(Example assumes `EVAL` is a helper function or extension.)*
-
----
-
-> **Symp** — framework from a parallel reality where symbols won.
 

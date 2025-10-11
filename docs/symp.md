@@ -26,7 +26,7 @@ It combines *form* and *meaning* into one executable definition:
 
 ```
 (FRAME
-  (SYNTAX   (APPLY symbolmatch  (SEXPR (RULES ...))))
+  (SYNTAX    (APPLY symbolmatch  (SEXPR (RULES ...))))
   (SEMANTICS (APPLY symbolverse (SEXPR (REWRITE ...)))))
 ````
 
@@ -41,7 +41,7 @@ During execution:
 1. The **input** is passed to the system.
 2. The **syntax** part validates the input.
 3. The **semantics** part transforms or executes it.
-4. The **output** is returned as a constant `(SEXPR …)`.
+4. The **output** is returned as a constant.
 
 ---
 
@@ -50,7 +50,7 @@ During execution:
 | Module          | Description                                                |
 | --------------- | ---------------------------------------------------------- |
 | **Symbolmatch** | Ensures the input follows the expected grammar.            |
-| **Symbolverse** | Transforms the symbolic structure into an executable form. |
+| **Symbolverse** | Transforms the symbolic structure into a symbolic result.  |
 | **Symbolprose** | Interprets the graph and produces a symbolic result.       |
 
 ---

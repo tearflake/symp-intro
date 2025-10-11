@@ -43,8 +43,7 @@ It’s how logic, language, and even mathematics work.
 | **Meaning** | [Symbolverse](symbolverse.md) | Rewriting and transformation. What it means. |
 | **Execution** | [Symbolprose](symbolprose.md) | Realization. What happens when meaning becomes action. |
 
-Together they form the **Symp Triad** —  
-the full cycle of symbolic computation.
+Together they form the **Symp Triad** — the full cycle of symbolic computation.
 
 ---
 
@@ -54,7 +53,7 @@ Every piece of computation in Symp is expressed as a **frame**:
 
 ```
 (FRAME
-  (SYNTAX   <form>)
+  (SYNTAX    <form>)
   (SEMANTICS <meaning>))
 ````
 
@@ -72,7 +71,7 @@ This self-similar structure mirrors the recursion of thought itself.
 
 Symp is built on the idea of **balance**.
 Syntax and semantics exist in symmetry — one cannot dominate the other.
-Execution (`Symbolprose`) is merely the act of restoring that balance.
+Execution is merely the act of restoring that balance.
 
 If an expression fails its syntax, it cannot be understood.
 If it passes syntax but lacks semantics, it has no meaning.
@@ -108,7 +107,7 @@ This is the boundary where code begins to resemble **thought**.
 ## 🖥️ The Place of Symp
 
 Symp is not a product of the modern computing lineage.
-It is an *artifact* — a fossil of an alternate evolution of logic machines.
+It is an *artifact* — a fossil of an alternate evolution of symbolic machines.
 
 In that world:
 
@@ -129,7 +128,7 @@ It reminds us that computation can be **transparent**, **symbolic**, and **meani
 That we can build software that is *explorable by reason*, not hidden by syntax.
 
 > Symp is not a better Lisp.
-> It is what Lisp would have been if mathematics had won the hardware race.
+> It is what Lisp would have been if symbols had won the hardware race.
 
 ---
 

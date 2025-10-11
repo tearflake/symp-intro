@@ -10,8 +10,6 @@
 It describes how one symbolic structure is rewritten into another.  
 This is where *meaning* happens — logic, inference, and transformation.
 
-It’s the bridge between **syntax** and **execution**.
-
 ---
 
 ## 📘 Grammar Overview
@@ -61,5 +59,5 @@ Output:
 
 * `Symbolverse` can describe any symbolic logic transformation.
 * Think of it as a pure function between *structures of meaning*.
-* You can combine rules recursively, or invoke other frames via `(RUN name input)`.
+* You can combine rules recursively, or invoke other computations via `(RUN name input)`.
 
