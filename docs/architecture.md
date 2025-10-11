@@ -1,3 +1,7 @@
+---
+id: architecture
+---
+
 # Symp Architecture
 
 **Symbolic computing pipeline for form, and meaning**
