@@ -41,9 +41,9 @@ It’s how logic, language, and even mathematics work.
 
 ## 🧬 The Three Pillars
 
-- **(Form)**: [Symbolmatch](symbolmatch.md) — grammar and recognition.
-- **(Meaning)**: [Symbolverse](symbolverse.md) — stateless rewriting and transformation.
-- **(Execution)**: [Symbolprose](symbolprose.md) — stateful realization.
+- **[Symbolmatch](symbolmatch.md)**: grammar and recognition.
+- **[Symbolverse](symbolverse.md)**: stateless rewriting and transformation.
+- **[Symbolprose](symbolprose.md)**: stateful realization.
 
 Together they form the **Symp Triad** — the full cycle of symbolic computation.
 
