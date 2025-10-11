@@ -49,7 +49,7 @@ During execution:
 
 ## ⚙️ Anatomy of the Pipeline
 
-The pipeline stages may choose from the three symbolic subsystems: 
+Each pipeline stage may choose to be constructed from the three symbolic subsystems: 
 - **Symbolmatch**: Ensures the input follows the expected grammar.
 - **Symbolverse**: Transforms the symbolic structure into a symbolic result.
 - **Symbolprose**: Interprets the graph and produces a symbolic result.
