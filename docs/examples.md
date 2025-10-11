@@ -138,7 +138,6 @@ Define a small DSL to simplify addition and multiplication. Complete example.
             (FLAT <start> <expr>)
             (FLAT <expr> ("add" <expr> <expr>)
             (FLAT <expr> ("mul" <expr> <expr>)
-            (FLAT <expr> ("pow" <expr> <expr>)
             (FLAT <expr> ATOMIC))))))))
 
     (SEMANTICS
