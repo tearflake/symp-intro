@@ -78,6 +78,12 @@ it’s a framework for building *languages of meaning*.
 
 ---
 
+## 🖤 Inspiration
+
+Symp is inspired by Lisp, PEGs, term rewriting systems, and graph control flow execution.
+
+---
+
 ## 📚 Learn More
 
 * [About Symp](docs/symp.md)
@@ -87,13 +93,4 @@ it’s a framework for building *languages of meaning*.
 * [Symbolverse](docs/symbolverse.md)
 * [Symbolprose](docs/symbolprose.md)
 * [Examples](docs/examples.md)
-
----
-
-## 🖤 Inspiration
-
-Symp is inspired by Lisp, PEGs, term rewriting systems, and graph flow execution.
-
----
-
 
