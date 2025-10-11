@@ -4,7 +4,7 @@ id: about
 
 # About
 
-**Symbolic Computing Pipeline — form, meaning, and execution**
+**Symbolic Computing Pipeline — form and meaning**
 
 ---
 
@@ -18,7 +18,7 @@ input → syntax → semantics → output
 
 ````
 
-Each stage is explicit, modular, and represented by its own symbolic language. Together, they make up the Symp framework — a computing substrate for defining and composing **frames**.
+Each stage is explicit, modular, and represented by its own symbolic language. Together, they make up the Symp framework — a computing substrate for defining, composing, and interacting with **frames**.
 
 ---
 
@@ -87,7 +87,8 @@ A small end-to-end demonstration:
 
 1. `Symbolmatch` checks that the top-level input is a valid S-expression.
 2. `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
-3. Result → `(eq (pow x 2) (pow x 2))`.
+
+Result → `(eq (pow x 2) (pow x 2))`.
 
 ---
 
