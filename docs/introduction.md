@@ -122,9 +122,8 @@ You can define your own frames, store them as files, and apply them dynamically.
 
 ## 🔮 Philosophy
 
-> In Symp, computation is a conversation between *form* and *meaning*.
->
-> Syntax defines what is allowed.
-> Semantics decides what it means.
-> Execution is simply the dialogue between them.
+In Symp, computation is a conversation between *form* and *meaning*.
 
+Syntax defines what is allowed.  
+Semantics decides what it means.  
+Execution is simply the dialogue between them.  
