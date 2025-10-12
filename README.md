@@ -72,7 +72,7 @@ It’s not a conventional programming language — it’s a framework for buildi
 
 ## 📚 Learn More
 
-* [About](docs/about.md)
+* [Introduction](docs/introduction.md)
 * [Philosophy](docs/philosophy.md)
 * [Architecture](docs/architecture.md)
 * [Symbolmatch](docs/symbolmatch.md)
