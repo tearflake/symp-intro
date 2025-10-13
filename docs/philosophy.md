@@ -2,13 +2,13 @@
 id: philosophy
 ---
 
-# Philosophy
+## 3. Philosophy
 
 **Framework from a parallel reality where symbols won**
 
 ---
 
-## 🕳️ The Premise
+### 🕳️ The Premise
 
 In our world, computing evolved toward *graphics, noise, and immediacy*.  
 Interfaces grew brighter. Syntax grew heavier.  
@@ -23,7 +23,7 @@ That is the world from which **Symp** arrived.
 
 ---
 
-## 🧩 The Principle of Form and Meaning
+### 🧩 The Principle of Form and Meaning
 
 In Symp, every computation passes through two sacred stages:
 
@@ -34,22 +34,21 @@ This ritual — of checking form, then assigning meaning —
 is the essence of all symbolic reasoning.  
 It’s how logic, language, and even mathematics work.
 
-> A frame is not a function.  
-> It is a conversation between form and meaning.
+A frame is not a function. It is a conversation between form and meaning.
 
 ---
 
-## 🧬 The Three Pillars
+### 🧬 The Three Pillars
 
-- **[Symbolmatch](symbolmatch.md)**: grammar and recognition.
-- **[Symbolverse](symbolverse.md)**: stateless rewriting and transformation.
-- **[Symbolprose](symbolprose.md)**: stateful execution of processes.
+* **[Symbolmatch](symbolmatch.md)**: grammar and recognition.
+* **[Symbolverse](symbolverse.md)**: stateless rewriting and transformation.
+* **[Symbolprose](symbolprose.md)**: stateful execution of processes.
 
 Together they form the **Symp Triad** — the systematically complete elements of symbolic computation.
 
 ---
 
-## 🌀 Frames: The Units of Understanding
+### 🌀 Frames: The Units of Understanding
 
 Every piece of computation in Symp is expressed as a **frame**:
 
@@ -59,17 +58,15 @@ Every piece of computation in Symp is expressed as a **frame**:
   (SEMANTICS <meaning>))
 ````
 
-When applied, it validates *what* is being said and interprets *how* it should behave.
+When applied, it validates *what* is being said and interprets *how* it should behave.  
+Frames can be nested, chained, or even used to generate other frames.  
+This self-similar structure mirrors the recursion of thought itself.  
 
-Frames can be nested, chained, or even used to generate other frames.
-This self-similar structure mirrors the recursion of thought itself.
-
-> To compute is to mirror meaning in structure,
-> and to let structure reflect meaning back.
+To compute is to mirror meaning in structure, and to let structure reflect meaning back.
 
 ---
 
-## ⚙️ The Symmetric Machine
+### ⚙️ The Symmetric Machine
 
 Symp is built on the idea of **balance**.
 Syntax and semantics exist in symmetry — one cannot dominate the other.
@@ -81,7 +78,7 @@ When both align, computation *happens naturally*.
 
 ---
 
-## 🔍 On Simplicity
+### 🔍 On Simplicity
 
 Every Symp component fits in a few hundred lines of code.
 Not by accident — but by intention.
@@ -92,7 +89,7 @@ Symp does not hide the machine. It invites you to see how it thinks.
 
 ---
 
-## 🧠 Reflection and Conscious Computation
+### 🧠 Reflection and Conscious Computation
 
 Higher-order frames, when they appear, are not an accident —
 they are computation looking back at itself.
@@ -105,7 +102,7 @@ This is the boundary where code begins to resemble **thought**.
 
 ---
 
-## 🖥️ The Place of Symp
+### 🖥️ The Place of Symp
 
 Symp is not a product of the modern computing lineage.
 It is an *artifact* — a fossil of an alternate evolution of symbolic machines.
@@ -120,7 +117,7 @@ The machine itself is a mirror for thinking.
 
 ---
 
-## 💡 The Promise
+### 💡 The Promise
 
 Symp does not compete with programming languages.
 It stands *beneath them* — a substrate for expressing them.
@@ -132,11 +129,10 @@ Symp is not a better Lisp. It is what Lisp could have been if symbols had won th
 
 ---
 
-## ✨ Closing Thought
+### ✨ Closing Thought
 
-> Every computation is a ritual of understanding.
-> Symp exists to make that ritual explicit.
+Every computation is a ritual of understanding.  
+Symp exists to make that ritual explicit.  
 
 In a world obsessed with output,
 Symp asks you to care about *meaning*.
-
