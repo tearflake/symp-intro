@@ -2,13 +2,13 @@
 id: examples
 ---
 
-# Examples
+## 6. Examples
 
 **A few small programs from a world where symbols won.**
 
 ---
 
-## 1️⃣ Grammar Checker — Symbolmatch
+### 1️⃣ Grammar Checker — Symbolmatch
 
 Validate that input consists of a single atomic token. To be nested within a frame.
 
@@ -38,7 +38,7 @@ Fails — not atomic.
 
 ---
 
-## 2️⃣ Rewriter — Symbolverse
+### 2️⃣ Rewriter — Symbolverse
 
 A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`. To be nested within a frame.
 
@@ -66,7 +66,7 @@ A symbolic rule that rewrites `(mul x x)` into `(pow x 2)`. To be nested within 
 
 ---
 
-## 3️⃣ Executor — Symbolprose
+### 3️⃣ Executor — Symbolprose
 
 A symbolic computation graph that multiplies 6 × 7. To be nested within a frame.
 
@@ -95,7 +95,7 @@ disregarded.
 
 ---
 
-## 4️⃣ Combined Frame — Syntax + Semantics
+### 4️⃣ Combined Frame — Syntax + Semantics
 
 A frame that validates syntax *and* executes a symbolic computation. Complete example.
 
@@ -132,7 +132,7 @@ A frame that validates syntax *and* executes a symbolic computation. Complete ex
 
 ---
 
-## 5️⃣ DSL Example — Custom Math Frame
+### 5️⃣ DSL Example — Custom Math Frame
 
 Define a small DSL to simplify addition and multiplication. Complete example.
 
