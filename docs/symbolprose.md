@@ -2,13 +2,13 @@
 id: symbolprose
 ---
 
-# Symbolprose
+### Symbolprose
 
 **The executable graph of symbolic computation**
 
 ---
 
-## 🧩 Purpose
+#### 🧩 Purpose
 
 Symbolprose also defines the *semantics* of a frame.  
 Symbolprose returns result of executing directed symbolic graphs.  
@@ -16,7 +16,7 @@ This is where meaning is being represented as a result of stateful actions.
 
 ---
 
-## 📘 Grammar Overview
+#### 📘 Grammar Overview
 
 ```
 <start> := <graph>
@@ -34,7 +34,7 @@ This is where meaning is being represented as a result of stateful actions.
 
 ---
 
-## 💡 Example
+#### 💡 Example
 
 A simple multiplication program:
 
@@ -58,10 +58,8 @@ Output:
 
 ---
 
-## 🔍 Notes
+#### 🔍 Notes
 
 * The graph model allows conditional and sequential computation.
 * Each `ASGN` assigns symbolic values; `TEST` enables flow control.
-
 * You can invoke other computations via `(RUN name input)`.
-
