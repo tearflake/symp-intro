@@ -2,7 +2,9 @@
 id: conclusion
 ---
 
-## 7. Conclusion — The Quiet Machine
+## 7. Conclusion
+
+### 🕊️ The Quiet Machine
 
 Symp was never meant to be just another framework.  
 It is a question, disguised as a system.  
