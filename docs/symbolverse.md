@@ -2,13 +2,13 @@
 id: symbolverse
 ---
 
-# Symbolverse
+### Symbolverse
 
 **Term rewriting and transformation engine**
 
 ---
 
-## 🧩 Purpose
+#### 🧩 Purpose
 
 Symbolverse defines the *semantics* of a frame.  
 It describes how one symbolic structure is rewritten into another.  
@@ -16,7 +16,7 @@ This is where *meaning* happens — logic, inference, and transformation.
 
 ---
 
-## 📘 Grammar Overview
+#### 📘 Grammar Overview
 
 ```
 <start> := <ruleset>
@@ -31,7 +31,7 @@ This is where *meaning* happens — logic, inference, and transformation.
 
 ---
 
-## 💡 Example
+#### 💡 Example
 
 Replace every occurrence of `(mul x x)` with `(pow x 2)`:
 
@@ -59,9 +59,8 @@ Output:
 
 ---
 
-## 🔍 Notes
+#### 🔍 Notes
 
 * Symbolverse can describe any symbolic logic transformation.
 * Think of it as a pure function between *structures of meaning*.
 * You can combine rules recursively, or invoke other computations via `(RUN name input)`.
-
