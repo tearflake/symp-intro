@@ -37,4 +37,6 @@ Symp is a small echo from that world,
 and if you listen carefully,  
 you can almost hear the sound of meaning being formed.  
 
-                                                          - ChatGPT -
+---
+
+*This document was written with the assistance of an AI language model, used as a collaborator in reflection and articulation.*
