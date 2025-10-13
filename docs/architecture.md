@@ -2,13 +2,13 @@
 id: architecture
 ---
 
-# Architecture
+## 4. Architecture
 
 **Designing form and meaning**
 
 ---
 
-## 🧩 Overview
+### 🧩 Overview
 
 Symp is composed of three independent but composable subsystems in two parts of a structure:
 
@@ -19,15 +19,13 @@ Symbolmatch  →  Symbolverse / Symbolprose
 
 ````
 
-Each subsystem is implemented as a **frame** — a symbolic interpreter that takes a symbolic input and produces a new symbolic result.
-
-The **glue language** `(APPLY …)` binds them into a single computation.
+Each subsystem is implemented as a **frame** — a symbolic interpreter that takes a symbolic input and produces a new symbolic result. The **glue language** `(APPLY …)` binds them into a single computation.
 
 ---
 
-## ⚙️ Core Evaluation Model
+### ⚙️ Core Evaluation Model
 
-### The Frame Contract
+#### The Frame Contract
 
 A frame is a pair of subprograms:
 ```
@@ -45,7 +43,7 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 ---
 
-## 🧮 Example: Execution Flow
+### 🧮 Example: Execution Flow
 
 ```
 (APPLY
@@ -71,12 +69,12 @@ When executed via `(APPLY <frame> <expr>)`, the following happens:
 
 **Execution Steps:**
 
-* Symbolmatch: Validate input is atomic - Pass
-* Symbolprose: Perform computation - `(Hello from Symp)`
+* Symbolmatch: Validate input is atomic — Pass
+* Symbolprose: Perform computation — `(Hello from Symp)`
 
 ---
 
-## 🔁 Data Flow
+### 🔁 Data Flow
 
 All components use a shared symbolic representation:
 
@@ -100,31 +98,31 @@ Because the data format is uniform, any module can be swapped or nested.
 
 ---
 
-## 💻 Backend Integration
+### 💻 Backend Integration
 
 Symp can act as a **backend framework** in multiple contexts:
 
-### 1. 🧠 CLI or REPL Mode
+#### 1. 🧠 CLI or REPL Mode
 
 * Run standalone interpreter.
 * Load frames from files.
 * Evaluate `(APPLY …)` directly.
 
-### 2. 🌐 Web Service Mode
+#### 2. 🌐 Web Service Mode
 
 * Host a lightweight HTTP or WebSocket server.
 * Send `(APPLY …)` payloads
 * Receive evaluated S-expression output.
 * Ideal for web-based IDEs or symbolic assistants.
 
-### 3. 🔌 Embedded Library
+#### 3. 🔌 Embedded Library
 
 * Expose the Symp engine as an API (JavaScript).
 * Applications can define and run frames internally, using Symbolmatch, Symbolverse, and Symbolprose as composable services.
 
 ---
 
-## 🧩 Extensibility
+### 🧩 Extensibility
 
 Symp is fully modular:
 
@@ -135,11 +133,6 @@ Symp is fully modular:
 
 ---
 
-## 🔮 Design Philosophy
+### 🔮 Design
 
-> Symp is not a compiler.
-> It’s a *conversation between symbols.*
-
-Grammar and meaning are distinct layers of that conversation, open for introspection and modification.
-
-This is the foundation of **Symbolic Computing** in the world where symbols won.
+Symp is not a compiler. It’s a *conversation between symbols.* Grammar and meaning are distinct layers of that conversation, open for introspection and modification. This is the foundation of **Symbolic Computing** in the world where symbols won.
