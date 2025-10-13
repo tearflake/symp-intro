@@ -8,6 +8,8 @@
 
 Symp began as an exploration of what programming might look like if compilers were transparent conversations instead of black boxes.
 
+---
+
 ### 🧩 What Is Symp?
 
 Symp is a **minimalist symbolic computation backend**. It unifies parsing, transformation, and execution into one explicit pipeline:
