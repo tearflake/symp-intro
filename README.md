@@ -1,10 +1,14 @@
-# Symp
+## About Symp
 
 **A symbolic processing framework**
 
 ---
 
-## 🧩 What Is Symp?
+### 🌀 motivation
+
+Symp began as an exploration of what programming might look like if compilers were transparent conversations instead of black boxes.
+
+### 🧩 What Is Symp?
 
 Symp is a **minimalist symbolic computation backend**. It unifies parsing, transformation, and execution into one explicit pipeline:
 
@@ -14,21 +18,17 @@ input → syntax → semantics → output
 
 ````
 
-Instead of hiding these layers inside a compiler, Symp makes each stage programmable.
-
-Symp lets you experiment with how programming languages themselves think — right from the grammar to execution.
-
-You don’t define *functions*. You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
+Instead of hiding these layers inside a compiler, Symp makes each stage programmable. Symp lets you experiment with how programming languages themselves think — right from the grammar to execution. You don’t define *functions*. You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
 
 ---
 
-## 🧠 Core Components
+### 🧠 Core Components
 
-  - **Symbolmatch**: PEG-like grammar engine — built-in syntax validation
-  - **Symbolverse**: term rewriting and transformation engine — built-in semantic processing
-  - **Symbolprose**: graph-based execution of symbolic programs — built-in semantic processing
+* **Symbolmatch**: PEG-like grammar engine — built-in syntax validation
+* **Symbolverse**: term rewriting and transformation engine — built-in semantic processing
+* **Symbolprose**: graph-based execution of symbolic programs — built-in semantic processing
 
-These three systems for syntax analisys and semantic synthesis are connected through the **Symp glue language**, where you can write:
+These three systems for syntax analysis and semantic synthesis are connected through the **Symp glue language**, where you can write:
 
 ```
 (APPLY
@@ -40,7 +40,7 @@ These three systems for syntax analisys and semantic synthesis are connected thr
 
 ---
 
-## 🔮 Why It’s Different
+### 🔮 Why It’s Different
 
 * **Explicit meaning** – You can *see* how syntax maps to semantics.
 * **Composable** – Each frame can use others as sub-frames.
@@ -50,7 +50,7 @@ These three systems for syntax analisys and semantic synthesis are connected thr
 
 ---
 
-## 🧬 Design Philosophy
+### 🧬 Design Philosophy
 
 Every computation in Symp passes through **form** and **meaning**.
 
@@ -62,7 +62,7 @@ It’s not a conventional programming language — it’s a framework for buildi
 
 ---
 
-## 🚀 Getting Started (coming soon)
+### 🚀 Getting Started (coming soon)
 
 * Install the runtime.
 * Run the Symp web REPL or CLI.
@@ -70,7 +70,7 @@ It’s not a conventional programming language — it’s a framework for buildi
 
 ---
 
-## 📚 Learn More
+### 📚 Learn More
 
 * [Introduction](docs/introduction.md)
 * [Philosophy](docs/philosophy.md)
@@ -82,7 +82,6 @@ It’s not a conventional programming language — it’s a framework for buildi
 
 ---
 
-## 🖤 Inspiration
+### 🖤 Inspiration
 
 Symp is inspired by Lisp, PEGs, term rewriting systems, and finite state machines.
-
