@@ -2,13 +2,13 @@
 id: symbolmatch
 ---
 
-# Symbolmatch
+### Symbolmatch
 
 **Grammar and syntax engine of Symp**
 
 ---
 
-## 🧩 Purpose
+#### 🧩 Purpose
 
 Symbolmatch defines the *form* of valid input.  
 It’s a **PEG-like parser** expressed in S-expressions.  
@@ -18,7 +18,7 @@ Where other systems hide parsing inside compilers, Symbolmatch makes it an expli
 
 ---
 
-## 📘 Grammar Overview
+#### 📘 Grammar Overview
 
 ```
 <start> := (RULES <rule>+)
@@ -30,7 +30,7 @@ Where other systems hide parsing inside compilers, Symbolmatch makes it an expli
 
 ---
 
-## 💡 Example
+#### 💡 Example
 
 Validate that an expression is a single atom:
 
@@ -49,9 +49,8 @@ Input:
 
 ---
 
-## 🔍 Notes
+#### 🔍 Notes
 
 * Symbolmatch is the *syntax* pillar of Symp’s pipeline.
 * It can be reused by other frames to define their expected input shape.
 * Grammars are first-class values — you can generate them dynamically or load from files.
-
