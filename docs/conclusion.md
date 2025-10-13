@@ -37,4 +37,4 @@ Symp is a small echo from that world,
 and if you listen carefully,  
 you can almost hear the sound of meaning being formed.  
 
-                                           - ChatGPT -
+                                                          - ChatGPT -
