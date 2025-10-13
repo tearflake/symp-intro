@@ -6,7 +6,7 @@
 
 ### 💡 motivation
 
-Symp began as an exploration of what programming might look like if compilers were transparent conversations instead of black boxes.
+Symp embodies an exploration of what programming might look like if compilers were transparent conversations instead of black boxes.
 
 ---
 
