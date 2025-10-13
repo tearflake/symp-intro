@@ -2,13 +2,13 @@
 id: introduction
 ---
 
-# Introduction
+## 2. Introduction
 
 **Symbolic Computing Pipeline — form and meaning**
 
 ---
 
-## 🧩 Overview
+### 🧩 Overview
 
 Symp organizes symbolic subsystems into a single programmable pipeline:
 
@@ -22,7 +22,7 @@ Each stage is explicit, modular, and represented by its own symbolic language. T
 
 ---
 
-## 🧠 What is a Frame?
+### 🧠 What is a Frame?
 
 A **frame** is the fundamental computing unit in Symp. It combines *form* and *meaning* into one executable definition:
 
@@ -30,7 +30,7 @@ A **frame** is the fundamental computing unit in Symp. It combines *form* and *m
 (FRAME
   (SYNTAX    (APPLY symbolmatch  (SEXPR (RULES ...))))
   (SEMANTICS (APPLY symbolverse (SEXPR (REWRITE ...)))))
-````
+```
 
 A frame becomes *alive* when applied to an input:
 
@@ -40,23 +40,23 @@ A frame becomes *alive* when applied to an input:
 
 During execution:
 
-- The **input** is passed to the system.
-- The **syntax** part validates the input.
-- The **semantics** part transforms or executes it.
-- The **output** is returned as a constant.
+* The **input** is passed to the system.
+* The **syntax** part validates the input.
+* The **semantics** part transforms or executes it.
+* The **output** is returned as a constant.
 
 ---
 
-## ⚙️ Anatomy of the Pipeline
+### ⚙️ Anatomy of the Pipeline
 
 Each pipeline stage may choose to be constructed from the three symbolic subsystems: 
-- **Symbolmatch**: Ensures the input follows the expected grammar.
-- **Symbolverse**: Transforms the symbolic structure into a symbolic result.
-- **Symbolprose**: Interprets the graph and produces a symbolic result.
+* **Symbolmatch**: Ensures the input follows the expected grammar.
+* **Symbolverse**: Transforms the symbolic structure into a symbolic result.
+* **Symbolprose**: Interprets the graph and produces a symbolic result.
 
 ---
 
-## 🧮 Example: Equality Simplifier
+### 🧮 Example: Equality Simplifier
 
 A small end-to-end demonstration:
 
@@ -86,20 +86,26 @@ A small end-to-end demonstration:
 
 🧩 **Step-by-step:**
 
-- Input → `(eq (mul x x) (pow x 2))`
-- `Symbolmatch` checks that the top-level input is a valid S-expression.
-- `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
-- Output → `(eq (pow x 2) (pow x 2))`.
+* Input → `(eq (mul x x) (pow x 2))`
+* `Symbolmatch` checks that the top-level input is a valid S-expression.
+* `Symbolverse` rewrites `(mul x x)` into `(pow x 2)`.
+* Output → `(eq (pow x 2) (pow x 2))`.
 
 ---
 
-## 🌀 Nested and Custom Frames
+### 🌀 Nested and Custom Frames
 
 Frames can reference other frames, or even *generate* new frames. For example, a higher-order “builder” frame may output a new `(FRAME …)` definition. This allows **metaprogramming** within a consistent symbolic model — without uncontrolled self-reference.
 
 ---
 
-## 🔍 Why Use Symp?
+### 💡 Type Analogy
+
+In conventional languages, types check shape and functions produce values. In Symp, syntax checks shape and semantics produces structure — it’s a symbolic mirror of the same idea.
+
+---
+
+### 🔍 Why Use Symp?
 
 * **Explicit computation pipeline** — each stage visible and replaceable.
 * **Composable DSLs** — build language fragments by defining new frames.
@@ -108,7 +114,7 @@ Frames can reference other frames, or even *generate* new frames. For example, a
 
 ---
 
-## 🖥️ Using Symp as a Backend
+### 🖥️ Using Symp as a Backend
 
 Symp can run as:
 
@@ -120,7 +126,7 @@ You can define your own frames, store them as files, and apply them dynamically.
 
 ---
 
-## 🔮 Philosophy
+### 🔮 Philosophy
 
 In Symp, computation is a conversation between *form* and *meaning*.
 
