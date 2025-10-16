@@ -2,7 +2,7 @@
 id: about
 ---
 
-## 2. About
+## 2. About Symp
 
 **Symbolic Computing Pipeline — form and meaning**
 
