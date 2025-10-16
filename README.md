@@ -81,6 +81,7 @@ It’s not a conventional programming language — it’s a framework for buildi
 * [Symbolverse](docs/symbolverse.md)
 * [Symbolprose](docs/symbolprose.md)
 * [Examples](docs/examples.md)
+* [Conclusion](docs/conclusion.md)
 
 ---
 
