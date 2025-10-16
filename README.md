@@ -1,4 +1,4 @@
-## 1. Gentle Introduction to Symp
+## 1. Introduction
 
 **A symbolic processing framework**
 
