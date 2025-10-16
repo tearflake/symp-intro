@@ -1,4 +1,4 @@
-## 1. Gente Introduction to Symp
+## 1. Gentle Introduction to Symp
 
 **A symbolic processing framework**
 
