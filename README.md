@@ -1,4 +1,4 @@
-## 1. About Symp
+## 1. Gente Introduction to Symp
 
 **A symbolic processing framework**
 
