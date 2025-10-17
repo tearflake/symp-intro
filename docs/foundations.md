@@ -43,7 +43,7 @@ All components use a shared symbolic representation:
 
 ### 🧱 Architecture
 
-Symp is a **minimalist symbolic computation backend**. It unifies parsing, transformation, and execution into one explicit pipeline:
+Symp is a **minimalist symbolic computation backend**. It unifies parsing and transformation/execution into one explicit pipeline:
 
 ```
 input → syntax → semantics → output
