@@ -13,7 +13,7 @@ Semantics decides what it means.
 Execution connects the two.
 
 Symp is small, strange, and honest.  
-A quiet system from a reality in which symbols triumphed over flashing lights.
+A thought experiment from a reality in which symbols triumphed over flashing lights.
 
 ---
 
