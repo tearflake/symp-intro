@@ -12,7 +12,7 @@ Syntax defines a form of expressions.
 Semantics decides what they mean.  
 Execution connects the two.
 
-Symp is small, strange, and honest framework evolved from form and meaning.  
+Symp is a small, strange, and honest framework evolved from form and meaning.  
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
 
 ---
