@@ -1,6 +1,6 @@
-## Symp
+## 1. Symp
 
-**framework from a Parallel Reality Where Symbols Won**
+**a framework from a parallel reality where symbols won.**
 
 ---
 
