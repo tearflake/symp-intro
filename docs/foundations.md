@@ -1,3 +1,7 @@
+---
+id: foundations
+---
+
 ## 2. The Foundations
 
 **Designing form and meaning**
