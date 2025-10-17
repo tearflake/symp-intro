@@ -1,18 +1,20 @@
-## 1. Introduction
+## Symp
 
-**A symbolic processing framework**
-
----
-
-### 💡 motivation
-
-Symp began as an exploration of what programming might look like if compilers were transparent conversations instead of black boxes.
+**framework from a Parallel Reality Where Symbols Won**
 
 ---
 
-### 🧩 What Is Symp?
+### 🔮 Philosophy
 
-Symp is a **minimalist symbolic computation backend**. It unifies parsing, transformation, and execution into one explicit pipeline:
+**What if programming evolved around meaning instead of machines?**  
+Symp is a minimalist symbolic framework that re-imagines computing as a dialogue between **form** and **meaning**.  
+A small, strange, and honest system — from a world where *symbols* triumphed over *flashing lights*.
+
+---
+
+### 💡 The Idea
+
+In Symp, every computation follows one simple ritual:
 
 ```
 
@@ -20,66 +22,58 @@ input → syntax → semantics → output
 
 ````
 
-Instead of hiding these layers inside a compiler, Symp makes each stage programmable. Symp lets you experiment with how programming languages themselves think — right from the grammar to execution. You don’t define *functions*. You define **frames** — each with its own *syntax* (form) and *semantics* (meaning).
+Instead of a compiler that hides these stages,  
+Symp makes each one **programmable**.
+
+You don’t just write programs in Symp —  
+you define *how* programs themselves should be understood.
 
 ---
 
-### 🧠 Core Components
+### 🧠 Why Symp Exists
 
-* **Symbolmatch**: PEG-like grammar engine — built-in syntax validation
-* **Symbolverse**: term rewriting and transformation engine — built-in semantic processing
-* **Symbolprose**: graph-based execution of symbolic programs — built-in semantic processing
+Symp isn’t a Lisp dialect or a new syntax flavor.  
+It’s a **computational philosophy**:
 
-These three systems for syntax analysis and semantic synthesis are connected through the **Symp glue language**, where you can write:
+* Programs prove their *form* before they express their *meaning*.
+* Syntax and semantics are equals — two halves of a single act.
+* Everything can be described in its own language.
 
-```
-(APPLY
-  (FRAME
-    (SYNTAX (APPLY symbolmatch (SEXPR (RULES ...))))
-    (SEMANTICS (APPLY symbolverse (SEXPR (REWRITE ...)))))
-  (SEXPR myProgram))
-```
+It’s deliberately colorless, minimalist, and transparent.  
+A tool for anyone who loves **building languages more than writing in them**.
 
 ---
 
-### 🔮 Why It’s Different
+### 🚀 What You Can Build
 
-* **Explicit meaning** – You can *see* how syntax maps to semantics.
-* **Composable** – Each frame can use others as sub-frames.
-* **Reflective** – Frames can define new frames (meta-programming built in).
-* **Minimal** – Entire core fits in a few hundred lines.
-* **Beautifully weird** – A computing system from an alternate reality where theory outran graphics.
+Symp is tiny, but composable.  
+It’s a playground for symbolic systems:
 
----
+* Custom DSLs and interpreters
+* Meta-compilers and term rewriters
+* Theorem provers, logic engines, or exotic REPLs
 
-### 🧬 Design Philosophy
-
-Every computation in Symp passes through **form** and **meaning**.
-
-Syntax validates structure.  
-Semantics transforms intent.  
-Output becomes new input.  
-
-It’s not a conventional programming language — it’s a framework for building *languages of meaning*. Use it to prototype symbolic languages, theorem provers, or DSLs.
+Anything that can be described as “form → meaning → action”.
 
 ---
 
-### 🚀 Getting Started (coming soon)
+### ✨ A Thought Experiment
 
-* Install the runtime.
-* Run the Symp web REPL or CLI.
-* Try examples in `/examples/`.
+*“What if computers had never chased graphics?  
+What if clarity of expression had guided evolution instead?”*
+
+Symp comes from that alternate timeline.
+It’s small, honest, and built for people who enjoy the elegance of theory.
 
 ---
 
 ### 📚 Learn More
 
-* [About](docs/about.md)
-* [Philosophy](docs/philosophy.md)
-* [Architecture](docs/architecture.md)
-* [Symbolmatch](docs/symbolmatch.md)
-* [Symbolverse](docs/symbolverse.md)
-* [Symbolprose](docs/symbolprose.md)
+* [Foundations](docs/foundations.md)
+* The Three Pillars
+  * [Symbolmatch](docs/symbolmatch.md)
+  * [Symbolverse](docs/symbolverse.md)
+  * [Symbolprose](docs/symbolprose.md)
 * [Examples](docs/examples.md)
 * [Conclusion](docs/conclusion.md)
 
