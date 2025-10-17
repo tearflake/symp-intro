@@ -10,7 +10,7 @@ id: examples
 
 ### ✨ Remark
 
-Each of the first three examples illustrates one pillar of the system — syntax, semantics, and execution — before combining them into complete frames.
+Each of the first three examples illustrates one pillar of the system — syntax, rewriting, and execution — before combining them into complete frames.
 
 ---
 
