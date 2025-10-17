@@ -6,8 +6,8 @@
 
 ### 🔮 Philosophy
 
-What if programming evolved around meaning, not machinery?  
-Symp is a minimalist symbolic framework that re-imagines computing as a dialogue between form and meaning.  
+What if programming evolved around meaning, not machinery?
+Symp is a minimalist symbolic framework that re-imagines computing as a dialogue between form and meaning.
 It comes from a world where theory advanced faster than hardware — where clarity of expression mattered more than display or speed.
 
 Symp is small, strange, and honest — a quiet system from a reality in which symbols triumphed over flashing lights.
