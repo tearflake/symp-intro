@@ -62,16 +62,6 @@ Anything that can be described as “action → form → meaning → reaction”
 
 ---
 
-### ✨ A Thought Experiment
-
-*“What if computers had never chased graphics?  
-What if clarity of expression had guided evolution instead?”*
-
-Symp comes from that alternate timeline.
-It’s small, honest, and built for people who enjoy the elegance of theory.
-
----
-
 ### 📚 Learn More
 
 * [Foundations](docs/foundations.md)
