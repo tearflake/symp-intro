@@ -53,7 +53,7 @@ It’s a playground for symbolic systems:
 * Meta-compilers and term rewriters
 * Theorem provers, logic engines, or exotic REPLs
 
-Anything that can be described as “form → meaning → action”.
+Anything that can be described as “action → form → meaning → reaction”.
 
 ---
 
