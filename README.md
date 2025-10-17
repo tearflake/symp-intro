@@ -8,7 +8,7 @@
 
 What if programming had evolved around **form** and **meaning** rather than machinery?
 
-Syntax defines form of expressions.  
+Syntax defines a form of expressions.  
 Semantics decides what they mean.  
 Execution connects the two.
 
