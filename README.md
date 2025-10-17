@@ -8,8 +8,8 @@
 
 What if programming had evolved around meaning rather than machinery?
 
-Syntax defines what can be expressed.
-Semantics decides what it means.
+Syntax defines what can be expressed.  
+Semantics decides what it means.  
 Execution connects the two.
 
 Symp is small, strange, and honest.
