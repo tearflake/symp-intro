@@ -1,3 +1,7 @@
+---
+id: examples
+---
+
 ## 4. Examples
 
 **A few small programs from a world where symbols won.**
