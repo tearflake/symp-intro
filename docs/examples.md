@@ -12,6 +12,8 @@ id: examples
 
 Each of the first three examples illustrates one pillar of the system — syntax, semantics, and execution — before combining them into complete frames.
 
+---
+
 ### 1️⃣ Grammar Checker — Symbolmatch
 
 Validate that input consists of a single atomic token. To be nested within a frame.
