@@ -6,7 +6,7 @@
 
 ### 🔮 Philosophy
 
-What if programming had evolved around **meaning** rather than machinery?
+What if programming had evolved around **form** and **meaning** rather than machinery?
 
 Syntax defines what can be expressed.  
 Semantics decides what it means.  
