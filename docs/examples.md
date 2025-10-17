@@ -1,12 +1,12 @@
----
-id: examples
----
-
-## 6. Examples
+## 4. Examples
 
 **A few small programs from a world where symbols won.**
 
 ---
+
+### ✨ Remark
+
+Each of the first three examples illustrates one pillar of the system — syntax, semantics, and execution — before combining them into complete frames.
 
 ### 1️⃣ Grammar Checker — Symbolmatch
 
