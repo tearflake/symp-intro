@@ -69,6 +69,8 @@ A frame becomes *alive* when applied to an input:
 (APPLY myFrame (SEXPR myInput))
 ```
 
+A frame is like a function whose type signature is explicit syntax, and whose return type is explicit semantics.
+
 ---
 
 ### 🧮 Example: Equality Simplifier
@@ -86,7 +88,7 @@ A small end-to-end demonstration:
             (FLAT <expr> ("eq" <expr> <expr>)
             (FLAT <expr> ("mul" <expr> <expr>)
             (FLAT <expr> ("pow" <expr> <expr>)
-            (FLAT <expr> ATOMIC)))))
+            (FLAT <expr> ATOMIC))))))))
 
     (SEMANTICS
       (APPLY symbolverse
@@ -94,7 +96,7 @@ A small end-to-end demonstration:
           (REWRITE
             (RULE
               (READ ("mul" x x))
-              (WRITE ("pow" x "2"))))))))
+              (WRITE ("pow" x "2")))))))))
               
   (SEXPR (eq (mul x x) (pow x 2))))
 ```
@@ -111,6 +113,3 @@ A small end-to-end demonstration:
 ### 🔍 Notes
 
 Symp is a **glue language** where frame components are connected. In conventional languages, types check shape and functions produce values. In Symp, syntax checks shape and semantics produces structure — it’s a symbolic mirror of the same idea.
-
----
-
