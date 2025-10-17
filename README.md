@@ -42,7 +42,7 @@ It’s a **computational philosophy**:
 
 * Programs prove their *form* before they express their *meaning*.
 * Syntax and semantics are equals — two halves of a single act.
-* Everything can be described in its own language.
+* Everything can be described in its own syntax and semantics.
 
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves **building languages more than writing in them**.
