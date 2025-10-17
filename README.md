@@ -13,7 +13,7 @@ Semantics decides what they mean.
 Execution connects the two.
 
 Symp is small, strange, and honest.  
-A *thought experiment* from a reality in which symbols triumphed over flashing lights.
+It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
 
 ---
 
