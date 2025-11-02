@@ -243,7 +243,7 @@ Input:
 
 #### 🔍 Notes
 
-* Symbolmatch is the *syntax* pillar of Symp’s pipeline.
+* Symbolmatch is the *syntax* checker of Symp’s pipeline.
 * It can be reused by other frames to define their expected input shape.
 * Grammars are first-class values — you can generate them dynamically or load from files.
 
