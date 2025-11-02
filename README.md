@@ -7,7 +7,7 @@
 - [3. The Three Pillars](#3-the-three-pillars)
   - [3.1. Symbolmatch](#31-symbolmatch)
   - [3.2. Symbolverse](#32-symbolverse)
-  - [3.3. Symbolprose](#33symbolprose)
+  - [3.3. Symbolprose](#33-symbolprose)
 - [4. Examples](#4-examples)
 - [5. Conclusion](#5-conclusion)
 
