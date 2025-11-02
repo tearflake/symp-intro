@@ -4,12 +4,11 @@
 
 - [1. Symp](#1-symp)
 - [2. The Foundations](#2-the-foundations)
-- [3. The Three Pillars](#3-the-three-pillars)
-  - [3.1. Symbolmatch](#31-symbolmatch)
-  - [3.2. Symbolverse](#32-symbolverse)
-  - [3.3. Symbolprose](#33-symbolprose)
-- [4. Examples](#4-examples)
-- [5. Conclusion](#5-conclusion)
+  - [2.1. Symbolmatch](#21-symbolmatch)
+  - [2.2. Symbolverse](#22-symbolverse)
+  - [2.3. Symbolprose](#23-symbolprose)
+- [3. Examples](#3-examples)
+- [4. Conclusion](#4-conclusion)
 
 ## 1. Symp
 
@@ -193,13 +192,9 @@ A small end-to-end demonstration:
 
 Symp is a **glue language** where frame components are connected. In conventional languages, types check shape and functions produce values. In Symp, syntax checks shape and semantics produces structure — it’s a symbolic mirror of the same idea.
 
-## 3. The Three Pillars 
-
-**origin engines that power symp**
-
 ---
 
-### 3.1. Symbolmatch
+### 2.1. Symbolmatch
 
 **grammar and syntax engine of symp**
 
@@ -252,7 +247,7 @@ Input:
 * It can be reused by other frames to define their expected input shape.
 * Grammars are first-class values — you can generate them dynamically or load from files.
 
-### 3.2. Symbolverse
+### 2.2. Symbolverse
 
 **term rewriting and transformation engine**
 
@@ -315,7 +310,7 @@ Output:
 * Think of it as a pure function between *structures of meaning*.
 * You can combine rules recursively, or invoke other computations via `(RUN name input)`.
 
-### 3.3. Symbolprose
+### 2.3. Symbolprose
 
 **the executable graph of symbolic computation**
 
@@ -378,7 +373,7 @@ Output:
 * Each `ASGN` assigns symbolic values; `TEST` enables flow control.
 * You can invoke other computations via `(RUN name input)`.
 
-## 4. Examples
+## 3. Examples
 
 **a few small programs from a world where symbols won**
 
@@ -569,7 +564,7 @@ Define a small DSL to simplify addition and multiplication. Complete example.
 5
 ```
 
-## 5. Conclusion
+## 4. Conclusion
 
 **the quiet machine**
 
