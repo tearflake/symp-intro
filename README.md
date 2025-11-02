@@ -75,18 +75,6 @@ Anything that can be described as “action → form → meaning → reaction”
 
 ---
 
-#### 📚 Learn More
-
-* [Foundations](docs/foundations.md)
-* The Three Pillars
-  * [Symbolmatch](docs/symbolmatch.md)
-  * [Symbolverse](docs/symbolverse.md)
-  * [Symbolprose](docs/symbolprose.md)
-* [Examples](docs/examples.md)
-* [Conclusion](docs/conclusion.md)
-
----
-
 #### 🖤 Inspiration
 
 Symp is inspired by Lisp, PEGs, term rewriting systems, and finite state machines.
