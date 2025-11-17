@@ -105,8 +105,6 @@ After passing the syntax check, we may want to translate the expression to a for
 <elem> := (RULE (READ <S-EXPR>) (WRITE <S-EXPR>))
 ```
 
----
-
 #### Example
 
 ```
