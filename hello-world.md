@@ -47,7 +47,7 @@ The fundamental purpose of Symp is to provide means to connect different program
 
 #### Purpose
 
-Each programming framework we want to define can be required to satisfy some form of our interest. This form is written as syntax grammar rules, and may help catching errors before proceeding with further processing. Also, knowing that an expression satisfies given form, we can exclude a considerable amount of later checking, relieving us of later tedious work. In parsing expressions, we are dealing with standard S-expressions. This expectation boils down the syntax check to mere pattern matching which we perform by normalized rules inspired from parsing expression grammars (PEGs).
+Each programming framework we want to define can be required to satisfy some form of our interest. This form is written as syntax grammar rules, and may help catching errors before proceeding with further processing. Also, knowing that an expression satisfies given form, we can exclude a considerable amount of later checking, relieving us of later tedious work. In expression parsing in Symp, we are dealing with standard S-expressions. This expectation boils down the syntax check to mere pattern matching which we perform by normalized rules which behave like in parsing expression grammars (PEGs).
 
 #### Grammar Overview
 
