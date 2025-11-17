@@ -56,10 +56,10 @@ Each programming framework we want to define can be required to satisfy some for
 
 <grammar> := (GRAMMAR <elem>+)
 
-<elem> := (RULE <IDENTIFIER> <metaExp>)
+<elem> := (RULE <IDENTIFIER> <metaExpr>)
 
-<metaExp> := (LIST <metaExp> <metaExp>)
-           | <metaAtom>
+<metaExpr> := (LIST <metaExpr> <metaExpr>)
+            | <metaAtom>
          
 <metaAtom> := (ATOM <ATOMIC> <metaAtom>)
             | <atomic>
