@@ -2,7 +2,7 @@
 
 ## TOC
 
-- [1. Symp](#1-symp)
+- [1. Symp "hello world" example](#1-symp-hello-world-example)
 - [2. The Foundations](#2-the-foundations)
   - [2.1. Symbolmatch](#21-symbolmatch)
   - [2.2. Symbolverse](#22-symbolverse)
@@ -11,7 +11,7 @@
 - [3. Complete Example](#3-complete-example)
 - [4. Conclusion](#4-conclusion)
 
-## 1. Symp
+## 1. Symp "hello world" example
 
 **"hello world" example in a symbolic processing framework**
 
