@@ -13,7 +13,7 @@
 
 ## 1. Symp
 
-**"hello world" in a symbolic processing framework**
+**"hello world" example in a symbolic processing framework**
 
 Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. It may find its use in AI symbolic processing, creating domain specific frameworks for solving various problems, building logic solvers and theorem provers from its components, or exploring declarative programming basics.
 
