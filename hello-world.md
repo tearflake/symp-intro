@@ -47,7 +47,7 @@ The fundamental purpose of Symp is to provide means to connect different program
 
 #### Purpose
 
-Each programming framework we want to define can be required to satisfy some form of our interest. This form is written as syntax grammar rules, and may help catching errors before proceeding with further processing. Also, knowing that an expression satisfies given form, we can exclude a considerable amount of later checking, relieving us of later tedious work. In expression parsing in Symp, we are dealing with standard S-expressions. This expectation boils down the syntax check to mere pattern matching which we perform by normalized rules behaving similarly to parsing expression grammar (PEG) rules.
+Each programming framework we want to define can be required to satisfy some form of our interest. This form is written as syntax grammar rules, and may help catching errors before proceeding with further processing. Also, knowing that an expression satisfies given form, we can exclude a considerable amount of later checking, relieving us of later tedious work. In expression parsing in Symp, we are dealing with standard S-expressions. This expectation boils down the syntax check to mere pattern matching which we perform by normalized rules behaving similarly to parsing expression grammar (PEG) rules. Seek for more details in accompanying documentation.
 
 #### Grammar Overview
 
@@ -93,7 +93,7 @@ Output
 
 #### Purpose
 
-After passing the syntax check, we may want to translate the expression to a form suitable for final execution. This, so-called semantic transformation is done in Symp using rules that represent a term rewriting system of our interest. The term rewriting is a complex matter on its own and it is based on replacing expected patterns by new expressions which we recursively replace further until no more of the expected patterns occur in the whole expression. Seek for more details in accompanying documentation.
+After passing the syntax check, it may be required to translate the expression to a form suitable for final execution. This so-called semantic transformation is done in Symp using rules that represent a term rewriting system. The term rewriting is a complex matter on its own. It is based on replacing expected patterns by new expressions. The process repeats recursively until no more of the expected patterns occur in the whole expression. Seek for more details in accompanying documentation.
 
 #### Grammar Overview
 
@@ -132,7 +132,7 @@ Output:
 
 #### Purpose
 
-When we finally get the expression suitable for execution, we interpret in a declarative environment resembling graphs known from graph theory, but our graphs hold instructions as edges. Instructions deal with states, assigning values to variables. Graphs may also be cyclic, requiring testing variables for expected values to break out of loops. Seek for more details in accompanying documentation.
+When we finally get the expression suitable for execution, we interpret it in a declarative environment resembling graphs known from graph theory. But our graphs hold instructions attached to edges. These instructions deal with states, assigning values to variables. Graphs may also be cyclic, requiring testing variables for expected values to break out of loops. Variable testing may also be used to control branching to one of the continuing nodes. Seek for more details in accompanying documentation.
 
 #### Grammar Overview
 
@@ -179,7 +179,7 @@ Output:
 
 #### Purpose
 
-Lastly, we would want to present the computation we performed in some kind of user interface. This is where we use an environment that shows information, and may interact with a user. The user interface is inspired by HTML output with a form submitting system. Seek for more details in accompanying documentation.
+At last, we would want to present the computation we performed in some kind of user interface. This is where we use an environment that shows information, and may interact with a user. The user interface is minimalistic, and inspired by HTML output with a form submitting system. Seek for more details in accompanying documentation.
 
 #### Grammar Overview
 
@@ -234,7 +234,7 @@ Runs as a stand-alone application and outputs the "hello world" text on the scre
 
 **a comprehensive "hello world" example**
 
-Finally we skimmed over enough building blocks to combine them all into a meaningful "hello world" example covering all the enumerated components.
+Finally we skimmed over enough building blocks to combine them all into a compound "hello world" example covering all the enumerated components.
 
 ```
 (NODE
@@ -275,11 +275,11 @@ Finally we skimmed over enough building blocks to combine them all into a meanin
                         (TARGET END)))))))
 ```
 
-The example may seem as overly exaggerated for outputting the simple `hello world` on the screen, but the pattern in which it is written actually may already serve as a skeleton for more serious domain specific programming framework. 
+This example may seem as overly exaggerated for outputting the simple `hello world` on the screen, but the pattern in which it is written actually may already serve as a skeleton for more serious domain specific programming framework. 
 
 ## 4. Conclusion
 
 **the machine**
 
-In this short exposure, we saw how to form the component tree, and we saw each of the available components (Symbolmatch, Symbolverse, Symbolprose, and Symbolfront) in action of executing the "hello world" example. Each component in the tree structure may explicitly refer to each other, allowing us to choose the right tools for the right tasks. The available components include the syntax checking, semantic transformations, runtime execution, and user interface, while they can be combined in whatever way required. Bundled together, they may form complex structures capable of performing any computation of our interest.
+In this short exposure, we saw how to form the component tree, and we saw each of the available components (Symbolmatch, Symbolverse, Symbolprose, and Symbolfront) in action of executing the "hello world" example. Each component in the tree structure may explicitly refer to each other, allowing us to choose the right tools for the right tasks. The available components include the syntax checking, semantic transformations, runtime execution, and user interface, while their arbitrary combination may form complex structures capable of performing any computation of our interest.
 
