@@ -17,7 +17,7 @@
 
 Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. It may find its use in AI symbolic processing, building logic solvers and theorem provers from its components, creating domain specific frameworks for solving various problems, or exploring declarative programming basics.
 
-The purpose of this document is to write a comprehensive "hello world" example. We try to give an insight on how complex programs may be constructed in Symp framework. Although the simplest "hello world" program in Symp - choosing any of the offered methods - would be of much less complexity than the one in our ending section, we strive to establish the entire infrastructure that could be reused later to build more complex programs.
+The purpose of this document is to write a comprehensive "hello world" example. We try to give an insight on how complex programs may be constructed in Symp framework. Although the simplest "hello world" program in Symp - choosing any of the offered methods - would be of much less complexity than the one in our ending section, we strive to establish the entire infrastructure that could be reused later to build more complex programs. The other purpose of this document is to tickle a bit of imagination of the reader.
 
 We start from the foundations of Symp, continuing to present the "hello world" programs in each of Symp programming components Symbolmatch, Symbolverse, Symbolprose, and Symbolfront, ending with the composite "hello world" example showing all of the described components united in action.
 
@@ -139,14 +139,12 @@ When we finally get the expression suitable for execution, we interpret it in a 
 ```
 <start> := <graph>
 
-<graph> := (RUNGRAPH <element>+)
+<graph> := (RUNGRAPH <elem>+)
 
-<element> := (EDGE (SOURCE <ATOMIC>) (INSTR <instruction>+)? (TARGET <ATOMIC>))
+<elem> := (EDGE (SOURCE <ATOMIC>) (INSTR <instr>+)? (TARGET <ATOMIC>))
 
-<instruction> := (TEST <ANY> <ANY>)
-               | (ASGN <ATOMIC> <ANY>)
-
-<compute-call> := (RUN <ATOMIC> <ANY>)
+<instr> := (TEST <ANY> <ANY>)
+         | (ASGN <ATOMIC> <ANY>)
 ```
 
 #### Example
