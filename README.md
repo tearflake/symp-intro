@@ -73,8 +73,9 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 ## Links
 
 * ["hello world" from Symp](hello-world)
+* A Gentle Introduction to Symp
 * Symp Reference
-    * Symbolmatch Reference
-    * Symbolverse Reference
-    * Symbolprose Reference
-    * Symbolfront Reference
+    * Symbolmatch
+    * Symbolverse
+    * Symbolprose
+    * Symbolfront
