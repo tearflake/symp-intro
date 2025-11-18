@@ -255,9 +255,10 @@ Finally we skimmed over enough building blocks to combine them all into a compou
         (NODE
             (NAME semantics)
             (CONTENT
-                (RULE
-                    (READ ("greet" x))
-                    (WRITE ("greeting" x)))))
+                (REWRITE
+                    (RULE
+                        (READ ("greet" x))
+                        (WRITE ("greeting" x))))))
         
         (NODE
             (NAME runtime)
