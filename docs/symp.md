@@ -146,6 +146,7 @@ The root node constructs the user interface with a number calculated by the node
 
 The following example shows how to apply the `syntax`, `semantics`, and `runtime` functions to validate, compile, and execute a domain specific kind of computation. It performs an optimization of a math expression involving addition and multiplication of integers:
 
+```
 (NODE
     (NAME optimizer)
     (CONTENT
