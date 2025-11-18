@@ -11,7 +11,7 @@ layout: docs
 > Advanced programmers
 > 
 > **[abstract]**  
-> Symp is a symbolic orchestration framework that embeds computation, semantics, and user interface construction within a unified tree-structured program model. It connects Symbolmatch, Symbolverse, Symbolprose, and Symbolfront into an executable composition layer, where each component is named, loaded, referenced, and executed through a declarative node system. Symp turns file-system hierarchy into a first-class part of program structure, enabling programs to be organized, executed, and reasoned about as symbolic trees rather than linear code files.
+> Symp is a symbolic coordination framework that embeds computation, semantics, and user interface construction within a unified tree-structured program model. It connects Symbolmatch, Symbolverse, Symbolprose, and Symbolfront into an executable composition layer, where each component is named, loaded, referenced, and executed through a declarative node system. Symp turns file-system hierarchy into a first-class part of program structure, enabling programs to be organized, executed, and reasoned about as symbolic trees rather than linear code files.
 
 
 ## table of contents

@@ -70,7 +70,7 @@ Anything that can be described as “form → meaning → execution → intent�
 
 #### 🖤 Inspiration
 
-Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML.
+Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML user interface.
 
 ---
 
@@ -80,13 +80,13 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 
 ## Links
 
-* ["hello world" from Symp](docs/hello-world.md)
-* [Symp Intro](docs/symp.md)
+* ["hello world" from Symp](https://github.com/tearflake/symp-promo/blob/main/docs/hello-world)
+* [Symp Intro](https://github.com/tearflake/symp-promo/blob/main/docs/symp)
     * Symbolmatch
     * Symbolverse
     * Symbolprose
     * Symbolfront
-* [Awakening of the Lambda Calculus in Symp](docs/lmbd.md)
+* [Awakening of the Lambda Calculus in Symp](https://github.com/tearflake/symp-promo/blob/main/docs/lmbd)
 
 ```
 // WORK IN PROGRESS //

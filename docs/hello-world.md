@@ -4,7 +4,7 @@ layout: docs
 
 # "hello world" From Symp
 
-## TOC
+### Table Of Contents
 
 - [1. Symp "hello world" example](#1-symp-hello-world-example)
 - [2. The Foundations](#2-the-foundations)
@@ -85,7 +85,7 @@ Input:
 (hello world)
 ```
 
-Output
+Output:
 
 ```
 (hello world)
@@ -285,3 +285,4 @@ This example may seem as overly exaggerated for outputting the simple `hello wor
 **the machine**
 
 In this short exposure, we saw how to form the component tree, and we saw each of the available components (Symbolmatch, Symbolverse, Symbolprose, and Symbolfront) in action of executing the "hello world" example. Each component in the tree structure may explicitly refer to each other, allowing us to choose the right tools for the right tasks. The available components include the syntax checking, semantic transformations, runtime execution, and user interface, while their arbitrary combination may form complex structures capable of performing any computation of our interest.
+
