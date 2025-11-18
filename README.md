@@ -70,7 +70,7 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 
 ## Links
 
-* ["hello world" from Symp](hello-world)
+* [`hello world` from Symp](hello-world)
 * Symp Reference
 * Symbolmatch Reference
 * Symbolverse Reference
