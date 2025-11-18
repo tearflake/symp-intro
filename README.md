@@ -70,9 +70,9 @@ Symp is inspired by symbolic expressions, grammar rules, term rewriting systems,
 
 ## Links
 
-"hello world" from Symp
-Symp Intro
-Symbolmatch
-Symbolverse
-Symbolprose
-Symbolfront
+"hello world" from Symp  
+Symp Intro  
+Symbolmatch  
+Symbolverse  
+Symbolprose  
+Symbolfront  
