@@ -1,1 +1,8 @@
 theme: jekyll-theme-minimal
+
+defaults:
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: "docs"
