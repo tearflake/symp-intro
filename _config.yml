@@ -2,7 +2,6 @@ theme: jekyll-theme-minimal
 
 defaults:
   - scope:
-      path: "docs/"
-      type: "pages"
+      path: "docs"
     values:
       layout: "docs"
