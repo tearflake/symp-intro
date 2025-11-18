@@ -66,16 +66,16 @@ Anything that can be described as “form → meaning → execution → intent�
 
 #### 🖤 Inspiration
 
-Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, and finite state machines.
+Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML.
 
 ---
 
 ## Links
 
 * ["hello world" from Symp](hello-world)
-* A Gentle Introduction to Symp
 * Symp Reference
     * Symbolmatch
     * Symbolverse
     * Symbolprose
     * Symbolfront
+* Awakening of the Lambda Calculus in Symp
