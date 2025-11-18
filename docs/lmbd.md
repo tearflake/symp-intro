@@ -1,3 +1,8 @@
+---
+layout: docs
+---
+
+
 ```
 (NODE
     (NAME lmbd)
