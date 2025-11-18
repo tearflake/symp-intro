@@ -46,7 +46,7 @@ Symp isn’t a Lisp dialect or a new syntax flavor.
 It’s a **computational philosophy**:
 
 * Programs can prove their *form* before they express their *meaning*.
-* *Meaning* of programs directs a way of their *execution*.
+* *Meaning* of programs is interpreted by their *execution*.
 * Program *execution* reflects their *intent*.
 * Everything can be described in its own **syntax**, **semantics**, **runtime**, and **presentation**.
 
