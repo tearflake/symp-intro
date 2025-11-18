@@ -48,7 +48,7 @@ It’s a **computational philosophy**:
 * Programs can prove their *form* before they express their *meaning*.
 * *Meaning* of programs is interpreted by their *execution*.
 * Program *execution* reflects their *intent*.
-* Everything can be described in its own **syntax**, **semantics**, **runtime**, and **presentation**
+* Everything can be described in its own **syntax**, **semantics**, **runtime**, and **presentation**.
 
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves **building languages more than writing in them**.
