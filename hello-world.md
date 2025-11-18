@@ -150,7 +150,7 @@ When we finally get the expression suitable for execution, we interpret it in a 
 #### Example
 
 ```
-(GRAPH
+(RUNGRAPH
     (EDGE
         (SOURCE BEGIN)
         (INSTR
@@ -263,7 +263,7 @@ Finally we skimmed over enough building blocks to combine them all into a compou
             (NAME runtime)
             (CONTENT
                 (USING stdlib)
-                (GRAPH
+                (RUNGRAPH
                     (EDGE
                         (SOURCE BEGIN)
                         (INSTR
