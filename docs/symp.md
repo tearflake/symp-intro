@@ -1,3 +1,7 @@
+---
+layout: docs
+---
+
 # symp intro
 
 > **[about document]**  
