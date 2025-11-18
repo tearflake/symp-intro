@@ -73,7 +73,7 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 ## Links
 
 * ["hello world" from Symp](https://github.com/tearflake/symp-promo/blob/main/docs/hello-world.md)
-* [Symp Reference](https://github.com/tearflake/symp-promo/blob/main/docs/symp.md)
+* [Symp Intro](https://github.com/tearflake/symp-promo/blob/main/docs/symp.md)
     * Symbolmatch
     * Symbolverse
     * Symbolprose
