@@ -23,7 +23,7 @@ We start from the foundations of Symp, continuing to present the "hello world" p
 
 ## 2. The Foundations
 
-**designing form, meaning, and execution**
+**designing form, meaning, execution, and intent**
 
 #### Purpose
 
@@ -173,7 +173,7 @@ Output:
 
 ### 2.4. Symbolfront
 
-**user interface**
+**presentation**
 
 #### Purpose
 
@@ -280,4 +280,3 @@ This example may seem as overly exaggerated for outputting the simple `hello wor
 **the machine**
 
 In this short exposure, we saw how to form the component tree, and we saw each of the available components (Symbolmatch, Symbolverse, Symbolprose, and Symbolfront) in action of executing the "hello world" example. Each component in the tree structure may explicitly refer to each other, allowing us to choose the right tools for the right tasks. The available components include the syntax checking, semantic transformations, runtime execution, and user interface, while their arbitrary combination may form complex structures capable of performing any computation of our interest.
-
