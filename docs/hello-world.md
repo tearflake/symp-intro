@@ -219,8 +219,8 @@ At last, we would want to present the computation we performed in some kind of u
             | (CHECK <NAME> <formElem>+)
             | (RADIO <NAME> <formElem>+)
             | (EDIT <NAME> <ROWS> <ATOMIC>?)
-            | (HBLIST (BUTTON <NAME> <ATOMIC> (PUT <ATOMIC>+)? (ERR <ATOMIC>+)? (GET <ATOMIC>+) <ATOMIC>)+)
-            | (VBLIST (BUTTON <NAME> <ATOMIC> (PUT <ATOMIC>+)? (ERR <ATOMIC>+)? (GET <ATOMIC>+) <ATOMIC>)+)
+            | (HBLIST (BUTTON <NAME> <ATOMIC> (PUT <ATOMIC>+)? (ERR <ATOMIC>+)? (GET <ATOMIC>+))+)
+            | (VBLIST (BUTTON <NAME> <ATOMIC> (PUT <ATOMIC>+)? (ERR <ATOMIC>+)? (GET <ATOMIC>+))+)
 ```
 
 #### Example
