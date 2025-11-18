@@ -83,3 +83,8 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
     * Symbolprose
     * Symbolfront
 * [Awakening of the Lambda Calculus in Symp](https://github.com/tearflake/symp-promo/blob/main/docs/lmbd.md)
+
+```
+// WORK IN PROGRESS //
+```
+
