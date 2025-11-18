@@ -81,12 +81,12 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 ## Links
 
 * ["hello world" from Symp](docs/hello-world.md)
-* [Symp Intro](https://github.com/tearflake/symp-promo/blob/main/docs/symp.md)
+* [Symp Intro](docs/symp.md)
     * Symbolmatch
     * Symbolverse
     * Symbolprose
     * Symbolfront
-* [Awakening of the Lambda Calculus in Symp](https://github.com/tearflake/symp-promo/blob/main/docs/lmbd.md)
+* [Awakening of the Lambda Calculus in Symp](docs/lmbd.md)
 
 ```
 // WORK IN PROGRESS //
