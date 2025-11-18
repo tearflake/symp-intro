@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 
 # "hello world" From Symp
