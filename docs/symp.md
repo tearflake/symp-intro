@@ -1,4 +1,4 @@
-# symp
+# symp intro
 
 > **[about document]**  
 > Introduction to *Symp*, a symbolic processing framework
@@ -21,7 +21,7 @@
 
 ## 1. introduction
 
-Symp provides the structural layer that integrates the Symbolmatch, Symbolverse, Symbolprose, and Symbolfront subsystems into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as syntax definition, semantic transformation, runtime evaluation, or GUI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
+Symp provides the structural layer that integrates the Symbolmatch, Symbolverse, Symbolprose, and Symbolfront subsystems into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as syntax definition, semantic transformation, runtime evaluation, or UI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
 
 The framework removes the distinction between *program organization* and *program execution model*: the same symbolic representation is used to store, locate, and run components. This minimizes hidden state, avoids implicit linking, prevents namespace ambiguity, and enables deterministic resolution of dependencies at runtime.
 
@@ -67,7 +67,7 @@ To visualize the structure and control flow in a Symp application, we can draw a
 • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 ```
 
-The diagram reads from the ground up. Symp reads the application code, processes it by applying Symbolmatch, Symbolverse, and Symbolprose in a sequence required by the Symbolfront that provides the GUI to the renderer. The renderer may send feedback information to the application, regenerating its GUI in each cycle. Resulting application maintains its internal states in the renderer while it is alive. External states may be altered by modifying the application code.
+The diagram reads from the ground up. Symp reads the application code, processes it by applying Symbolmatch, Symbolverse, and Symbolprose in a sequence required by the Symbolfront that provides the UI to the renderer. The renderer may send feedback information to the application, regenerating its UI in each cycle. Resulting application maintains its internal states in the renderer while it is alive. External states may be altered by modifying the application code.
 
 ### 2.1. formal syntax
 
@@ -103,47 +103,48 @@ In Symp, there are three computational components, namely Symbolmatch, Symbolver
 
 Finally, the built-in computational triad closes the programming cycle of ranging between the form, meaning, and execution, making Symp capable of expressing a whole plethora of domain specific framework. For the details about Symbolmatch, Symbolverse, and Symbolprose functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
-#### graphical user interface component
+#### user interface component
 
-Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a graphical user interface (GUI) of a page system created in Symp framework. There may exist many variations of GUI, but the Symp version opinionated to the one inspired by a combination of HTML and markdown file formats. It is called Symbolfront, and it is the fourth kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a user interface (UI) of a page system created in Symp framework. There may exist many variations of UI, but the Symp version opinionated to the one inspired by a combination of HTML and markdown file formats. It is called Symbolfront, and it is the fourth kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 ## 3. examples
 
 We bring a two simplistic examples describing how components held within Symp tree are accessed. For understanding examples, the reader is expected to have a certain level of familiarity with the Symbolmatch, Symbolverse, Symbolfront, and Synbolfront, as attainable from the documentation supporting these frameworks.
 
-### example 1: building a GUI application
+### example 1: building a UI application
 
-The following example builds up a small graphical user interface depicting a number and two buttons for incrementing and decrementing the number:
+The following example builds up a small user interface depicting a number and two buttons for incrementing and decrementing the number:
 
 ```
 (NODE
-    (NAME guiExample)
+    (NAME uiExample)
     (CONTENT
         (USING THIS)
         (PAGE
             (HDR1 "Increment/decrement value")
             (PARAG (calc PARAMS))
             (HBLIST
-                (BUTTON incr "increment" (GET guiExample (incr PARAMS)))
-                (BUTTON decr "decrement" (GET guiExample (decr PARAMS)))))))
+                (BUTTON incr "increment" (GET uiExample (incr PARAMS)))
+                (BUTTON decr "decrement" (GET uiExample (decr PARAMS))))))
     (BRANCHES
         (NODE
             (NAME calc)
             (CONTENT
+                (USING stdlib)
                 (REWRITE
                     (RULE (READ ()) (WRITE "0"))
-                    (RULE (READ ("incr" x)) (WRITE (RUN stdlib ("add" x "1"))))
-                    (RULE (READ ("decr" x)) (WRITE (RUN stdlib ("sub" x "1")))))))))
+                    (RULE (READ ("incr" x)) (WRITE (add (x "1"))))
+                    (RULE (READ ("decr" x)) (WRITE (sub (x "1")))))))))
 
 ```
 
-Let's store this example into a file named `guiExample`. When we run the Symbolback interpreter on the file, the GUI opens, shows the number `0`, and waits for our action of pushing its buttons. According to our further actions, the number increments/decrements by one.
+Let's store this example into a file named `uiExample`. When we run the Symbolback interpreter on the file, the UI opens, shows the number `0`, and waits for our action of pushing its buttons. According to our further actions, the number increments/decrements by one.
 
-The root node constructs the user interface with a number calculated by the node `calc` which is made accessible by `(USING THIS)` section. The initial ignition of the file is supposed to be without an input which is then assumed to be of a default value `()`. The `calc` node turns this input to `0`. Further UI interactions reload the `guiExample` with action parameters, causing the number to change and recalculate its value.
+The root node constructs the user interface with a number calculated by the node `calc` which is made accessible by `(USING THIS)` section. The initial ignition of the file is supposed to be without an input which is then assumed to be of a default value `()`. The `calc` node turns this input to `0`. Further UI interactions reload the `uiExample` with action parameters, causing the number to change and recalculate its value.
 
 ### example 2: simple math optimizer using syntax checking, semantic transformation, and runtime execution
 
-The following example shows how to apply the built-in `symbolmatch`, `symbolverse`, and `symbolprose` functions to validate, compile, and execute a domain specific kind of computation. It performs an optimization of a math expression involving addition and multiplication of integers:
+The following example shows how to apply the `syntax`, `semantics`, and `runtime` functions to validate, compile, and execute a domain specific kind of computation. It performs an optimization of a math expression involving addition and multiplication of integers:
 
 (NODE
     (NAME optimizer)
@@ -210,7 +211,7 @@ The following example shows how to apply the built-in `symbolmatch`, `symbolvers
                         (TARGET END)))))
 ```
 
-Root node sets up a small interface containing  an editor, a button, and a feedback paragraph. Below the root node, the example declares `syntax`, `semantics`, and `runtime` nodes. Symbolprose `runtime` node utilizes Symbolmatch `syntax` and Symbolverse `semantics` nodes. After entering a math expression and hitting the `Optimize` button in the user interface, the `runtime` node is executed. Here, the `syntax` node checks the syntax of entered math expressions. If the syntax rules decide it is valid, the same input is passed through the `semantics` node that performs the optimization. Finally, optimized expression is outputted to the GUI paragraph.
+Root node sets up a small interface containing  an editor, a button, and a feedback paragraph. Below the root node, the example declares `syntax`, `semantics`, and `runtime` nodes. Symbolprose `runtime` node utilizes Symbolmatch `syntax` and Symbolverse `semantics` nodes. After entering a math expression and pressing the `Optimize` button in the user interface, the `runtime` node is executed. Here, the `syntax` node checks the syntax of entered math expressions. If the syntax rules decide it is valid, the same input is passed through the `semantics` node that performs the optimization. Finally, optimized expression is outputted to the UI paragraph.
 
 In summary, if we pass a parameter like `(add 0 (mul 7 1))` to this example, we may expect an output like `7` in the output. The constructions used in this specific example represent a pattern capable of handling more complex domain specific programming frameworks.
 
