@@ -24,7 +24,7 @@ It carries a *thought experiment* from a reality in which symbols triumphed over
 
 #### 💡 The Idea
 
-In Symp, every computation may follow one simple ritual:
+In Symp, every computation may follow a simple ritual:
 
 ```
 
