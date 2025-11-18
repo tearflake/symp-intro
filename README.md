@@ -28,7 +28,7 @@ syntax → semantics → runtime → presentation
 
 ````
 
-Instead of a black box that hides these stages,  
+Instead of hiding these stages,  
 Symp makes each one **programmable**.
 
 You don’t just write programs in Symp —  
@@ -71,8 +71,8 @@ Symp is inspired by symbolic expressions, grammar rules, term rewriting systems,
 ## Links
 
 * ["hello world" from Symp](hello-world)  
-* Symp Intro  
-* Symbolmatch  
-* Symbolverse  
-* Symbolprose  
-* Symbolfront  
+* Symp Reference
+* Symbolmatch
+* Symbolverse
+* Symbolprose
+* Symbolfront
