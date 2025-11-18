@@ -72,10 +72,10 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 
 ## Links
 
-* ["hello world" from Symp](hello-world)
-* Symp Reference
+* ["hello world" from Symp](docs/hello-world)
+* Symp Reference(docs/symp)
     * Symbolmatch
     * Symbolverse
     * Symbolprose
     * Symbolfront
-* Awakening of the Lambda Calculus in Symp
+* [Awakening of the Lambda Calculus in Symp](docs/lmbd)
