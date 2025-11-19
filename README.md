@@ -86,7 +86,7 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
     * Symbolverse
     * Symbolprose
     * Symbolfront
-* [Awakening of the Lambda Calculus in Symp](docs/lmbd)
+* [Lambda Calculus Awakening in Symp](docs/lmbd)
 
 ```
 // WORK IN PROGRESS //
