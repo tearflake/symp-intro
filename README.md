@@ -4,7 +4,7 @@
 
 ## Symp
 
-**a framework from a parallel reality where symbols won** 
+**a framework from a parallel reality where symbols won**
 
 ---
 
@@ -70,7 +70,7 @@ Anything that can be described as “form → meaning → execution → intent�
 
 #### 🖤 Inspiration
 
-Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML user interface.
+Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML forms user interface.
 
 ---
 
@@ -78,7 +78,7 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 // WORK IN PROGRESS //
 ```
 
-## Links
+## Docs
 
 * ["hello world" from Symp](docs/hello-world)
 * [Symp Intro](docs/symp)

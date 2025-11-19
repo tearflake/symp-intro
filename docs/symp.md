@@ -11,7 +11,7 @@ layout: docs
 > Advanced programmers
 > 
 > **[abstract]**  
-> Symp is a symbolic coordination framework that embeds computation, semantics, and user interface construction within a unified tree-structured program model. It connects Symbolmatch, Symbolverse, Symbolprose, and Symbolfront into an executable composition layer, where each component is named, loaded, referenced, and executed through a declarative node system. Symp turns file-system hierarchy into a first-class part of program structure, enabling programs to be organized, executed, and reasoned about as symbolic trees rather than linear code files.
+> Symp is a symbolic coordination framework that embeds syntax, semantics, computation, and user interface construction within a unified tree-structured program model. It connects Symbolmatch, Symbolverse, Symbolprose, and Symbolfront into an executable composition layer, where each component is named, loaded, referenced, and executed through a declarative node system. Symp turns file-system hierarchy into a first-class part of program structure, enabling programs to be organized, executed, and reasoned about as symbolic trees rather than linear code files.
 
 
 ## table of contents
@@ -71,11 +71,11 @@ To visualize the structure and control flow in a Symp application, we can draw a
 • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 ```
 
-The diagram reads from the ground up. Symp reads the application code, processes it by applying Symbolmatch, Symbolverse, and Symbolprose in a sequence required by the Symbolfront that provides the UI to the renderer. The renderer may send feedback information to the application, regenerating its UI in each cycle. Resulting application maintains its internal states in the renderer while it is alive. External states may be altered by modifying the application code.
+The diagram reads from the ground up. Symp reads the application code, processes it by applying Symbolmatch, Symbolverse, and Symbolprose in a sequence required by the Symbolfront that provides the UI to the renderer. The renderer may send feedback information to the application, regenerating its UI in each cycle. Resulting application maintains its internal states in the renderer while it is running. External states may be altered by modifying the application code.
 
 ### 2.1. formal syntax
 
-In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language. Symp language itself resembles a kind of S-expression. S-expressions consist of lists of atoms or other S-expressions where lists are surrounded by parenthesis. In Symp, the first list element to the left determines a type of a list. There are a few predefined list types used for data transformation depicted by the following relaxed kind of Backus-Naur form syntax rules:
+In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language. Symp language itself resembles a kind of S-expression. S-expressions consist of lists of atoms or other S-expressions where lists are surrounded by parenthesis. In Symp, the first list element to the left determines a type of a list. There are a few predefined list types depicted by the following relaxed kind of Backus-Naur form syntax rules:
 
 ```
 <start> := <tree>
@@ -95,11 +95,11 @@ In addition to the exposed grammar, user comments have no meaning to the system,
 
 ### 2.2 informal semantics
 
-Every program in Symp is wrapped up within the tree data structure. Each tree consists of a parent node which may terminate as a leaf node, or may branch out further to a set of child nodes. This structure may indefinitely recursively repeat. There exist cyclic and acyclic kinds of trees while Symp is initially set to handle the acyclic kind.
+Every program in Symp is wrapped up within the tree data structure. Each tree consists of a parent node which may terminate as a leaf node, or may branch out further to a set of child nodes. This structure may indefinitely recursively repeat. In theory, there exist cyclic and acyclic kinds of trees while Symp is initially set to handle the acyclic kind.
 
-The tree structure, as one of the cornerstones in Symp, is not contained only in source code files, yet each tree in the code spans further up the file-directory system holding the files. Such feature makes the original file and directory structure seamlessly span into the source code, making no distinction between the low level file-directory structure and the trees expressed in code files. To achieve this characteristic, Symp kind of file-directory tree must follow a strict form compatible with the low level OS filesystem. Thus, a file containing a node must have the same name as declared in node. Such file may be accompanied by a directory having the same name having the additional `.branch` extension. The branching may be defined either in the source code file, or a directory, but not both. Such system of files and directories have to start in some directory in the structure of the entire low level filesystem, and we will refer to that location as a `HOME` node.
+The tree structure, as one of the cornerstones in Symp, is not contained only in source code files, yet each tree in the code spans further up the file-directory system holding the files. Such feature makes the original file and directory structure seamlessly span into the source code, making no distinction between the low level file-directory structure and the trees expressed in code files. To achieve this characteristic, Symp kind of file-directory tree must follow a strict form compatible with the low level OS filesystem. Thus, a file containing a node must have the same name as declared in node. Such file may be accompanied by a directory having the same name with the additional `.branch` extension. The branching may be defined either in the source code file, or a directory, but not both. Such system of files and directories have a starting directory in the structure of the entire low level filesystem, and we will refer to that location as a `HOME` node.
 
-Within the structure branching from the `HOME` node, every tree node may contain some kind of computation component, or hold an use interface component. The primary Symp tree structure intention is to assign names to those components. Components may refer to other components by noting other components paths in the `(USING ...)` sections when declaring nodes `CONTENT`. During the reference, in the surrounding tree, a node may see only adjacent, parents, and adjacent to their parents nodes. To access any other node, Symp uses the initially visible tree node names as a starting point for reaching deeper nodes by enumerating node names in a sequence, separated by the `/` character. Such sequence then forms a path to an unique node containing the component of our interest.
+Within the structure branching from the `HOME` node, every tree node may contain some kind of computation component, or hold an use interface component. The primary Symp tree structure intention is to assign names to those components. Components may refer to other components by noting other components paths in the `(USING ...)` sections when declaring nodes `CONTENT`. During the reference, in the surrounding tree, a node may see only immediate children, adjacents, parents, and adjacent to their parents nodes. To access any other node, Symp uses the initially visible tree node names as a starting point for reaching deeper nodes by enumerating node names in a sequence, separated by the `/` character. Such sequence then forms a path to an unique node containing the component of our interest. the `THIS` name refers to the current node.
 
 #### computational components
 
@@ -109,7 +109,7 @@ Finally, the built-in computational triad closes the programming cycle of rangin
 
 #### user interface component
 
-Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a user interface (UI) of a page system created in Symp framework. There may exist many variations of UI, but the Symp version opinionated to the one inspired by a combination of HTML and markdown file formats. It is called Symbolfront, and it is the fourth kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a user interface (UI) of a page system created in Symp framework. There may exist many variations of UI, but the Symp version opinionated to the one inspired by a combination of HTML forms and markdown file formats. It is called Symbolfront, and it is the fourth kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 ## 3. examples
 
@@ -159,7 +159,7 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
             (HDR1 "Simple Math Optimizer")
             (EDIT expr 10 (stringify PARAMS))
             (HBLIST (BUTTON opt "Optimize" (GET optimizer expr)))
-            (PARAG (runtime PARAMS)))))))
+            (PARAG (runtime PARAMS))))
     
     (BRANCHES
         (NODE
@@ -213,7 +213,7 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
                     (EDGE
                         (SOURCE BEGIN)
                         (INSTR (ASGN RESULT (stringify (semantics expr))))
-                        (TARGET END)))))
+                        (TARGET END)))))))
 ```
 
 Root node sets up a small interface containing  an editor, a button, and a feedback paragraph. Below the root node, the example declares `syntax`, `semantics`, and `runtime` nodes. Symbolprose `runtime` node utilizes Symbolmatch `syntax` and Symbolverse `semantics` nodes. After entering a math expression and pressing the `Optimize` button in the user interface, the `runtime` node is executed. Here, the `syntax` node checks the syntax of entered math expressions. If the syntax rules decide it is valid, the same input is passed through the `semantics` node that performs the optimization. Finally, optimized expression is outputted to the UI paragraph.
