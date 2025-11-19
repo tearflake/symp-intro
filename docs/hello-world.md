@@ -2,7 +2,7 @@
 layout: docs
 ---
 
-# "hello world" From Symp
+# "Hello world" From Symp
 
 ### Table Of Contents
 
