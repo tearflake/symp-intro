@@ -42,7 +42,7 @@ To visualize the structure and control flow in a Symp application, we can draw a
 
 • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 •                                                                       •
-•                            R E N D E R E R                            •
+•                     U S E R     I N T E R F A C E                     •
 •                                                                       •
 • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 •                                                                       •
@@ -99,7 +99,7 @@ Every program in Symp is wrapped up within the tree data structure. Each tree co
 
 The tree structure, as one of the cornerstones in Symp, is not contained only in source code files, yet each tree in the code spans further up the file-directory system holding the files. Such feature makes the original file and directory structure seamlessly span into the source code, making no distinction between the low level file-directory structure and the trees expressed in code files. To achieve this characteristic, Symp kind of file-directory tree must follow a strict form compatible with the low level OS filesystem. Thus, a file containing a node must have the same name as declared in node. Such file may be accompanied by a directory having the same name with the additional `.branch` extension. The branching may be defined either in the source code file, or a directory, but not both. Such system of files and directories have a starting directory in the structure of the entire low level filesystem, and we will refer to that location as a `HOME` node.
 
-Within the structure branching from the `HOME` node, every tree node may contain some kind of computation component, or hold an use interface component. The primary Symp tree structure intention is to assign names to those components. Components may refer to other components by noting other components paths in the `(USING ...)` sections when declaring nodes `CONTENT`. During the reference, in the surrounding tree, a node may see only immediate children, adjacents, parents, and adjacent to their parents nodes. To access any other node, Symp uses the initially visible tree node names as a starting point for reaching deeper nodes by enumerating node names in a sequence, separated by the `/` character. Such sequence then forms a path to an unique node containing the component of our interest. the `THIS` name refers to the current node.
+Within the structure branching from the `HOME` node, every tree node may contain some kind of computation component, or hold an use interface component. The primary Symp tree structure intention is to assign names to those components. Components may refer to other components by noting other components paths in the `(USING ...)` sections when declaring nodes `CONTENT`. During the reference, in the surrounding tree, a node may see only immediate children, adjacents, parents, and adjacent to their parents nodes. To access any other node, Symp uses the initially visible tree node names as a starting point for reaching deeper nodes by enumerating node names in a sequence, separated by the `/` character. Such sequence then forms a path to an unique node containing the component of our interest. The `THIS` name refers to the current node.
 
 #### computational components
 
