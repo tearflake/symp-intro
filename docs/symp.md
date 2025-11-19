@@ -206,7 +206,7 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
                         (SOURCE BEGIN)
                         (INSTR
                             (ASGN expr (syntax PARAMS))
-                            (TEST (nth syn 0) "ERROR")
+                            (TEST (nth expr 0) "ERROR")
                             (ASGN RESULT "syntax error"))
                         (TARGET END))
                         
