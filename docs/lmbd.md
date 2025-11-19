@@ -2,6 +2,8 @@
 layout: docs
 ---
 
+# Lambda Calculus Awakening in Symp
+
 ```
 (NODE
     (NAME lmbd)
