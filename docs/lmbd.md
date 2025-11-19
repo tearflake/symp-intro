@@ -1,13 +1,14 @@
 ---
 layout: docs
 ---
+
 # Lambda Calculus Awakening in Symp
 
 ```
 (NODE
     (NAME lmbd)
     (CONTENT
-        (USING lmbd)
+        (USING lmbd stdlib)
         (RUNGRAPH
             (EDGE
                 (SOURCE BEGIN)
