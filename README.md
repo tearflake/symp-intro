@@ -4,7 +4,7 @@
 
 ## Symp
 
-**a framework from a parallel reality where symbols won**
+**a framework from a parallel reality where symbols won** 
 
 ---
 
