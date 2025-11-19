@@ -115,7 +115,7 @@ Upon running, and after all the computations are performed, each Symp source cod
 
 We bring a two simplistic examples describing how components held within Symp tree are accessed. For understanding examples, the reader is expected to have a certain level of familiarity with the Symbolmatch, Symbolverse, Symbolfront, and Synbolfront, as attainable from the documentation supporting these frameworks.
 
-### example 1: building a UI application
+#### example 1: building a UI application
 
 The following example builds up a small user interface depicting a number and two buttons for incrementing and decrementing the number:
 
@@ -146,7 +146,7 @@ Let's store this example into a file named `uiExample`. When we run the Symbolba
 
 The root node constructs the user interface with a number calculated by the node `calc` which is made accessible by `(USING THIS)` section. The initial ignition of the file is supposed to be without an input which is then assumed to be of a default value `()`. The `calc` node turns this input to `0`. Further UI interactions reload the `uiExample` with action parameters, causing the number to change and recalculate its value.
 
-### example 2: simple math optimizer using syntax checking, semantic transformation, and runtime execution
+#### example 2: simple math optimizer using syntax checking, semantic transformation, and runtime execution
 
 The following example shows how to apply the `syntax`, `semantics`, and `runtime` functions to validate, compile, and execute a domain specific kind of computation. It performs an optimization of a math expression involving addition and multiplication of integers:
 
