@@ -6,7 +6,7 @@ layout: docs
 
 Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. The components include Symbolmatch, Symbolverse, Symbolprose, and Symbolfront. In this document, we will shortly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
 
-#### "Hello world!" in Symbolmatch
+##### "Hello world!" in Symbolmatch
 
 The purpose of Symbolmatch is to perform a **syntax check** of an input. This is done by using input grammar rules. If the input meets our expectations, the output merely passes the input further down the computing line.
 
@@ -32,7 +32,7 @@ Output:
 'Hello world!'
 ```
 
-#### "Hello world!" in Symbolverse
+##### "Hello world!" in Symbolverse
 
 The purpose of Symbolverse is to perform **semantic transformations** on the input. This is done by using a term rewriting system.
 
@@ -60,7 +60,7 @@ Output:
 'Hello world!'
 ```
 
-#### "Hello world!" in Symbolprose
+##### "Hello world!" in Symbolprose
 
 The purpose of Symbolprose is to perform stateful **runtime execution**. This is done by using a finite state machine inspired computation graph. 
 
@@ -89,7 +89,7 @@ Output:
 'Hello world!'
 ```
 
-#### "Hello world!" in Symbolfront
+##### "Hello world!" in Symbolfront
 
 The purpose of Symbolfront is to provide **presentation** means for our program. This is done by utilizing HTML forms inspired content pages.
 
@@ -104,4 +104,3 @@ Program:
 ```
 
 Runs as a stand-alone application and outputs the "hello world" text on the screen.
-
