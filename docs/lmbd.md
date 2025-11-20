@@ -55,8 +55,8 @@ layout: docs
                     (RULE var (ATOM letter varNext))
                     (RULE var (ATOM letter ()))
 
-                    (RULE varNext (ATOM letterDigit varNext))
-                    (RULE varNext (ATOM letterDigit ()))
+                    (RULE varNext (ATOM letterOrDigit varNext))
+                    (RULE varNext (ATOM letterOrDigit ()))
                     
                     (RULE letter "A")
                     ...
@@ -65,10 +65,11 @@ layout: docs
                     ...
                     (RULE letter "z")
 
-                    (RULE letterDigit letter)
-                    (RULE letterDigit "0")
+                    (RULE digit "0")
                     ...
-                    (RULE letterDigit "9"))))))
+                    (RULE digit "9")
                     
+                    (RULE letterOrDigit letter)
+                    (RULE letterOrDigit digit))))))
 ```
 

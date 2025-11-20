@@ -81,7 +81,7 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 ## Docs
 
 * ["Hello world" From Symp](docs/hello-world)
-* [Symp Intro](docs/symp)
+* [Symp Reference](docs/symp)
     * Symbolmatch
     * Symbolverse
     * Symbolprose

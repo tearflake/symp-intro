@@ -157,7 +157,7 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
         (USING THIS stdlib)
         (PAGE
             (HDR1 "Simple Math Optimizer")
-            (EDIT expr 10 (stringify PARAMS))
+            (EDIT expr 0 10 (stringify PARAMS))
             (HBLIST (BUTTON opt "Optimize" (GET optimizer expr)))
             (PARAG (runtime PARAMS))))
     
