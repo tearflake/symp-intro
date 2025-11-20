@@ -4,7 +4,7 @@ layout: docs
 
 # "Hello world" From Symp
 
-Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. The components include Symbolmatch, Symbolverse, Symbolprose, and Symbolfront. In this document, we will shortly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
+Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. The components include Symbolmatch (syntax), Symbolverse (semantics), Symbolprose (runtime), and Symbolfront (presentation). In this document, we shortly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
 
 #### "Hello world!" in Symbolmatch
 
@@ -81,7 +81,7 @@ Program:
 
 Input:
 
-disregarded
+ignored
 
 Output:
 
@@ -105,6 +105,6 @@ Program:
 
 Runs as a stand-alone application and outputs the "Hello world!" text on the screen.
 
-#### Further Readings
+#### Further Reading
 
-All the components in Symp have their role. The point of having multiple components is to be able to use the right component for the right task. The components are described in more detail in the accompanying documentation.
+Each Symp component has its role in a pipeline `syntax → semantics → runtime → presentation`. Together, they form a small but expressive environment for building symbolic systems, DSLs, and experimental interpreters. The components are described in more detail in the accompanying documentation.
