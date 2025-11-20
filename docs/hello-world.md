@@ -74,7 +74,7 @@ Program:
             (EDGE
                 (SOURCE BEGIN)
                 (INSTR
-                    (ASGN RESULT ("Hello world!")))
+                    (ASGN RESULT "Hello world!"))
                 
                 (TARGET END)))))
 ```
