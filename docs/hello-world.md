@@ -103,7 +103,7 @@ Program:
                 (PARAG "Hello world!"))))
 ```
 
-Runs as a stand-alone application and outputs the "hello world" text on the screen.
+Runs as a stand-alone application and outputs the "Hello world!" text on the screen.
 
 #### Further Readings
 
