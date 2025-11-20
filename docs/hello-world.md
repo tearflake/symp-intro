@@ -108,3 +108,4 @@ Runs as a stand-alone application and outputs the "Hello world!" text on the scr
 #### Further Reading
 
 Each Symp component has its role in a pipeline `syntax → semantics → runtime → presentation`. Together, they form a small but expressive environment for building symbolic systems, DSLs, and experimental interpreters. The components are described in more detail in the accompanying documentation.
+

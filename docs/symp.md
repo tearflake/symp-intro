@@ -2,10 +2,10 @@
 layout: docs
 ---
 
-# symp intro
+# symp specs
 
 > **[about document]**  
-> Introduction to *Symp*, a symbolic processing framework
+> Specification of *Symp*, a symbolic processing framework
 >
 > **[intended audience]**  
 > Advanced programmers
@@ -82,24 +82,34 @@ In computer science, the syntax of a computer language is the set of rules that 
 
 <tree> := (NODE
               (NAME <ATOMIC>)
-              (CONTENT (USING <ATOMIC>+)? <COMPONENT>)?
+              (CONTENT (USING <using>+)? <component>)?
               (BRANCHES <tree>+)?
           )
+
+<using> := <ATOMIC>
+         | (ALIAS <ATOMIC> <ATOMIC>)
+
+<component> := <symbolmatch>
+             | <symbolverse>
+             | <symbolprose>
+             | <symbolfront>
 ```
 
-The above grammar defines the syntax of Symp. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered as parts of the Symp grammar.
+The above grammar defines the syntax of Symp. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered parts of the Symp grammar.
 
 Atoms may be enclosed between a pair of `'` characters if we want to include special characters used in the grammar. Strings are enclosed between a pair of `"` characters. Multiline atoms and strings are enclosed between an odd number of `'` or `"` characters.
  
 In addition to the exposed grammar, user comments have no meaning to the system, but may be descriptive to readers, and may be placed wherever a whitespace is expected. Single line comments begin with `//` and span to the end of line. Multiline comments begin with `/*` and end with `*/`.
 
+We will be using the same syntax definition nomenclature throughout the accompanying specification documents of Symbolmatch, Symbolverse, Symbolprose, and Symbolfront components.
+
 ### 2.2 informal semantics
 
-Every program in Symp is wrapped up within the tree data structure. Each tree consists of a parent node which may terminate as a leaf node, or may branch out further to a set of child nodes. This structure may indefinitely recursively repeat. In theory, there exist cyclic and acyclic kinds of trees while Symp is initially set to handle the acyclic kind.
+Every program in Symp is wrapped up within the tree data structure. Each tree consists of a node which may terminate as a leaf node, or may branch out further as parent to a set of child nodes. This structure may indefinitely recursively repeat at each node. In theory, there exist cyclic and acyclic kinds of trees while Symp is initially set to handle the acyclic kind.
 
-The tree structure, as one of the cornerstones in Symp, is not contained only in source code files, yet each tree in the code spans further up the file-directory system holding the files. Such feature makes the original file and directory structure seamlessly span into the source code, making no distinction between the low level file-directory structure and the trees expressed in code files. To achieve this characteristic, Symp kind of file-directory tree must follow a strict form compatible with the low level OS filesystem. Thus, a file containing a node must have the same name as declared in node. Such file may be accompanied by a directory having the same name with the additional `.branch` extension. The branching may be defined either in the source code file, or a directory, but not both. Such system of files and directories have a starting directory in the structure of the entire low level filesystem, and we will refer to that location as a `HOME` node.
+The tree structure, as one of the cornerstones in Symp, is not contained only in source code files, yet each tree in the code spans further up the file-directory system holding the files. Such feature makes the original file and directory structure seamlessly span into the source code, making no distinction between the low level file-directory structure and the trees expressed in code files. To achieve this characteristic, Symp kind of file-directory tree must follow a strict form compatible with the low level OS filesystem. Thus, a file containing a node must have the same name as declared in node. Such file may be accompanied by a directory having the same name with the additional `.branch` extension. The branching may be defined either in the source code file, or in a directory, but not both. Such system of files and directories have a starting directory in the structure of the entire low level filesystem, and we will refer to that location as a `HOME` node.
 
-Within the structure branching from the `HOME` node, every tree node may contain some kind of computation component, or hold an use interface component. The primary Symp tree structure intention is to assign names to those components. Components may refer to other components by noting other components paths in the `(USING ...)` sections when declaring nodes `CONTENT`. During the reference, in the surrounding tree, a node may see only immediate children, adjacents, parents, and adjacent to their parents nodes. To access any other node, Symp uses the initially visible tree node names as a starting point for reaching deeper nodes by enumerating node names in a sequence, separated by the `/` character. Such sequence then forms a path to an unique node containing the component of our interest. The `THIS` name refers to the current node.
+Within the structure branching from the `HOME` node, every tree node may contain a kind of computation component. The primary intention of the Symp tree structure is to assign names to those components. Components may refer to each other by noting other node paths in the `(USING ...)` sections after announcing `CONTENT`. During the reference to surrounding tree nodes, a component initially sees only its node and its parent nodes. Their child nodes are reached by appending the relative child node path, separating the path elements by the `/` character. After `(USING ...)` declaration, within the component definition, to refer to the nodes declared from `(USING ...)` section, we write only the last element of the path (or its alias declared by `(ALIAS ...)` section). From that element, we may similarly append further path elements to access further child nodes.
 
 #### computational components
 
@@ -109,11 +119,11 @@ Finally, the built-in computational triad closes the programming cycle of rangin
 
 #### user interface component
 
-Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a user interface (UI) of a page system created in Symp framework. There may exist many variations of UI, but the Symp version opinionated to the one inspired by a combination of HTML forms and markdown file formats. It is called Symbolfront, and it is the fourth kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+Upon running, and after all the computations are performed, each Symp source code file may output a structure that may serve as a user interface (UI) of a page system created in Symp framework. There may exist many variations of UI, but the Symp version opinionated to the one inspired by a combination of HTML forms and markdown file formats. It is called Symbolfront, and it is the fourth, and the last kind of component that may be held within the Symp trees. For the details about it, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 ## 3. examples
 
-We bring a two simplistic examples describing how components held within Symp tree are accessed. For understanding examples, the reader is expected to have a certain level of familiarity with the Symbolmatch, Symbolverse, Symbolfront, and Synbolfront, as attainable from the documentation supporting these frameworks.
+We bring a two simplistic examples describing how components held within Symp tree may interact. For understanding examples, the reader is expected to have a certain level of familiarity with the Symbolmatch, Symbolverse, Symbolfront, and Synbolfront, as attainable from the documentation supporting these frameworks.
 
 #### example 1: building a UI application
 
@@ -123,10 +133,10 @@ The following example builds up a small user interface depicting a number and tw
 (NODE
     (NAME uiExample)
     (CONTENT
-        (USING THIS)
+        (USING uiExample)
         (PAGE
             (HDR1 "Increment/decrement value")
-            (PARAG (calc PARAMS))
+            (PARAG (uiExample/calc PARAMS))
             (HBLIST
                 (BUTTON incr "increment" (GET uiExample (incr PARAMS)))
                 (BUTTON decr "decrement" (GET uiExample (decr PARAMS))))))
@@ -137,14 +147,14 @@ The following example builds up a small user interface depicting a number and tw
                 (USING stdlib)
                 (REWRITE
                     (RULE (READ ()) (WRITE "0"))
-                    (RULE (READ ("incr" x)) (WRITE (add (x "1"))))
-                    (RULE (READ ("decr" x)) (WRITE (sub (x "1")))))))))
+                    (RULE (READ ("incr" x)) (WRITE (stdlib/incr x)))
+                    (RULE (READ ("decr" x)) (WRITE (stdlib/decr x))))))))
 
 ```
 
-Let's store this example into a file named `uiExample`. When we run the Symbolback interpreter on the file, the UI opens, shows the number `0`, and waits for our action of pushing its buttons. According to our further actions, the number increments/decrements by one.
+Let's store this example into a file named `uiExample`. When we run the Symbolback interpreter on the file, the UI opens, shows the number `0`, and waits for our action of pushing the buttons. According to our further actions, the number increments/decrements by one.
 
-The root node constructs the user interface with a number calculated by the node `calc` which is made accessible by `(USING THIS)` section. The initial ignition of the file is supposed to be without an input which is then assumed to be of a default value `()`. The `calc` node turns this input to `0`. Further UI interactions reload the `uiExample` with action parameters, causing the number to change and recalculate its value.
+The root node constructs the user interface with a number calculated by the node `calc` which is made accessible by `(USING uiExample)` section. The initial ignition of the file is supposed to be without an input which is then assumed to be of a default value `()`. The `calc` node turns this input to `0`. Further UI interactions reload the `uiExample` with action parameters, causing the number to change and recalculate its value using `stdlib/incr` and `stdlib/decr`.
 
 #### example 2: simple math optimizer using syntax checking, semantic transformation, and runtime execution
 
@@ -154,12 +164,12 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
 (NODE
     (NAME optimizer)
     (CONTENT
-        (USING THIS stdlib)
+        (USING (ALIAS opt optimizer) (ALIAS sl stdlib))
         (PAGE
             (HDR1 "Simple Math Optimizer")
-            (EDIT expr 0 10 (stringify PARAMS))
-            (HBLIST (BUTTON opt "Optimize" (GET optimizer expr)))
-            (PARAG (runtime PARAMS))))
+            (EDIT expr 0 10 (sl/stringify PARAMS))
+            (HBLIST (BUTTON opt "Optimize" (GET opt expr)))
+            (PARAG (opt/runtime PARAMS))))
     
     (BRANCHES
         (NODE
@@ -200,27 +210,27 @@ The following example shows how to apply the `syntax`, `semantics`, and `runtime
         (NODE
             (NAME runtime)
             (CONTENT
-                (USING math stdlib)
+                (USING (ALIAS opt optimizer) (ALIAS sl stdlib))
                 (RUNGRAPH
                     (EDGE
                         (SOURCE BEGIN)
                         (INSTR
-                            (ASGN expr (syntax PARAMS))
-                            (TEST (nth expr 0) "ERROR")
+                            (ASGN expr (opt/syntax PARAMS))
+                            (TEST (sl/nth expr 0) "ERROR")
                             (ASGN RESULT "syntax error"))
                         (TARGET END))
                         
                     (EDGE
                         (SOURCE BEGIN)
-                        (INSTR (ASGN RESULT (stringify (semantics expr))))
+                        (INSTR (ASGN RESULT (sl/stringify (opt/semantics expr))))
                         (TARGET END)))))))
 ```
 
-Root node sets up a small interface containing  an editor, a button, and a feedback paragraph. Below the root node, the example declares `syntax`, `semantics`, and `runtime` nodes. Symbolprose `runtime` node utilizes Symbolmatch `syntax` and Symbolverse `semantics` nodes. After entering a math expression and pressing the `Optimize` button in the user interface, the `runtime` node is executed. Here, the `syntax` node checks the syntax of entered math expressions. If the syntax rules decide it is valid, the same input is passed through the `semantics` node that performs the optimization. Finally, optimized expression is outputted to the UI paragraph.
+Root node sets up a small interface containing an editor, a button, and a feedback paragraph. Below the root node, the example declares `syntax`, `semantics`, and `runtime` nodes. Symbolprose `runtime` node utilizes Symbolmatch `syntax` and Symbolverse `semantics` nodes. After entering a math expression and pressing the `Optimize` button in the user interface, the `runtime` node is executed. Here, the `syntax` node checks the syntax of entered math expressions. If the syntax rules decide it is valid, the same input is passed through the `semantics` node that performs the optimization. Finally, optimized expression is outputted to the UI paragraph.
 
 In summary, if we pass a parameter like `(add 0 (mul 7 1))` to this example, we may expect an output like `7` in the output. The constructions used in this specific example represent a pattern capable of handling more complex domain specific programming frameworks.
 
 ## 4. conclusion
 
-Symp defines an execution model where program structure, computation, and user interfaces are integrated through a uniform symbolic tree. Through this approach, Symp provides a minimal but complete foundation for constructing new micro-languages, application runtimes, and interactive tools without leaving the symbolic domain. Its deterministic referencing, distributed responsibility model, and filesystem-aligned structure allow incremental system growth with minimal coordination overhead.
+Symp defines an execution model where program structure, computation, and user interfaces are integrated through a uniform symbolic tree. Through this approach, Symp provides a foundation for constructing new micro-languages, application runtimes, and interactive tools without leaving the symbolic domain. Its deterministic referencing, distributed responsibility model, and filesystem-aligned structure allow incremental system growth.
 

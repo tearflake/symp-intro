@@ -81,11 +81,11 @@ Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting 
 ## Docs
 
 * ["Hello world" From Symp](docs/hello-world)
-* [Symp Reference](docs/symp)
-    * Symbolmatch
-    * Symbolverse
-    * Symbolprose
-    * Symbolfront
+* [Symp Specs](docs/symp)
+    * [Symbolmatch](docs/symbolmatch)
+    * [Symbolverse](docs/symbolverse)
+    * [Symbolprose](docs/symbolprose)
+    * [Symbolfront](docs/symbolfront)
 * [Lambda Calculus Awakening in Symp](docs/lmbd)
 
 ```
