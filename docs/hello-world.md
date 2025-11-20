@@ -2,7 +2,7 @@
 layout: docs
 ---
 
-# "Hello world" From Symp
+# "Hello world!" From Symp
 
 Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific languages using a unified representation. Instead of hard-coding syntax, semantics, and runtime behavior in a general-purpose language, Symp lets you build them declaratively, layer by layer, using interoperable components. The components include Symbolmatch (syntax), Symbolverse (semantics), Symbolprose (runtime), and Symbolfront (presentation). In this document, we shortly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
 
@@ -14,10 +14,10 @@ Program:
 
 ```
 (NODE
-    (NAME helloWorld)
-        (CONTENT
-            (GRAMMAR
-                (RULE START "Hello world!"))))
+    (NAME helloWorld)
+    (CONTENT
+        (GRAMMAR
+            (RULE START "Hello world!"))))
 ```
 
 Input:
@@ -40,12 +40,12 @@ Program:
 
 ```
 (NODE
-    (NAME helloWorld)
-        (CONTENT
-            (REWRITE
-                (RULE
-                    (READ ())
-                    (WRITE "Hello world!")))))
+    (NAME helloWorld)
+    (CONTENT
+        (REWRITE
+            (RULE
+                (READ ())
+                (WRITE "Hello world!")))))
 ```
 
 Input:
@@ -68,15 +68,15 @@ Program:
 
 ```
 (NODE
-    (NAME helloWorld)
-        (CONTENT
-            (RUNGRAPH
-                (EDGE
-                    (SOURCE BEGIN)
-                    (INSTR
-                        (ASGN RESULT ("Hello world!")))
-                    
-                    (TARGET END)))))
+    (NAME helloWorld)
+    (CONTENT
+        (RUNGRAPH
+            (EDGE
+                (SOURCE BEGIN)
+                (INSTR
+                    (ASGN RESULT ("Hello world!")))
+                
+                (TARGET END)))))
 ```
 
 Input:
@@ -97,10 +97,10 @@ Program:
 
 ```
 (NODE
-    (NAME helloWorld)
-        (CONTENT
-            (PAGE
-                (PARAG "Hello world!"))))
+    (NAME helloWorld)
+    (CONTENT
+        (PAGE
+            (PARAG "Hello world!"))))
 ```
 
 Runs as a stand-alone application and outputs the "Hello world!" text on the screen.
