@@ -8,7 +8,7 @@ Symp is a modular symbolic programming environment designed to define, transform
 
 #### "Hello world!" in Symbolmatch
 
-The purpose of Symbolmatch is to perform a **syntax check** of an input. This is done by using input grammar rules. If the input meets our expectations, the output merely passes the input further down the computing line.
+The purpose of Symbolmatch is to perform a **syntax check** of an input. This is done by using input grammar rules. If the input conforms the rules, it is merely copied to the output.
 
 Program:
 
