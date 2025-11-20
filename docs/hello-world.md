@@ -104,3 +104,7 @@ Program:
 ```
 
 Runs as a stand-alone application and outputs the "hello world" text on the screen.
+
+#### Further Readings
+
+All the components in Symp have their role. The point of having multiple components is to be able to use the right component for the right task. The components are described in more detail in the accompanying documentation.
