@@ -4,11 +4,11 @@ layout: docs
 
 # "Hello world!" From Symp
 
-Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific frameworks using a unified representation. Its backend framework triad, together with the frontend, Symp lets you build frameworks using interoperable components. The components include assembly, functional, and rewriting frameworks, together with the frontend user interface. In this document, we shortly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
+Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific frameworks using a unified representation. Its backend framework triad, together with the frontend, Symp lets you build frameworks using interoperable components. The components include assembly, functional, and rewriting frameworks, together with the frontend user interface. In this document, we briefly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
 
 #### "Hello world!" in assembly component
 
-The purpose of assembly component is to run code in a fast environment where dealing with variable states apply.
+The purpose of the assembly component is to run code in a fast environment where dealing with variable states apply.
 
 Program:
 
@@ -32,7 +32,7 @@ Output:
 
 #### "Hello world!" in functional component
 
-The purpose of functional component is to utilize untyped lambda calculus to perform computations.
+The purpose of the functional component is to utilize untyped lambda calculus to perform computations.
 
 Program:
 
@@ -56,7 +56,7 @@ Output:
 
 #### "Hello world!" in rewriting component
 
-The purpose of rewriting component is to perform **semantic transformations** on the input. This is done by using a term rewriting system. 
+The purpose of the rewriting component is to perform **semantic transformations** on the input. This is done by using a term rewriting system. 
 
 Program:
 
@@ -64,7 +64,7 @@ Program:
 (NODE
     (NAME helloWorld)
     (CONTENT
-        (REWRITE
+        (REWRITER
             (RULE ("helloWorld" x) "Hello world!"))))
 ```
 
@@ -80,7 +80,7 @@ Output:
 
 #### "Hello world!" in pagefront
 
-The purpose of pagefront is to provide user interface for our program. This is done by utilizing HTML forms inspired content pages.
+The purpose of the pagefront is to provide a user interface for our program. This is done by utilizing HTML forms inspired content pages.
 
 Program:
 
