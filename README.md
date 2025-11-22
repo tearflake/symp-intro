@@ -10,48 +10,51 @@
 
 #### 🔮 Philosophy
 
-What if programming had evolved around **form**, **meaning**, **performer**, and **presentation** rather than machinery?
+What if there is a world where programming had evolved around source code ergonomics rather than user interface machinery?
 
-Syntax defines a form of expressions.  
-Semantics decides what they mean.  
-Executive reflects their performer.  
-Interface completes their presentation.  
+* In that world, computer displays never evolved beyond the monochrome text mode.
+* Instead, the programming theory advanced far beyond the one from this world.
+* Source code became a matter of seeking beauty in structures of its appearance.
 
-Symp is a small, strange, and honest framework evolved from form, meaning, performer, and presentation.  
+Symp is a small, strange, and honest framework evolved from using restricted visuals in a favor of rich programming theory.
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
 
 ---
 
 #### 💡 The Idea
 
-In Symp, every computation may follow a simple ritual:
+In Symp, every interaction may follow a simple cyclic ritual:
 
 ```
+      • • • • • • • • • • • • • • • • • •
+      •                                 •
+• • ► •   u s e r   i n t e r f a c e   • • • •
+•     •                                 •     •
+•     • • • • • • • • • • • • • • • • • •     •
+•                                             •
+•                                             •
+•           • • • • • • • • • • • •           •
+•           •                     •           •
+•           •   r e w r i t e r   •           •
+• • • • • • •   f u n c t i o n   • ◄ • • • • •
+            •   a s s e m b l y   •
+            •                     •
+            • • • • • • • • • • • •
+```
 
-syntax → semantics → executive → interface
+While the modest user interface frontend is baked in, the programming backend spans free over a broad range of different complexities between low and high level programming.
 
-````
+The backend span should make it easy to define new domain specific frameworks using the right paradigms for the right tasks. It is possible to choose between fast but simple assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
 
-Instead of hiding these stages,  
-Symp makes each one **programmable**.
-
-You don’t just write programs in Symp —  
-you define *how* programs themselves should be understood.
+Each of the initially offered paradigms favor minimalist design, differing not in sizes, but only in their approach to solving various kinds of programming tasks.
 
 ---
 
 #### 🧠 Why Symp Exists
 
-Symp isn’t a Lisp dialect or a new syntax flavor.  
-It’s a **computational philosophy**:
-
-* Programs can prove their *form* before they express their *meaning*.
-* *Meaning* of programs is interpreted by their *performer*.
-* Program *performer* carries on their *presentation*.
-* Everything can be described in its own **syntax**, **semantics**, **executive**, and **interface**.
-
+Symp is a Lisp dialect and a new syntax flavor.  
 It’s deliberately colorless, minimalist, and transparent.  
-A tool for anyone who loves **building languages more than writing in them**.
+A tool for anyone who loves **building languages more than writing in them**.  
 
 ---
 
@@ -64,13 +67,13 @@ It’s a playground for symbolic systems:
 * Meta-compilers and term rewriters
 * Theorem provers, logic engines, or exotic REPLs
 
-Anything that can be described as “form → meaning → performer → presentation”.
+Anything that can be described as a programming paradigm.
 
 ---
 
 #### 🖤 Inspiration
 
-Symp is inspired by symbolic expressions, parsing grammar rules, term rewriting systems, finite state machines, and HTML forms user interface.
+Symp is inspired by symbolic expressions, term rewriting systems, lambda calculus, assembly frameworks, and HTML forms user interface.
 
 ---
 
