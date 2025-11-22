@@ -46,7 +46,7 @@ Program:
 
 Input:
 
-ignored
+none
 
 Output:
 
