@@ -14,7 +14,7 @@ What if programming had evolved around **form**, **meaning**, **runtime**, and *
 
 Syntax defines a form of expressions.  
 Semantics decides what they mean.  
-executive carries their runtime.  
+executable carries their runtime.  
 interface completes their presentation.  
 
 Symp is a small, strange, and honest framework evolved from form, meaning, runtime, and presentation.  
@@ -28,7 +28,7 @@ In Symp, every computation may follow a simple ritual:
 
 ```
 
-syntax → semantics → executive → interface
+syntax → semantics → executable → interface
 
 ````
 
@@ -48,7 +48,7 @@ It’s a **computational philosophy**:
 * Programs can prove their *form* before they express their *meaning*.
 * *Meaning* of programs is interpreted by their *runtime*.
 * Program *runtime* reflects their *presentation*.
-* Everything can be described in its own **syntax**, **semantics**, **executive**, and **interface**.
+* Everything can be described in its own **syntax**, **semantics**, **executable**, and **interface**.
 
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves **building languages more than writing in them**.
