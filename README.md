@@ -54,7 +54,7 @@ Each of the initially offered paradigms favor minimalist design, differing not i
 
 Symp is a Lisp dialect and a new syntax flavor.  
 It’s deliberately colorless, minimalist, and transparent.  
-A tool for anyone who loves **building languages more than writing in them**.  
+A tool for anyone who loves building languages more than writing in them.  
 
 ---
 
