@@ -10,7 +10,7 @@
 
 #### 🔮 Philosophy
 
-What if there is a world where programming had evolved around source code ergonomics rather than user interface machinery?
+What if there is a world where programming has evolved around source code ergonomics rather than user interface machinery?
 
 * In that world, computer displays never evolved beyond the monochrome text mode.
 * Instead, the programming theory advanced far beyond the one from this world.
@@ -90,7 +90,7 @@ Symp is inspired by symbolic expressions, term rewriting systems, lambda calculu
     * [Rewriting](docs/rewriting)
     * [Pagefront](docs/pagefront)
     * [Stdlib Reference](docs/stdlib)
-* [bootstrap](docs/bootstrap)
+* [meta-circular interpreter](docs/meta-circ)
 
 ```
 // WORK IN PROGRESS //
