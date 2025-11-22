@@ -47,7 +47,7 @@ It’s a **computational philosophy**:
 
 * Programs can prove their *form* before they express their *meaning*.
 * *Meaning* of programs is interpreted by their *performer*.
-* Program *performer* reflects their *presentation*.
+* Program *performer* carries on their *presentation*.
 * Everything can be described in its own **syntax**, **semantics**, **executive**, and **interface**.
 
 It’s deliberately colorless, minimalist, and transparent.  
