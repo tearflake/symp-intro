@@ -73,7 +73,7 @@ Anything that can be described as a programming paradigm.
 
 #### 🖤 Inspiration
 
-Symp is inspired by symbolic expressions, term rewriting systems, lambda calculus, assembly frameworks, and HTML forms user interface.
+Symp is inspired by symbolic expressions, term rewriting, lambda calculus, assembly frameworks, and HTML forms user interface.
 
 ---
 
