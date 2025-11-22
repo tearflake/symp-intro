@@ -10,14 +10,14 @@
 
 #### 🔮 Philosophy
 
-What if programming had evolved around **form**, **meaning**, **runtime**, and **presentation** rather than machinery?
+What if programming had evolved around **form**, **meaning**, **performer**, and **presentation** rather than machinery?
 
 Syntax defines a form of expressions.  
 Semantics decides what they mean.  
-executable carries their runtime.  
+executive carries on their performer.  
 interface completes their presentation.  
 
-Symp is a small, strange, and honest framework evolved from form, meaning, runtime, and presentation.  
+Symp is a small, strange, and honest framework evolved from form, meaning, performer, and presentation.  
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
 
 ---
@@ -28,7 +28,7 @@ In Symp, every computation may follow a simple ritual:
 
 ```
 
-syntax → semantics → executable → interface
+syntax → semantics → executive → interface
 
 ````
 
@@ -46,9 +46,9 @@ Symp isn’t a Lisp dialect or a new syntax flavor.
 It’s a **computational philosophy**:
 
 * Programs can prove their *form* before they express their *meaning*.
-* *Meaning* of programs is interpreted by their *runtime*.
-* Program *runtime* reflects their *presentation*.
-* Everything can be described in its own **syntax**, **semantics**, **executable**, and **interface**.
+* *Meaning* of programs is interpreted by their *performer*.
+* Program *performer* reflects their *presentation*.
+* Everything can be described in its own **syntax**, **semantics**, **executive**, and **interface**.
 
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves **building languages more than writing in them**.
@@ -64,7 +64,7 @@ It’s a playground for symbolic systems:
 * Meta-compilers and term rewriters
 * Theorem provers, logic engines, or exotic REPLs
 
-Anything that can be described as “form → meaning → runtime → presentation”.
+Anything that can be described as “form → meaning → performer → presentation”.
 
 ---
 
