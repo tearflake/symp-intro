@@ -14,8 +14,8 @@ What if programming had evolved around **form**, **meaning**, **performer**, and
 
 Syntax defines a form of expressions.  
 Semantics decides what they mean.  
-executive reflects their performer.  
-interface completes their presentation.  
+Executive reflects their performer.  
+Interface completes their presentation.  
 
 Symp is a small, strange, and honest framework evolved from form, meaning, performer, and presentation.  
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
