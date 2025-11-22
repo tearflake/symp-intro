@@ -44,7 +44,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 
 While the modest user interface frontend is baked in, the programming backend spans free over a broad range of different complexities between low and high level programming.
 
-The backend span should make it easy to define new domain specific frameworks using the right paradigms for the right tasks. It is possible to choose between fast but simple assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
+The backend span should make it easy to define new domain specific frameworks using the right paradigms for the right tasks. It is possible to choose between fast but rudimentary assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
 
 Each of the initially offered paradigms favor minimalist design, differing not in sizes, but only in their approach to solving various kinds of programming tasks.
 
