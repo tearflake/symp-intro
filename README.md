@@ -85,12 +85,12 @@ Symp is inspired by symbolic expressions, term rewriting systems, lambda calculu
 
 * ["Hello world!" From Symp](docs/hello-world)
 * [Symp Specs](docs/symp)
-    * [Symbolmatch](docs/symbolmatch)
-    * [Symbolverse](docs/symbolverse)
-    * [Symbolprose](docs/symbolprose)
-    * [Symbolfront](docs/symbolfront)
+    * [Assembly](docs/assembly)
+    * [Functional](docs/functional)
+    * [Rewriting](docs/rewriting)
+    * [Pagefront](docs/pagefront)
     * [Stdlib Reference](docs/stdlib)
-* [Lambda Calculus Awakening in Symp](docs/lmbd)
+* [bootstrap](docs/bootstrap)
 
 ```
 // WORK IN PROGRESS //
