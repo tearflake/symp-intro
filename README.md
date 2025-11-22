@@ -33,13 +33,13 @@ In Symp, every interaction may follow a simple cyclic ritual:
 •     • • • • • • • • • • • • • • • • • •     •
 •                                             •
 •                                             •
-•           • • • • • • • • • • • •           •
-•           •                     •           •
-•           •   r e w r i t e r   •           •
-• • • • • • •   f u n c t i o n   • ◄ • • • • •
-            •   a s s e m b l y   •
-            •                     •
-            • • • • • • • • • • • •
+•         • • • • • • • • • • • • • •         •
+•         •                         •         •
+•         •     r e w r i t e r     •         •
+• • • • • •   f u n c t i o n a l   • ◄ • • • •
+          •     a s s e m b l y     •
+          •                         •
+          • • • • • • • • • • • • • •
 ```
 
 While the modest user interface frontend is baked in, the programming backend spans free over a broad range of different complexities between low and high level programming.
