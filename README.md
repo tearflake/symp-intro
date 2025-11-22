@@ -10,14 +10,14 @@
 
 #### 🔮 Philosophy
 
-What if programming had evolved around **form**, **meaning**, **execution**, and **intent** rather than machinery?
+What if programming had evolved around **form**, **meaning**, **execution**, and **presentation** rather than machinery?
 
 Syntax defines a form of expressions.  
 Semantics decides what they mean.  
 Runtime carries their execution.  
-Presentation completes their intent.  
+interface completes their presentation.  
 
-Symp is a small, strange, and honest framework evolved from form, meaning, execution, and intent.  
+Symp is a small, strange, and honest framework evolved from form, meaning, execution, and presentation.  
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
 
 ---
@@ -28,7 +28,7 @@ In Symp, every computation may follow a simple ritual:
 
 ```
 
-syntax → semantics → runtime → presentation
+syntax → semantics → runtime → interface
 
 ````
 
@@ -47,8 +47,8 @@ It’s a **computational philosophy**:
 
 * Programs can prove their *form* before they express their *meaning*.
 * *Meaning* of programs is interpreted by their *execution*.
-* Program *execution* reflects their *intent*.
-* Everything can be described in its own **syntax**, **semantics**, **runtime**, and **presentation**.
+* Program *execution* reflects their *presentation*.
+* Everything can be described in its own **syntax**, **semantics**, **runtime**, and **interface**.
 
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves **building languages more than writing in them**.
@@ -64,7 +64,7 @@ It’s a playground for symbolic systems:
 * Meta-compilers and term rewriters
 * Theorem provers, logic engines, or exotic REPLs
 
-Anything that can be described as “form → meaning → execution → intent”.
+Anything that can be described as “form → meaning → execution → presentation”.
 
 ---
 
