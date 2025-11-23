@@ -54,7 +54,7 @@ Each of the initially supplied paradigms favor minimalist design, differing not 
 
 #### 🧠 Why Symp Exists
 
-Symp is an S-expression based meta-framework.  
+Symp is an S-expression based programming meta-framework.  
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves building languages more than writing in them.  
 
