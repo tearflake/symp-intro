@@ -44,7 +44,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 
 While the modest user interface frontend is baked in, the programming backend spans free over a broad range between low and high level programming.
 
-The backend frameworks should provide an easy way to define new domain specific frameworks using the right paradigms for the right tasks.
+The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right paradigms for the right tasks.
 
 It is possible to choose between fast but rudimentary assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
 
