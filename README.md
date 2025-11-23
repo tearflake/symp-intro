@@ -46,9 +46,9 @@ While the modest user interface frontend is baked in, the programming backend sp
 
 The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right paradigms for the right tasks.
 
-It is possible to choose between fast but rudimentary assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
+It is possible to choose between rudimentary but fast assembly programming, the sweet spot functional programming, and advanced but slow term rewriting programming.
 
-Each of the initially offered paradigms favor minimalist design, differing not in complexity, yet only in their approach to solving various kinds of programming tasks.
+Each of the initially offered paradigms favor minimalist design, differing not in complexity, yet only in their approach to solve various kinds of programming tasks.
 
 ---
 
