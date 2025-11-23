@@ -4,7 +4,7 @@
 
 ## Symp
 
-a framework from a parallel reality where symbols won
+a programming framework from a parallel reality where symbols won
 
 ---
 
@@ -28,7 +28,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 ```
       · · · · · · · · · · · · · · · · · ·
       ·                                 ·
-· · ► ·   u s e r   i n t e r f a c e   · · · ·
+· · > ·   u s e r   i n t e r f a c e   · · · ·
 ·     ·                                 ·     ·
 ·     · · · · · · · · · · · · · · · · · ·     ·
 ·                                             ·
@@ -36,7 +36,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 ·         · · · · · · · · · · · · · ·         ·
 ·         ·                         ·         ·
 ·         ·     r e w r i t e r     ·         ·
-· · · · · ·   f u n c t i o n a l   · ◄ · · · ·
+· · · · · ·   f u n c t i o n a l   · < · · · ·
           ·     a s s e m b l y     ·
           ·                         ·
           · · · · · · · · · · · · · ·
