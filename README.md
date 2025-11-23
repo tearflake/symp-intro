@@ -48,13 +48,13 @@ The backend set of programming paradigms should provide an easy way to define ne
 
 It is possible to choose between rudimentary but fast assembly programming, the sweet spot functional programming, and advanced but slow term rewriting programming.
 
-Each of the initially offered paradigms favor minimalist design, differing not in complexity, yet only in their approach to solve various kinds of programming tasks.
+Each of the initially supplied paradigms favor minimalist design, differing not in complexity, yet only in their approach to solve various kinds of programming tasks.
 
 ---
 
 #### 🧠 Why Symp Exists
 
-Symp is a Lisp dialect and a new syntax flavor.  
+Symp is a S-expression based meta-framework.  
 It’s deliberately colorless, minimalist, and transparent.  
 A tool for anyone who loves building languages more than writing in them.  
 

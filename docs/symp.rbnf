@@ -1,0 +1,34 @@
+<start> := <tree>
+
+<tree> := (NODE
+              (NAME <ATOMIC>)
+              (CONTENT (USING <using>+)? <component>)?
+              (BRANCHES <tree>+)?
+          )
+
+<using> := <ATOMIC>
+         | (ALIAS <ATOMIC> <ATOMIC>)
+
+<component> := <frontend>
+             | <backend>
+
+<backend> := <assembly>
+           | <functional>
+           | <rewriting>
+
+<assembly> := (ASSEMBLY <instr>+)
+
+<instr> := (LABEL <ATOMIC>)
+         | (ASSGN <ATOMIC> <ANY>)
+         | (JMPEQ <ANY> <ANY> <ANY>)
+ 
+<functional> := (<FUNCTIONAL> <lmbd>)
+ 
+ <lmbd> := (LMBD <ATOMIC>+ <lmbd>)
+         | (<lmbd> <lmbd>+)
+         | <ATOMIC>
+
+<rewriting> := (REWRITER <rule>+)
+
+<rule> := (RULE (READ <ANY>) (WRITE <ANY>))
+

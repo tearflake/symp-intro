@@ -104,10 +104,10 @@ The following example builds up a small user interface depicting a number and tw
             (NAME init)
             (CONTENT
                 (REWRITE
-                    (RULE ("init" ()) 0))))))
+                    (RULE (READ ("init")) (WRITE 0)))))))
 ```
 
-Let's store this example into a file named `uiExample`. When we run the Symp interpreter on the file, the UI opens, shows the number `0`, and waits for our action of pushing the buttons. The initial number `0` is constructed by the node `init` which is made accessible by `(ALIAS ui uiExample)` under `USING` section. The call to this example is supposed to be without parameters which gives us an empty list. The `init` node turns this input to `0`. Further button interactions reload the paragraph `p` with the content recalculated by `sl/incr` and `sl/decr`, incrementing or decrementing the current value.
+Let's store this example into a file named `uiExample`. When we run the Symp interpreter on the file, the UI opens, shows the number `0`, and waits for our action of pushing the buttons. The initial number `0` is constructed by the node `init` which is made accessible by `(ALIAS ui uiExample)` under `USING` section. The call to this example is supposed to be without parameters. The `init` node turns this call to `0`. Further button interactions redefine the paragraph `p` with the content recalculated by `sl/incr` and `sl/decr`, incrementing or decrementing the current value.
 
 ## 4. conclusion
 
