@@ -65,7 +65,7 @@ A tool for anyone who loves building languages more than writing in them.
 Symp is tiny, but composable.  
 It’s a playground for symbolic systems:
 
-* Dmain specific interpreters
+* Domain specific interpreters
 * Meta-compilers and term rewriters
 * Theorem provers, logic engines, or exotic REPLs
 
