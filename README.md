@@ -42,34 +42,31 @@ In Symp, every interaction may follow a simple cyclic ritual:
           • • • • • • • • • • • • • •
 ```
 
-While the modest frontend user interface is baked in, the programming backend spans free over a wide range between low level and high level programming.
+While the modest frontend user interface is baked in, the programming backend spans free over the whole range between low level and high level programming.
+
+It is possible to choose between rudimentary but fast assembly programming, middle ground functional programming, and advanced but slow term rewriting.
 
 The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right tools for the right tasks.
-
-It is possible to choose between rudimentary but fast assembly programming, middle ground functional programming, and advanced but slow term rewriter programming.
-
-Each of the initially supplied paradigms favor minimalist design, differing not in complexity, yet only in their approach to solve various kinds of programming tasks.
 
 ---
 
 #### 🧠 Why Symp Exists
 
-Symp is an S-expression based programming meta-framework.  
-It’s deliberately colorless, minimalist, and transparent.  
-A tool for anyone who loves building languages more than writing in them.  
-
+Symp is an S-expression based programming framework.\
+It’s deliberately colorless and minimalist, but complete.\
+A tool for building languages as well as writing in them.\
 ---
 
 #### 🚀 What You Can Build
 
-Symp is tiny, but composable.  
+Symp is tiny, but composable.\
 It’s a playground for symbolic systems:
 
 * Domain specific interpreters
 * Meta-compilers and term rewriters
-* Theorem provers, logic engines, or exotic REPLs
+* Theorem provers and logic engines
 
-Anything that can be described as a programming paradigm.
+Anything computable from strict rules.
 
 ---
 
