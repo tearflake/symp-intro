@@ -54,7 +54,7 @@ The backend set of programming paradigms should provide an easy way to define ne
 
 Symp is an S-expression based programming framework.\
 It’s colorless and minimalist although computationally complete.\
-A tool for building languages as well as writing in them.
+A tool for building prgramming frameworks as well as writing in them.
 
 ---
 
