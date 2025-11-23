@@ -73,7 +73,7 @@ Anything computable using strict rules.
 
 #### Inspiration
 
-Symp is inspired by symbolic expressions, term rewriting, lambda calculus, assembly frameworks, and HTML forms user interface.
+Symp is inspired by symbolic expressions, term rewriting, lambda calculus, assembly approach, and HTML forms user interface.
 
 ---
 
