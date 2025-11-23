@@ -8,7 +8,7 @@
 
 ---
 
-#### 🔮 Philosophy
+#### Philosophy
 
 What if there is a world where programming has evolved around source code ergonomics rather than user interface machinery?
 
@@ -21,7 +21,7 @@ It carries a *thought experiment* from a reality in which symbols triumphed over
 
 ---
 
-#### 💡 The Idea
+#### The Idea
 
 In Symp, every interaction may follow a simple cyclic ritual:
 
@@ -50,7 +50,7 @@ The backend set of programming paradigms should provide an easy way to define ne
 
 ---
 
-#### 🧠 Why Symp Exists
+#### Why Symp Exists
 
 Symp is an S-expression based programming framework.\
 It’s colorless and minimalist although computationally complete.\
@@ -58,7 +58,7 @@ A tool for building languages as well as writing in them.
 
 ---
 
-#### 🚀 What You Can Build
+#### What You Can Build
 
 Symp is tiny, but composable.\
 It’s a playground for symbolic systems:
@@ -71,7 +71,7 @@ Anything computable using strict rules.
 
 ---
 
-#### 🖤 Inspiration
+#### Inspiration
 
 Symp is inspired by symbolic expressions, term rewriting, lambda calculus, assembly frameworks, and HTML forms user interface.
 
