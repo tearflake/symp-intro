@@ -14,7 +14,7 @@ What if there is a world where programming has evolved around source code ergono
 
 * In that world, computer displays never evolved beyond the monochrome text mode.
 * Instead, the programming theory advanced far beyond the one from this world.
-* Source code became a matter of seeking beauty in structures of its appearance.
+* Source code became a subject of seeking beauty in structures of its appearance.
 
 Symp is a small, strange, and honest framework evolved from using restricted visuals in a favor of rich programming theory.
 It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
@@ -42,11 +42,11 @@ In Symp, every interaction may follow a simple cyclic ritual:
           • • • • • • • • • • • • • •
 ```
 
-While the modest user interface frontend is baked in, the programming backend spans free over a broad range of different complexities between low and high level programming.
+While the modest user interface frontend is baked in, the programming backend spans free over a broad range between low and high level programming.
 
 The backend span should make it easy to define new domain specific frameworks using the right paradigms for the right tasks. It is possible to choose between fast but rudimentary assembly programming, the sweet spot functional programming, and slow but advanced term rewriting programming.
 
-Each of the initially offered paradigms favor minimalist design, differing not in sizes, but only in their approach to solving various kinds of programming tasks.
+Each of the initially offered paradigms favor minimalist design, differing not in complexity, yet only in their approach to solving various kinds of programming tasks.
 
 ---
 
