@@ -67,7 +67,7 @@ It’s a playground for symbolic systems:
 * Meta-compilers and term rewriters
 * Theorem provers and logic engines
 
-Anything computable from strict rules.
+Anything computable using strict rules.
 
 ---
 
