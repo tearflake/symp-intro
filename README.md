@@ -17,7 +17,7 @@ What if there is a world where programming has evolved around source code ergono
 * Source code became a subject of seeking beauty in structures of its appearance.
 
 Symp is a small, strange, and honest framework evolved from using restricted visuals in a favor of rich programming theory.
-It carries a *thought experiment* from a reality in which symbols triumphed over flashing lights.
+It carries a thought experiment from a reality in which symbols triumphed over flashing lights.
 
 ---
 
@@ -26,20 +26,20 @@ It carries a *thought experiment* from a reality in which symbols triumphed over
 In Symp, every interaction may follow a simple cyclic ritual:
 
 ```
-      • • • • • • • • • • • • • • • • • •
-      •                                 •
-• • ► •   u s e r   i n t e r f a c e   • • • •
-•     •                                 •     •
-•     • • • • • • • • • • • • • • • • • •     •
-•                                             •
-•                                             •
-•         • • • • • • • • • • • • • •         •
-•         •                         •         •
-•         •     r e w r i t e r     •         •
-• • • • • •   f u n c t i o n a l   • ◄ • • • •
-          •     a s s e m b l y     •
-          •                         •
-          • • • • • • • • • • • • • •
+      · · · · · · · · · · · · · · · · · ·
+      ·                                 ·
+· · ► ·   u s e r   i n t e r f a c e   · · · ·
+·     ·                                 ·     ·
+·     · · · · · · · · · · · · · · · · · ·     ·
+·                                             ·
+·                                             ·
+·         · · · · · · · · · · · · · ·         ·
+·         ·                         ·         ·
+·         ·     r e w r i t e r     ·         ·
+· · · · · ·   f u n c t i o n a l   · ◄ · · · ·
+          ·     a s s e m b l y     ·
+          ·                         ·
+          · · · · · · · · · · · · · ·
 ```
 
 While the modest frontend user interface is baked in, the programming backend spans free over the whole range between low level and high level programming.
