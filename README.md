@@ -28,7 +28,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 ```
       · · · · · · · · · · · · · · · · · ·
       ·                                 ·
-· · > ·   u s e r   i n t e r f a c e   · · · ·
+· · > ·        p a g e f r o n t        · · · ·
 ·     ·                                 ·     ·
 ·     · · · · · · · · · · · · · · · · · ·     ·
 ·                                             ·
@@ -42,7 +42,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
           · · · · · · · · · · · · · ·
 ```
 
-While the modest frontend user interface is baked in, the programming backend spans free over the whole range between low level and high level programming.
+While the modest frontend user interface is baked in (pagefront), the programming backend spans free over the whole range between low level and high level programming.
 
 It is possible to choose between rudimentary but fast assembly programming, middle ground functional programming, and advanced but slow term rewriting.
 
