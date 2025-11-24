@@ -88,7 +88,7 @@ Program:
 (NODE
     (NAME helloWorld)
     (CONTENT
-        (PAGE
+        (PAGEFRONT
             (PARAG ... "Hello world!"))))
 ```
 
