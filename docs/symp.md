@@ -25,7 +25,7 @@ layout: docs
 
 ## 1. introduction
 
-Symp provides the structural layer that integrates the assembly, functinal, rewriting, and pagefront components into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as backend support or UI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
+Symp provides the structural layer that integrates the assembly, functinal, rewriter, and pagefront components into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as backend support or UI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
 
 The framework removes the distinction between *program organization* and *program execution model*: the same symbolic representation is used to store, locate, and run components. This minimizes hidden state, avoids implicit linking, prevents namespace ambiguity, and enables deterministic resolution of dependencies at runtime.
 
@@ -56,7 +56,7 @@ In computer science, the syntax of a computer language is the set of rules that 
 
 <backend> := <assembly>
            | <functional>
-           | <rewriting>
+           | <rewriter>
 ```
 
 The above grammar defines the syntax of Symp. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered parts of the Symp grammar.
@@ -65,7 +65,7 @@ Atoms may be enclosed between a pair of `'` characters if we want to include spe
  
 In addition to the exposed grammar, user comments have no meaning to the system, but may be descriptive to readers, and may be placed wherever a whitespace is expected. Single line comments begin with `//` and span to the end of line. Multiline comments begin with `/*` and end with `*/`.
 
-We will be using the same syntax definition nomenclature throughout the accompanying specification documents of assembly, functional, and rewriting components.
+We will be using the same syntax definition nomenclature throughout the accompanying specification documents of assembly, functional, rewriter, and pagefront components.
 
 ### 2.2 informal semantics
 
@@ -77,7 +77,7 @@ Within the structure branching from the `HOME` node, every tree node may contain
 
 #### backend computational components
 
-In Symp, there are three backend computational components, namely assembly, functional, and rewriting. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming span of ranging between the imperative, functional, and rule-based programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about assembly, functional, and rewriting components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+In Symp, there are three backend computational components, namely assembly, functional, and rewriter. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming span of ranging between the imperative, functional, and rule-based programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about assembly, functional, and rewriter components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 #### frontend user interface component
 
@@ -103,7 +103,7 @@ The following example builds up a small user interface depicting a number and tw
         (NODE
             (NAME init)
             (CONTENT
-                (REWRITE
+                (REWRITER
                     (RULE (READ ("init")) (WRITE 0)))))))
 ```
 

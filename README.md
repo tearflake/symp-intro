@@ -87,7 +87,7 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
 * [Symp Specs](docs/symp)
     * [Assembly](docs/assembly)
     * [Functional](docs/functional)
-    * [Rewriting](docs/rewriting)
+    * [Rewriter](docs/rewriter)
     * [Pagefront](docs/pagefront)
     * [Stdlib Reference](docs/stdlib)
 * [meta-circular interpreter](docs/meta-circ)

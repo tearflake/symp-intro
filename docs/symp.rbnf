@@ -14,7 +14,7 @@
 
 <backend> := <assembly>
            | <functional>
-           | <rewriting>
+           | <rewriter>
 
 <assembly> := (ASSEMBLY <instr>+)
 
@@ -28,7 +28,7 @@
         | (<lmbd> <lmbd>+)
         | <ATOMIC>
 
-<rewriting> := (REWRITER <rule>+)
+<rewriter> := (REWRITER <rule>+)
 
 <rule> := (RULE (READ <ANY>) (WRITE <ANY>))
 
