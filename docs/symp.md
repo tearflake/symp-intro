@@ -94,10 +94,10 @@ The following example builds up a small user interface depicting a number and tw
         (USING (ALIAS ui uiExample) (ALIAS sl stdlib))
         (PAGEFRONT
             (HDR1 ... "Increment/Decrement Value")
-            (PARAG p (ui/init PARAMS))
+            (PARAG "p" (ui/init PARAMS))
             (HBLIST ...
-                (BUTTON incr "increment" (GET (PARAG p (sl/incr p))) (TARGET p))
-                (BUTTON decr "decrement" (GET (PARAG p (sl/decr p))) (TARGET p)))))
+                (BUTTON incr "increment" (GET (PARAG "p" (sl/incr p))) (TARGET p))
+                (BUTTON decr "decrement" (GET (PARAG "p" (sl/decr p))) (TARGET p)))))
     
     (BRANCHES
         (NODE
