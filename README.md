@@ -50,7 +50,7 @@ The backend set of programming paradigms should provide an easy way to define ne
 
 ---
 
-#### Why Symp Exists
+#### Purpose
 
 Symp is an S-expression based programming framework.\
 It’s colorless and minimalist although computationally complete.\
