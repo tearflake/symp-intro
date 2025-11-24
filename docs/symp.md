@@ -77,7 +77,7 @@ Within the structure branching from the `HOME` node, every tree node may contain
 
 #### backend computational components
 
-In Symp, there are three backend computational components, namely assembly, functional, and rewriting. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming cycle of ranging between the imperative, functional, and logic programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about assembly, functional, and rewriting components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+In Symp, there are three backend computational components, namely assembly, functional, and rewriting. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming span of ranging between the imperative, functional, and rule-based programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about assembly, functional, and rewriting components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 #### frontend user interface component
 

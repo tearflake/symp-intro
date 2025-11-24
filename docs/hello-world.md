@@ -65,12 +65,12 @@ Program:
     (NAME helloWorld)
     (CONTENT
         (REWRITER
-            (RULE ("helloWorld" x) "Hello world!"))))
+            (RULE ("helloWorld") "Hello world!"))))
 ```
 
 Input:
 
-ignored
+none
 
 Output:
 

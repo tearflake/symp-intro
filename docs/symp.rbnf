@@ -20,13 +20,13 @@
 
 <instr> := (LABEL <ATOMIC>)
          | (ASSGN <ATOMIC> <ANY>)
-         | (JMPEQ <ANY> <ANY> <ANY>)
+         | (JMPNE <ANY> <ANY> <ATOMIC>)
  
-<functional> := (<FUNCTIONAL> <lmbd>)
+<functional> := (FUNCTIONAL <lmbd>)
  
- <lmbd> := (LMBD <ATOMIC>+ <lmbd>)
-         | (<lmbd> <lmbd>+)
-         | <ATOMIC>
+<lmbd> := (LMBD <ATOMIC>+ <lmbd>)
+        | (<lmbd> <lmbd>+)
+        | <ATOMIC>
 
 <rewriting> := (REWRITER <rule>+)
 
