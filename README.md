@@ -44,7 +44,7 @@ In Symp, every interaction may follow a simple cyclic ritual:
 
 While the modest frontend user interface is baked in (pagefront), the programming backend spans free over the whole range between low level and high level programming.
 
-It is possible to choose between rudimentary but fast assembly programming, middle ground functional programming, and advanced but slow term rewriting.
+It is possible to choose between rudimentary but fast assembly execution, middle ground functional programming, and advanced but slow term rewriting.
 
 The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right tools for the right tasks.
 
