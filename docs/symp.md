@@ -92,7 +92,7 @@ The following example builds up a small user interface depicting a number and tw
     (NAME uiExample)
     (CONTENT
         (USING (ALIAS ui uiExample) (ALIAS sl stdlib))
-        (PAGE
+        (PAGEFRONT
             (HDR1 ... "Increment/Decrement Value")
             (PARAG p (ui/init PARAMS))
             (HBLIST ...
