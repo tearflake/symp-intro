@@ -9,8 +9,8 @@
 <using> := <ATOMIC>
          | (ALIAS <ATOMIC> <ATOMIC>)
 
-<component> := <frontend>
-             | <backend>
+<component> := <backend>
+             | <frontend>
 
 <backend> := <assembly>
            | <functional>

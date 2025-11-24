@@ -89,7 +89,7 @@ Program:
     (NAME helloWorld)
     (CONTENT
         (PAGEFRONT
-            (PARAG ... "Hello world!"))))
+            (PARAG "..." "Hello world!"))))
 ```
 
 Runs as a stand-alone application and outputs the "Hello world!" text on the screen.
