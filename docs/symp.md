@@ -214,7 +214,7 @@ Each of the functions first make a call to encoder of decimal to unary number (`
 
 Here, we use the hardcoded `stdlib` library of functions to access `add` (adds two numbers), `sub` (subtracts two numbers), and `snd` (returns the second list element) functions.
 
-Unary numbers consumed and produced by encoder/decoder are of the following notation:
+Unary numbers produced/consumed by encoder/decoder are of the following notation:
 
 ```
 0 = Z
@@ -224,7 +224,7 @@ Unary numbers consumed and produced by encoder/decoder are of the following nota
 ...
 ```
 
-This kind of unary numbers are suitable for performing computations in a very simple manner. This is shown by the rewriterOps node where the supported operations are `add`, `mul`, and `fact`:
+This kind of unary numbers is suitable for performing computations in a very simple manner. This is shown by the rewriterOps node where the supported operations are `add`, `mul`, and `fact`:
 
 ```
 (NODE
@@ -244,7 +244,9 @@ This kind of unary numbers are suitable for performing computations in a very si
             (RULE (READ (fact (S n))) (WRITE (mul (S n) (fact n)))))))
 ```
 
-The entire example consisting of these four segments shows how to use all the four available node types, namely in order of appearance: pagefront, functional, assembly, and rewriter. In Symp, all the operations are based on these node types while the new domain specific frameworks may be defined in their terms and called as functions when needed.
+The entire example consisting of these four segments shows how to use all the four available node types, namely in order of appearance: pagefront, functional, assembly, and rewriter.
+
+In Symp, all the operations are based on these node types while the new domain specific frameworks may be defined in their terms and called as functions when needed.
 
 ## 4. conclusion
 
