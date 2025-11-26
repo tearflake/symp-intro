@@ -88,7 +88,7 @@ Upon running, and after all the computations are performed, each Symp source cod
 
 ## 3. informative example
 
-Here, we bring a composite example of a simplistic calculator with its own user interface. The purpose of this example is not to give a comprehensive explanation about how Symp works, but to exhibit a representative form of a Symp application. A reader more interested in Symp may return to this example after completing the reading of the whole documentation. The example is called "Three-Mind Calculator" because it is using all of the three available computation models in Symp to produce new values.
+Here, we bring a composite example of a simplistic calculator with its own user interface. The purpose of this example is not to give a comprehensive explanation about how Symp works, but to exhibit a representative form of a Symp application. A reader more interested in Symp may return to this example after completing reading the entire documentation. The example is called "Three-Mind Calculator" because it is using all of the three available computation models in Symp to produce new values.
 
 We start our exposure with the user interface:
 
