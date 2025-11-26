@@ -68,7 +68,7 @@ We will be using the same syntax definition nomenclature throughout the accompan
 
 ### 2.2 informal semantics
 
-Every program in Symp is wrapped up within the tree data structure. Each tree consists of a node which may terminate as a leaf node, or may branch out further as a parent to a set of child nodes. This structure may indefinitely recursively repeat at each node. In theory, there exist cyclic and acyclic kinds of trees while Symp is initially set to handle the acyclic kind. Symp enforces acyclic structure to keep evaluation deterministic.
+Every program in Symp is wrapped up within the tree data structure. Each tree consists of a node which may terminate as a leaf node, or may branch out further as a parent to a set of child nodes. This structure may indefinitely recursively repeat at each node.
 
 #### tree-filesystem alignment
 
