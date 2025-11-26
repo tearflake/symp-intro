@@ -3,8 +3,7 @@
 <tree> := (NODE
               (NAME <ATOMIC>)
               (CONTENT (USING <using>+)? <component>)?
-              (BRANCHES <tree>+)?
-          )
+              (BRANCHES <tree>+)?)
 
 <using> := <ATOMIC>
          | (ALIAS <ATOMIC> <ATOMIC>)

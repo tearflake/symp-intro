@@ -65,7 +65,7 @@ Program:
     (NAME helloWorld)
     (CONTENT
         (REWRITER
-            (RULE ("helloWorld") "Hello world!"))))
+            (RULE (READ "helloWorld") (WRITE "Hello world!")))))
 ```
 
 Input:
