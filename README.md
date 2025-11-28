@@ -90,7 +90,7 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
     3. [Rewriter Specs](docs/rewriter)
     4. [Pagefront Specs](docs/pagefront)
     5. [Stdlib Reference](docs/stdlib)
-
+* [Why the UI is Textual](docs/why-the-UI-is-textual)
 ```
 // WORK IN PROGRESS //
 ```
