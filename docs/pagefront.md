@@ -33,38 +33,39 @@ These are the syntax rules of Pagefront:
 ```
 <start> := <pageFront>
 
-<pageFront> := (`PAGEFRONT` (PARAMS <ANY>+) <var>+ <content>)
+<pageFront> := (PAGEFRONT (ID <ATOMIC>)? (PARAMS <ANY>+)? <var>+ <content>)
 
-<var> := (`VAR` (`ID` <ATOMIC>) <ATOMIC>)
+<var> := (VAR (ID <ATOMIC>) <ATOMIC>)
 
-<content> := (`FRAMENS`
-                 (`ID` <ATOMIC>)?
-                 (`NORTH` (`ID` <ATOMIC>)? (`HEIGHT` <ATOMIC>) (`CONTENT` <content>))
-                 (`CENTER` (`ID` <ATOMIC>)? (`CONTENT` <content>))
-                 (`SOUTH` (`ID` <ATOMIC>)? (`HEIGHT` <ATOMIC>) (`CONTENT` <content>)))
+<content> := (FRAMENS
+                 (ID <ATOMIC>)?
+                 (NORTH (ID <ATOMIC>)? (HEIGHT <ATOMIC>) (CONTENT <content>))
+                 (CENTER (ID <ATOMIC>)? (CONTENT <content>))
+                 (SOUTH (ID <ATOMIC>)? (HEIGHT <ATOMIC>) (CONTENT <content>)))
            
-           | (`FRAMEWE`
-                 (`ID` <ATOMIC>)?
-                 (`WEST` (`ID` <ATOMIC>)? (`WIDTH` <ATOMIC>) (`CONTENT` <content>))
-                 (`CENTER` (`ID` <ATOMIC>)? (`CONTENT` <content>))
-                 (`EAST` (`ID` <ATOMIC>)? (`WIDTH` <ATOMIC>) (`CONTENT` <content>)))
+           | (FRAMEWE
+                 (ID <ATOMIC>)?
+                 (WEST (ID <ATOMIC>)? (WIDTH <ATOMIC>) (CONTENT <content>))
+                 (CENTER (ID <ATOMIC>)? (CONTENT <content>))
+                 (EAST (ID <ATOMIC>)? (WIDTH <ATOMIC>) (CONTENT <content>)))
            
            | <formElement>+
 
-<formElement> := (`HDR1` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`HDR2` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`HDR3` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`HDR4` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`HDR5` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`PARAG` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`ULIST` (`ID` <ATOMIC>)? <formElement>+)
-               | (`OLIST` (`ID` <ATOMIC>)? <formElement>+)
-               | (`CODE` (`ID` <ATOMIC>)? <ATOMIC>)
-               | (`CHECK` (`ID` <ATOMIC>)? <formElement>+)
-               | (`RADIO` (`ID` <ATOMIC>)? <formElement>+)
-               | (`EDIT` (`ID` <ATOMIC>)? (`ROWS` <ATOMIC>)? (COLS <ATOMIC>)? <ATOMIC>)
-               | (`HBLIST` (`ID` <ATOMIC>)? (`BUTTON` (`ID` <ATOMIC>)? (`CAPTION` <ATOMIC>)? (`SET` (`TARGET` <ATOMIC>)? <ANY>)?)+)
-               | (`VBLIST` (`ID` <ATOMIC>)? (`BUTTON` (`ID` <ATOMIC>)? (`CAPTION` <ATOMIC>)? (`SET` (`TARGET` <ATOMIC>)? <ANY>)?)+)
+<formElement> := (HDR1 (ID <ATOMIC>)? <ATOMIC>)
+               | (HDR2 (ID <ATOMIC>)? <ATOMIC>)
+               | (HDR3 (ID <ATOMIC>)? <ATOMIC>)
+               | (HDR4 (ID <ATOMIC>)? <ATOMIC>)
+               | (HDR5 (ID <ATOMIC>)? <ATOMIC>)
+               | (PARAG (ID <ATOMIC>)? <ATOMIC>)
+               | HRULER
+               | (ULIST (ID <ATOMIC>)? <formElement>+)
+               | (OLIST (ID <ATOMIC>)? <formElement>+)
+               | (CODE (ID <ATOMIC>)? <ATOMIC>)
+               | (CHECK (ID <ATOMIC>)? <formElement>+)
+               | (RADIO (ID <ATOMIC>)? <formElement>+)
+               | (EDIT (ID <ATOMIC>)? (ROWS <ATOMIC>)? (COLS <ATOMIC>)? <ATOMIC>)
+               | (HBLIST (ID <ATOMIC>)? (BUTTON (ID <ATOMIC>)? (CAPTION <ATOMIC>)? (SET (TARGET <ATOMIC>)? <ANY>)?)+)
+               | (VBLIST (ID <ATOMIC>)? (BUTTON (ID <ATOMIC>)? (CAPTION <ATOMIC>)? (SET (TARGET <ATOMIC>)? <ANY>)?)+)
 ```
 
 We apply the same syntax definition nomenclature as noted in Symp specification document.
@@ -78,14 +79,15 @@ Here, we shortly enumerate the components which may form the GUI of your applica
 - `FRAMEWE`: spans three containers on the page in the west/center/east direction. `FRAMENS` and `FRAMEWE` may be combined, or entirely skipped.
 - `HDR1` - `HDR5`: document headers expressed with quoted string.
 - `PARAG`: paragraph sections.
+- `HRULER`: a horizontal ruler.
 - `ULIST`: bullet-pointed unordered list.
 - `OLIST`: automatically numbered ordered list.
 - `CODE`:  a multiline string describing a code block rendered inverted.
 - `CHECK`: an interactive checkbox which may be referred to in submitting a form.
 - `RADIO`: interactive radio buttons group which may be referred to in submitting a form.
 - `EDIT`: a text box used as an editor which may be referred to in submitting a form.
-- `HBLIST`: a horizontal button list. Each button in the list may `SET` a content of `TARGET` referenced by `ID`.
-- `VBLIST`: a vertical button list. Each button in the list may `SET` a content of `TARGET` referenced by `ID`.
+- `HBLIST`: a horizontal button list. A `SET` action replaces the `TARGET` node’s content subtree with the S-expression provided.
+- `VBLIST`: a vertical button list. A `SET` action replaces the `TARGET` node’s content subtree with the S-expression provided.
 
 `PARAG`, `ULIST`, `OLIST`, `CHECK`, and `RADIO` content strings are interpreted in a following way: in the parameter string, words enclosed within a pair of backticks inverted (used for inline code blocks). There is also a possibility to create hyperlinks denoted in the `[...text...](...link path...)` pattern.
 
@@ -152,7 +154,7 @@ Another small example shows how to use `stdlib`:
                 (BUTTON (CAPTION "decrement") (SET (TARGET "p") (PARAG (ID "p") (sl/decr p))))))))
 ```
 
-This example defines a page with a number and increment/decrement buttons. We use `incr` and `decr` functions to modify the counter at runtime.
+This example defines a page with a number and increment/decrement buttons. We use `incr` and `decr` functions to modify the counter at runtime. Of course, Pagefront can be evaluated inside Symp using any function, like any other node.
 
 ## 4. conclusion
 
