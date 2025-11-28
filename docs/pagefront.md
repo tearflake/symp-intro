@@ -1,10 +1,10 @@
 # pagefront specs
 
 > **[about document]**  
-> Quick reference to Pagefront, a symbolic rendering engine
+> Specification of *Pagefront*, a symbolic rendering engine
 >
 > **[intended audience]**  
-> Beginner programmers
+> Intermediate programmers
 > 
 > **[abstract]**  
 > This document describes the Pagefront markup format, an S-expression-based alternative to HTML. It defines the syntax, semantics, and structure of the language, along with a couple of short illustrative examples.
