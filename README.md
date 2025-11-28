@@ -77,11 +77,11 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
 
 ---
 
+## Docs
+
 ```
 // WORK IN PROGRESS //
 ```
-
-## Docs
 
 * ["Hello world!" From Symp](docs/hello-world)
 * [Symp Specs](docs/symp)
@@ -91,6 +91,7 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
     4. [Pagefront Specs](docs/pagefront)
     5. [Stdlib Reference](docs/stdlib)
 * [Why the UI is Textual](docs/why-the-UI-is-textual)
+
 ```
 // WORK IN PROGRESS //
 ```
