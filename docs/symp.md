@@ -25,7 +25,7 @@ layout: docs
 
 ## 1. introduction
 
-Symp provides the structural layer that integrates the assembly, functional, rewriter, and pagefront components into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as backend support or UI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
+Symp provides the structural layer that integrates the imperative, functional, rewriting, and pagefront components into runnable projects. Its primary purpose is to organize computation into a named, navigable tree rather than a monolithic program. Each node carries a single responsibility — such as backend support or UI construction — and nodes cooperate via explicit symbolic referencing, not global scope.
 
 The framework removes the distinction between *program organization* and *program execution model*: the same symbolic representation is used to store, locate, and run components. This minimizes hidden state, avoids implicit linking, prevents namespace ambiguity, and enables deterministic resolution of dependencies at runtime.
 
@@ -53,9 +53,9 @@ In computer science, the syntax of a computer language is the set of rules that 
 <component> := <frontend>
              | <backend>
 
-<backend> := <assembly>
+<backend> := <imperative>
            | <functional>
-           | <rewriter>
+           | <rewriting>
 ```
 
 The above grammar defines the syntax of Symp. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered parts of the Symp grammar.
@@ -64,7 +64,7 @@ Atoms may be enclosed between a pair of `'` characters if we want to include spe
  
 In addition to the exposed grammar, user comments have no meaning to the system, but may be descriptive to readers, and may be placed wherever a whitespace is expected. Single line comments begin with `//` and span to the end of line. Multiline comments begin with `/*` and end with `*/`.
 
-We will be using the same syntax definition nomenclature throughout the accompanying specification documents of assembly, functional, rewriter, and pagefront components.
+We will be using the same syntax definition nomenclature throughout the accompanying specification documents of Imperative, Functional, Rewriting, and Pagefront components.
 
 ### 2.2 informal semantics
 
@@ -80,7 +80,7 @@ Within the structure branching from the `HOME` node, every tree node may contain
 
 #### backend computational components
 
-In Symp, there are three backend computational components, namely assembly, functional, and rewriter. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming span of ranging between the imperative, functional, and rule-based programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about assembly, functional, and rewriter components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
+In Symp, there are three backend computational components, namely imperative, functional, and rewriting. Each of these components are Turing complete minimalist programming segments. This computational triad serves as an utility bundle for creating new programming frameworks. The bundle is capable of defining any syntax, semantics, and runtime behavior of the newly created frameworks. Finally, the built-in computational triad closes the programming span of ranging between the imperative, functional, and rule-based programming, making Symp capable of expressing a whole plethora of domain specific frameworks. For the details about imperative, functional, and rewriting components functionality, the reader is kindly asked to refer to relevant documentation accompanying this distribution.
 
 #### frontend user interface component
 
@@ -97,7 +97,7 @@ We start our exposure with the user interface:
     (NAME calculator)
     (CONTENT
         (USING (ALIAS fnc calculator/functionalOps))
-        (PAGE
+        (PAGEFRONT
             (HDR1 "Three-Mind Calculator")
             (PARAG "num" 0)
             (HBLIST
@@ -119,15 +119,15 @@ We start our exposure with the user interface:
             ...)
 
         (NODE
-            (NAME assemblyOps)
+            (NAME imperativeOps)
             ...)
 
         (NODE
-            (NAME rewriterOps)
+            (NAME rewritingOps)
             ...)))
 ```
 
-The user interface consists of a title, a number, and three horizontally aligned buttons for incrementing, doubling, and calculating a factorial of a number initially set to zero. Pressing the buttons will make a call to functions `add1`, `mul2`, and `fact`, respectively. The calls to the functions are made possible by explicitly stating that we will use them in the body of the `PAGE` section. This is done in the `(USING ...)` section, stating the calls and their referent name in the `(ALIAS ...)` section. The called functions are defined in `functionalOps` node as follows:
+The user interface consists of a title, a number, and three horizontally aligned buttons for incrementing, doubling, and calculating a factorial of a number initially set to zero. Pressing the buttons will make a call to functions `add1`, `mul2`, and `fact`, respectively. The calls to the functions are made possible by explicitly stating that we will use them in the body of the `PAGEFRONT` section. This is done in the `(USING ...)` section, stating the calls and their referent name in the `(ALIAS ...)` section. The called functions are defined in `functionalOps` node as follows:
 
 ```
 (NODE
@@ -136,19 +136,19 @@ The user interface consists of a title, a number, and three horizontally aligned
         (NODE
             (NAME add1)
             (CONTENT
-                (USING (ALIAS rwr rewriterOps) (ALIAS asm assemblyOps))
+                (USING (ALIAS rwr rewritingOps) (ALIAS imp imperativeOps))
                 (FUNCTIONAL
                     (LMBD n
-                        (asm/decode
+                        (imp/decode
                             (rwr
                                 (add
-                                    (asm/encode n)
+                                    (imp/encode n)
                                     ("S" "Z"))))))))
         
         (NODE
             (NAME mul2)
             (CONTENT
-                (USING (ALIAS rwr rewriterOps) (ALIAS asm assemblyOps))
+                (USING (ALIAS rwr rewritingOps) (ALIAS imp imperativeOps))
                 (FUNCTIONAL
                     (LMBD n
                         (asm/decode
@@ -160,7 +160,7 @@ The user interface consists of a title, a number, and three horizontally aligned
         (NODE
             (NAME fact)
             (CONTENT
-                (USING (ALIAS rwr rewriterOps) (ALIAS asm assemblyOps))
+                (USING (ALIAS rwr rewritingOps) (ALIAS imp imperativeOps))
                 (FUNCTIONAL
                     (LMBD n
                         (asm/decode
@@ -169,17 +169,17 @@ The user interface consists of a title, a number, and three horizontally aligned
                                     (asm/encode n))))))))))
 ```
 
-Each of the functions first make a call to encoder of decimal to unary number (`encode`), then runs a term rewriting operation on the unary number (`rwr`), and finally decodes the result back to a decimal number (`decode`). Encoder and decoder are written in assemblyOps node as follows:
+Each of the functions first make a call to encoder of decimal to unary number (`encode`), then runs a term rewriting operation on the unary number (`rwr`), and finally decodes the result back to a decimal number (`decode`). Encoder and decoder are written in imperativeOps node as follows:
 
 ```
 (NODE
-    (NAME assemblyOps)
+    (NAME imperativeOps)
     (BRANCHES
         (NODE
             (NAME encode)
             (CONTENT
                 (USING (ALIAS sl stdlib))
-                (ASSEMBLY
+                (IMPERATIVE
                     // encode: int → symbolic
                     (ASSGN s "Z")
                     (ASSGN n PARAMS)
@@ -197,7 +197,7 @@ Each of the functions first make a call to encoder of decimal to unary number (`
             (NAME decode)
             (CONTENT
                 (USING (ALIAS sl stdlib))
-                (ASSEMBLY
+                (IMPERATIVE
                     // decode: symbolic → int
                     (ASSGN count 0)
                     (ASSGN s PARAMS)
@@ -224,13 +224,13 @@ Unary numbers produced/consumed by encoder/decoder are of the following notation
 ...
 ```
 
-This kind of unary numbers is suitable for performing computations in a very simple manner. This is shown by the rewriterOps node where the supported operations are `add`, `mul`, and `fact`:
+This kind of unary numbers is suitable for performing computations in a very simple manner. This is shown by the rewritingOps node where the supported operations are `add`, `mul`, and `fact`:
 
 ```
 (NODE
-    (NAME rewriterOps)
+    (NAME rewritingOps)
     (CONTENT
-        (REWRITER
+        (REWRITING
             // Addition
             (RULE (READ (add Z n)) (WRITE n))
             (RULE (READ (add (S m) n)) (WRITE (S (add m n))))
@@ -244,7 +244,7 @@ This kind of unary numbers is suitable for performing computations in a very sim
             (RULE (READ (fact (S n))) (WRITE (mul (S n) (fact n)))))))
 ```
 
-The entire example consisting of these four segments shows how to use all the four available node types, namely in order of appearance: pagefront, functional, assembly, and rewriter.
+The entire example consisting of these four segments shows how to use all the four available node types, namely in order of appearance: pagefront, functional, imperative, and rewriting.
 
 In Symp, all the operations are based on these node types while the new domain specific frameworks may be defined in their terms and called as functions when needed.
 

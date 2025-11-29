@@ -35,16 +35,16 @@ In Symp, every interaction may follow a simple cyclic ritual:
 ·                                             ·
 ·         · · · · · · · · · · · · · ·         ·
 ·         ·                         ·         ·
-·         ·     r e w r i t e r     ·         ·
+·         ·   r e w r i t i n g     ·         ·
 · · · · · ·   f u n c t i o n a l   · < · · · ·
-          ·     a s s e m b l y     ·
+          ·   i m p e r a t i v e   ·
           ·                         ·
           · · · · · · · · · · · · · ·
 ```
 
 While the modest frontend user interface is restricted (pagefront), the programming backend spans free over the whole range between low level and high level programming.
 
-It is possible to choose between rudimentary but fast assembly execution, middle ground functional programming, and advanced but slow term rewriting.
+It is possible to choose between rudimentary but fast imperative execution, middle ground functional programming, and advanced but slow term rewriting.
 
 The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right tools for the right tasks.
 
@@ -85,9 +85,9 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
 
 * ["Hello world!" From Symp](docs/hello-world)
 * [Symp Specs](docs/symp)
-    1. [Assembly Specs](docs/assembly)
+    1. [Imperative Specs](docs/imperative)
     2. [Functional Specs](docs/functional)
-    3. [Rewriter Specs](docs/rewriter)
+    3. [Rewriting Specs](docs/rewriting)
     4. [Pagefront Specs](docs/pagefront)
     5. [Stdlib Reference](docs/stdlib)
 * [Why the UI is Textual](docs/why-the-UI-is-textual)

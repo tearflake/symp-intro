@@ -15,7 +15,7 @@
 - [2. theoretical background](#2-theoretical-background)
     - [2.1. formal syntax](#21-formal-syntax)
     - [2.2. informal semantics](#22-informal-semantics)  
-- [3. example](#3-example)  
+- [3. examples](#3-examples)  
 - [4. conclusion](#4-conclusion)  
 
 ## 1. introduction
@@ -89,9 +89,9 @@ Here, we shortly enumerate the components which may form the GUI of your applica
 - `HBLIST`: a horizontal button list. A `SET` action replaces the `TARGET` node’s content subtree with the S-expression provided.
 - `VBLIST`: a vertical button list. A `SET` action replaces the `TARGET` node’s content subtree with the S-expression provided.
 
-`PARAG`, `ULIST`, `OLIST`, `CHECK`, and `RADIO` content strings are interpreted in a following way: in the parameter string, words enclosed within a pair of backticks inverted (used for inline code blocks). There is also a possibility to create hyperlinks denoted in the `[...text...](...link path...)` pattern.
+`PARAG`, `ULIST`, `OLIST`, `CHECK`, and `RADIO` content strings are interpreted in a following way: in the parameter string, words enclosed within a pair of backticks inverted (used for inline code blocks). There is also a possibility to create hyperlinks denoted in the `[...text...](...link path...)` pattern within strings.
 
-## 3. example
+## 3. examples
 
 ### example form
 
@@ -139,7 +139,7 @@ This example defines a page where the main area is divided into a vertical frame
 
 ### example counter
 
-Another small example shows how to use `stdlib`:
+Another small example shows a use of `stdlib`:
 
 ```
 (NODE
@@ -154,9 +154,9 @@ Another small example shows how to use `stdlib`:
                 (BUTTON (CAPTION "decrement") (SET (TARGET "p") (PARAG (ID "p") (sl/decr p))))))))
 ```
 
-This example defines a page with a number and increment/decrement buttons. We use `incr` and `decr` functions to modify the counter at runtime. Of course, any Pagefront element can be evaluated inside Symp tree structure using any function, like any other node.
+This example defines a page with a counter number in a paragraph, and increment/decrement buttons. We use `incr` and `decr` functions from `stdlib` to modify the counter at runtime. Of course, any Pagefront element can be evaluated inside Symp tree structure using any function processing it in parameters.
 
 ## 4. conclusion
 
-Pagefront provides a structured, S-expression-based representation of GUI documents suitable for deterministic parsing and compact storage. It offers basic layout and interactivity features inspired by HTML, yet remains minimal and easily adaptable for embedded or symbolic systems. This reference serves as a concise guide for implementing parsers, renderers, or converters targeting the Pagefront format.
+Pagefront provides a structured, S-expression-based representation of GUI documents suitable for deterministic parsing and compact storage. It offers basic layout and interactivity features inspired by HTML, yet remains minimal and adaptable for embedded or symbolic systems. This reference serves as a guide for implementing parsers, renderers, or converters targeting the Pagefront format.
 

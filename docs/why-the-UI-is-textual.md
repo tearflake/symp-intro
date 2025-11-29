@@ -14,7 +14,7 @@ Early in Symp’s development, the interface layer was intentionally stripped of
 
 In this initial phase, the interface existed only as monochrome text. No layout language. No theming. No graphical framing. Just the symbolic tree presented as symbols.
 
-Later, as Symp expanded — introducing assembly, lambda calculus, tree rewriting, and a structural node model — the decision to keep Pagefront minimal was no longer just experimental. It became conceptually aligned with the system’s identity. All of Symp operates in a symbolic domain; Pagefront stayed minimal because it became the interface that best fits a symbolic computational environment.
+Later, as Symp expanded — introducing imperative, functional, term rewriting programming, together with a structural tree model — the decision to keep Pagefront minimal was no longer just experimental. It became conceptually aligned with the system’s identity. All of Symp operates in a symbolic domain; Pagefront stayed minimal because it became the interface that best fits a symbolic computational environment.
 
 What started as a constraint turned out to be the correct conceptual setting. Pagefront remains text-focused because Symp itself is structurally focused. UI in Symp is meant to reveal program structure, not distract from it.
 
@@ -38,9 +38,8 @@ A richer visual layer would create a second “language” developers would have
 
 ## **3. Consistency With Symp’s Three Computational Models**
 
-Symp’s core languages — assembly, lambda calculus, and rewriting — are all:
+Symp’s core languages — imperative, functional, and rewriting model — are all:
 
-* monochrome
 * textual
 * deterministic
 * symbolic

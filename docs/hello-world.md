@@ -4,11 +4,11 @@ layout: docs
 
 # "Hello world!" From Symp
 
-Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific frameworks using a unified representation. Its backend framework triad, together with the frontend, Symp lets you build frameworks using interoperable components. The components include assembly, functional, and rewriter frameworks, together with the pagefront user interface. In this document, we briefly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
+Symp is a modular symbolic programming environment designed to define, transform, and execute domain-specific frameworks using a unified representation. Its backend framework triad, together with the frontend, Symp lets you build frameworks using interoperable components. The components include imperative, functional, and rewriting frameworks, together with the pagefront user interface. In this document, we briefly state the purpose of the components, and write a minimal "Hello world!" program in each of them.
 
-#### "Hello world!" in assembly component
+#### "Hello world!" in imperative component
 
-The purpose of the assembly component is to run code in a fast environment where dealing with variable states apply.
+The purpose of the imperative component is to run code in a fast environment where dealing with variable states apply.
 
 Program:
 
@@ -16,7 +16,7 @@ Program:
 (NODE
     (NAME helloWorld)
     (CONTENT
-        (ASSEMBLY
+        (IMPERATIVE
             (ASGN RESULT "Hello world!"))))
 ```
 
@@ -54,9 +54,9 @@ Output:
 'Hello world!'
 ```
 
-#### "Hello world!" in rewriter component
+#### "Hello world!" in rewriting component
 
-The purpose of the rewriting component is to perform **semantic transformations** on the input. This is done by using a term rewriter system. 
+The purpose of the rewriting component is to perform **semantic transformations** on the input. This is done by using a term rewriting system. 
 
 Program:
 
@@ -64,7 +64,7 @@ Program:
 (NODE
     (NAME helloWorld)
     (CONTENT
-        (REWRITER
+        (REWRITING
             (RULE (READ "helloWorld") (WRITE "Hello world!")))))
 ```
 
@@ -89,7 +89,7 @@ Program:
     (NAME helloWorld)
     (CONTENT
         (PAGEFRONT
-            (PARAG "..." "Hello world!"))))
+            (PARAG "Hello world!"))))
 ```
 
 Runs as a stand-alone application and outputs the "Hello world!" text on the screen.
