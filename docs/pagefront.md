@@ -68,7 +68,7 @@ These are the syntax rules of Pagefront:
                | (VBLIST (ID <ATOMIC>)? (BUTTON (ID <ATOMIC>)? (CAPTION <ATOMIC>)? (SET (TARGET <ATOMIC>)? <ANY>)?)+)
 ```
 
-We apply the same syntax definition nomenclature as noted in Symp specification document.
+We apply the same syntax definition nomenclature as noted in Symp specification document. In addition, we reserve some freedom to make an order of some sections arbitrary where appropriate.
 
 ### 2.2 informal semantics
 
@@ -128,14 +128,14 @@ The following example demonstrates a simple Pagefront document describing a smal
                     (CODE
                         """
                         echo "Pagefront form example"
-                        process_form();
+                        form_action();
                         """))
                         
                 (SOUTH (HEIGHT "2em")
                     (PARAG "© 2025 Pagefront Project"))))))
 ```
 
-This example defines a page where the main area is divided into a vertical frame with a header, central frame, and footer. A simple interactive form is included, demonstrating checkboxes, radio buttons, text input, and a navigation button.
+This example defines a page where the main area is divided into a vertical frame with a header, central frame, and footer. A simple interactive form is included, demonstrating checkboxes, radio buttons, text input, and a navigation button. Note how the button, once clicked, changes the contents of the page using the page `ID`.
 
 ### example counter
 
@@ -154,7 +154,7 @@ Another small example shows how to use `stdlib`:
                 (BUTTON (CAPTION "decrement") (SET (TARGET "p") (PARAG (ID "p") (sl/decr p))))))))
 ```
 
-This example defines a page with a number and increment/decrement buttons. We use `incr` and `decr` functions to modify the counter at runtime. Of course, Pagefront can be evaluated inside Symp using any function, like any other node.
+This example defines a page with a number and increment/decrement buttons. We use `incr` and `decr` functions to modify the counter at runtime. Of course, any Pagefront element can be evaluated inside Symp tree structure using any function, like any other node.
 
 ## 4. conclusion
 
