@@ -11,7 +11,7 @@ layout: docs
 > Intermediate programmers
 > 
 > **[abstract]**  
-> ...
+> The functional subsystem of Symp implements a lightweight variant of the untyped lambda calculus, providing a minimal yet expressive foundation for symbolic computation. This document introduces its syntax, evaluation model, and integration with Symp’s S-expression environment. It outlines how abstractions, applications, and symbolic constants interact, and offers representative examples demonstrating simple functions, symbolic construction, and recursion. The goal is to give readers a practical understanding of how to write, evaluate, and reason about functional expressions within Symp.
 
 ## table of contents
 
