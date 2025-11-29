@@ -1,3 +1,7 @@
+---
+layout: docs
+---
+
 # pagefront specs
 
 > **[about document]**  
