@@ -99,19 +99,22 @@ We start our exposure with the user interface:
         (USING (ALIAS fnc calculator/functionalOps))
         (PAGEFRONT
             (HDR1 "Three-Mind Calculator")
-            (PARAG "num" 0)
+            (PARAG (ID "num") 0)
             (HBLIST
-                (BUTTON "add" "Increment"
-                    (GET (PARAG "num" (fnc/add1 num)))
-                    (TARGET "num"))
+                (BUTTON
+                    (ID "add")
+                    (CAPTION "Increment")
+                    (SET (TARGET "num") (PARAG "num" (fnc/add1 num))))
                 
-                (BUTTON "mult" "Double"
-                    (GET (PARAG "num" (fnc/mul2 num)))
-                    (TARGET "num"))
+                (BUTTON
+                    (ID "mult")
+                    (CAPTION "Double")
+                    (SET (TARGET "num") (PARAG "num" (fnc/mul2 num))))
                 
-                (BUTTON "fact" "Factorial"
-                    (GET (PARAG "num" (fnc/fact num)))
-                    (TARGET "num")))))
+                (BUTTON
+                    (ID "fact")
+                    (CAPTION "Factorial")
+                    (SET (TARGET "num") (PARAG "num" (fnc/fact num)))))))
 
     (BRANCHES
         (NODE
