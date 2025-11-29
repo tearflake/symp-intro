@@ -24,11 +24,7 @@ layout: docs
 
 ## 1. introduction
 
-The functional subsystem of Symp provides an implementation of the untyped lambda calculus extended with convenient multi-parameter syntax and symbolic data integration. Its purpose is to offer a compact computational core capable of expressing algorithms, transformations, and symbolic manipulations in a uniform and minimal manner.
-
-In Symp, the lambda calculus is not presented as a separate language but as a structured subset of S-expressions. This allows functional expressions to coexist seamlessly with imperative instructions and rewriting rules. Because of this integration, functional nodes can operate both as self-contained computations and as intermediate processors within larger symbolic workflows.
-
-The goal of this document is not to exhaustively cover the mathematics of lambda calculus, but to introduce the variant used in Symp and to highlight the model of evaluation, the role of S-expressions, and the interaction between abstraction, application, and symbolic constants. The reader is expected to be familiar with basic programming concepts but not necessarily with formal lambda calculus.
+The functional subsystem of Symp provides a compact, S-expression–based realization of the untyped lambda calculus, enabling users to define and evaluate functions through abstractions, applications, and symbolic constants. Its purpose is to offer a minimal but expressive computational core that integrates cleanly with Symp’s other paradigms, allowing symbolic manipulation, composition, and recursion while keeping the syntax uniform and the evaluation model predictable.
 
 ## 2. theoretical background
 
@@ -127,9 +123,4 @@ The example uses recursion and references to the `stdlib` built-in library. Func
 
 ## 4. conclusion
 
-The functional layer of Symp provides a compact and expressive computational model based on the lambda calculus, extended with convenient multi-parameter abstractions, symbolic constants, and native integration with S-expressions. Its semantics remain intentionally simple: evaluation is driven by substitution, variable binding follows lexical scoping, and expressions reduce to values through a small and predictable set of rules.
-
-Because lambda expressions in Symp are first-class symbolic structures, they interoperate smoothly with the imperative and rewriting subsystems, forming a flexible foundation for transforming data, constructing symbolic representations, or implementing small algorithms. While the examples shown here only scratch the surface, the model is expressive enough to encode higher-order functions, recursion, structured symbolic data, and many classical lambda-calculus abstractions.
-
-The material presented in this document should provide enough background to understand how functional nodes behave and how they may be used in practice. Developers interested in deeper theoretical aspects — including combinatory logic, Church encodings, and evaluation strategies — are encouraged to explore these topics further, as the lambda calculus continues to be a rich and influential foundation for programming language theory.
-
+The functional component of Symp supplies a small yet powerful foundation for symbolic computation, offering direct access to lambda abstractions, application, recursion, and symbolic data construction. Despite its minimalism, it supports a wide range of expressive patterns and can interoperate with Symp’s imperative and rewriting subsystems, making it suitable for both experimentation and building higher-level abstractions.
