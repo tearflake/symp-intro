@@ -91,7 +91,7 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
     4. [Pagefront Specs](docs/pagefront)
     5. [Stdlib Reference](docs/stdlib)
 * [Why the UI is Textual](docs/why-the-UI-is-textual)
-* [What Does AI Say About Symp?](what-does-ai-say-about-symp)
+* [What Does AI Say About Symp?](docs/what-does-ai-say-about-symp)
 
 ```
 // WORK IN PROGRESS //
