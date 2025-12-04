@@ -27,27 +27,27 @@ There are two kinds of components in Symp: a core and a device.
 There can be many devices, all attached to the core, as shown in the diagram:
 
 ```
-                      · · · · · · · · ·
-                      ·               ·
-                      ·  d e v i c e  ·
-                      ·               ·
-                      · · · · · · · · ·
-                              ·
-                              ·
-                              ·
-· · · · · · · · ·       · · · · · · ·       · · · · · · · · ·
-·               ·       ·           ·       ·               ·
-·  d e v i c e  · · · · ·  c o r e  · · · · ·  d e v i c e  ·
-·               ·       ·           ·       ·               ·
-· · · · · · · · ·       · · · · · · ·       · · · · · · · · ·
-                              ·
-                              ·
-                              ·
-                      · · · · · · · · ·
-                      ·               ·
-                      ·  d e v i c e  ·
-                      ·               ·
-                      · · · · · · · · ·
+                    · · · · · · ·
+                    ·           ·
+                    ·  device   ·
+                    ·           ·
+                    · · · · · · ·
+                          ·
+                          ·
+                          ·
+· · · · · · ·       · · · · · · ·       · · · · · · ·
+·           ·       ·           ·       ·           ·
+·  device   · · · · ·  c o r e  · · · · ·  device   ·
+·           ·       ·           ·       ·           ·
+· · · · · · ·       · · · · · · ·       · · · · · · ·
+                          ·
+                          ·
+                          ·
+                    · · · · · · ·
+                    ·           ·
+                    ·  device   ·
+                    ·           ·
+                    · · · · · · ·
 ```
 
 Devices may be a front-end interface to the outer world, while the back-end core is quietly connecting all of the devices.
