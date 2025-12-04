@@ -167,7 +167,7 @@ A classic example showing recursion.
     (FUNCTION length (PARAMS xs)
         (RESULT
             (IF (EQ xs ())
-                0
+                ()
                 (CONS 1 (CALL length (TAIL xs))))))
 )
 ```
