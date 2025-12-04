@@ -14,7 +14,7 @@ layout: docs
 > Symp core is a minimal symbolic computation engine built upon a strict S-expression grammar and a compact set of primitive operations. Its purpose is to provide a referentially transparent environment for expressing deterministic computations using function definitions and pure symbolic evaluation. This document formally defines the syntax, informal semantics, and fundamental computational model of Symp core. It also outlines the relationship between core functions, imported modules, and the built-in primitives that together form a complete and usable foundation for higher-level Symp components.
 
 
-## Table of contents
+## Table of Contents
 
 - [1. Introduction](#1-introduction)  
 - [2. Theoretical Background](#2-theoretical-background)
