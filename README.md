@@ -61,7 +61,7 @@ Together, they form an integrated system capable of performing any kind of compu
 #### About The Core
 
 Symp core is an S-expression based programming framework.\
-It’s austere and minimalist although computationally complete.\
+It is austere and minimalist although computationally complete.\
 A tool for building programming frameworks as well as writing in them.
 
 ---
