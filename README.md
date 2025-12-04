@@ -21,38 +21,48 @@ It carries a thought experiment from a reality in which symbols triumphed over f
 
 ---
 
-#### The Idea
+#### The Architecture
 
-In Symp, every interaction may follow a simple cyclic ritual:
+There are two kinds of components in Symp: a core and a device.
+There can be many devices, all attached to the core, as shown in the diagram:
 
 ```
-      · · · · · · · · · · · · · · · · · ·
-      ·                                 ·
-· · > ·        p a g e f r o n t        · · · ·
-·     ·                                 ·     ·
-·     · · · · · · · · · · · · · · · · · ·     ·
-·                                             ·
-·                                             ·
-·         · · · · · · · · · · · · · ·         ·
-·         ·                         ·         ·
-·         ·   r e w r i t i n g     ·         ·
-· · · · · ·   f u n c t i o n a l   · < · · · ·
-          ·   i m p e r a t i v e   ·
-          ·                         ·
-          · · · · · · · · · · · · · ·
+                      · · · · · · · · ·
+                      ·               ·
+                      ·  d e v i c e  ·
+                      ·               ·
+                      · · · · · · · · ·
+                              ·
+                              ·
+                              ·
+· · · · · · · · ·       · · · · · · ·       · · · · · · · · ·
+·               ·       ·           ·       ·               ·
+·  d e v i c e  · · · · ·  c o r e  · · · · ·  d e v i c e  ·
+·               ·       ·           ·       ·               ·
+· · · · · · · · ·       · · · · · · ·       · · · · · · · · ·
+                              ·
+                              ·
+                              ·
+                      · · · · · · · · ·
+                      ·               ·
+                      ·  d e v i c e  ·
+                      ·               ·
+                      · · · · · · · · ·
 ```
 
-While the modest frontend user interface is restricted (pagefront), the programming backend spans free over the whole range between low level and high level programming.
+Devices may be a front-end interface to the outer world, while the back-end core is quietly connecting all of the devices.
 
-It is possible to choose between rudimentary but fast imperative execution, middle ground functional programming, and advanced but slow term rewriting.
+Devices may communicate to each other using the core as a mediating environment which performs the intermediate computations.
 
-The backend set of programming paradigms should provide an easy way to define new domain specific frameworks using the right tools for the right tasks.
+The core is pure, stateless, and referentially transparent computing unit, while devices may maintain states during their life cycle.
+
+Together, they form an integrated system capable of performing any kind of computation we may require as their users.
 
 ---
 
-#### Why Symp Exists
+#### About The Core
 
-Symp is an S-expression based programming framework.\
+Symp core is an S-expression based programming framework.\
 It’s colorless and minimalist although computationally complete.\
 A tool for building programming frameworks as well as writing in them.
 
@@ -73,7 +83,7 @@ Anything computable using strict rules.
 
 #### Inspiration
 
-Symp is inspired by symbolic expressions, assembly approach, lambda calculus, term rewriting, and HTML forms user interface.
+Symp is mostly inspired by relation between stateless vs. stateful programming and central processor unit vs. peripheral hardware devices design. The modern programming technologies also influenced Symp appearance to a great extent.
 
 ---
 
@@ -83,14 +93,14 @@ Symp is inspired by symbolic expressions, assembly approach, lambda calculus, te
 // WORK IN PROGRESS //
 ```
 
-* ["Hello world!" From Symp](docs/hello-world)
-* [Symp Specs](docs/symp)
-    1. [Imperative Specs](docs/imperative)
-    2. [Functional Specs](docs/functional)
-    3. [Rewriting Specs](docs/rewriting)
-    4. [Pagefront Specs](docs/pagefront)
-    5. [Stdlib Reference](docs/stdlib)
-* [What Does AI Say About Symp?](docs/what-does-ai-say-about-symp)
+* [Symp Specs]
+    * [Core Specs](docs/core)
+        * [Imperative Specs]
+        * [Functional Specs]
+        * [Rewriting Specs]
+    * [Devices Specs]
+        * [Pagefront Specs]
+* [What Does AI Say About Symp?]
 
 ```
 // WORK IN PROGRESS //
