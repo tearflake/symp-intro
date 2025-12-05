@@ -93,9 +93,9 @@ Symp is mostly inspired by relation between stateless vs. stateful programming o
 
 * [Symp Specs]
     * [Core Specs](docs/core)
-        * [Imperative Specs]
-        * [Functional Specs]
-        * [Rewriting Specs]
+        * [Imperative Programming]
+        * [Functional Programming]
+        * [Term Rewriting]
     * [Devices Specs]
         * [Pagefront Specs]
 * [What Does AI Say About Symp?]
