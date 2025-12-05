@@ -81,7 +81,7 @@ Anything computable using strict rules.
 
 #### Inspiration
 
-Symp is mostly inspired by relation between stateless vs. stateful programming or central processor unit vs. peripheral hardware devices design. The modern programming technologies also influenced Symp appearance to a great extent.
+Symp is mostly inspired by relation between stateless vs. stateful programming or central processor unit vs. peripheral hardware devices design. Modern programming technologies also influenced Symp appearance to a great extent.
 
 ---
 

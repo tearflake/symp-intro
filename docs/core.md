@@ -38,9 +38,9 @@ The Symp core rests on a formal syntactic structure that defines what constitute
 In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language. Symp core language itself resembles a kind of S-expression. S-expressions consist of lists of atoms or other S-expressions where lists are surrounded by parenthesis. In Symp core, the first list element to the left determines a type of a list. There are a few predefined list types depicted by the following relaxed kind of Backus-Naur form syntax rules:
 
 ```
-<start> := (<CORE> (USING (ALIAS <ATOMIC> <ATOMIC)+)? <func>+)
+<start> := (CORE (USING (ALIAS <ATOMIC> <ATOMIC>)+)? <func>+)
 
-<func> := (FUNCTION <ATOMIC> (PARAMS <ATOMIC>*) (RESULT <ANY>))
+<func> := (FUNCTION <ATOMIC> (PARAMS <ATOMIC>+)? (RESULT <ANY>))
 ```
 
 The above grammar defines the syntax of Symp core. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered parts of the Symp core grammar.
@@ -66,7 +66,7 @@ Symp core program may import other programs stored in separate files, by `USING`
 
 ## 3. Examples
 
-We present seven examples each one building on the previous. Every example will be a full program with one or more functions, increasing in sophistication.
+We present seven examples each one building on the previous. Every example will be a full program with one or more functions, increasing in complexity.
 
 #### Example 1 — A Constant Function
 
@@ -172,7 +172,7 @@ A classic example showing recursion.
 )
 ```
 
-This returns a unary count like `(1 1 1)` rather than a number.
+This returns a unary count like `(1 1 1)` rather than a decimal number.
 
 Call:
 
@@ -240,5 +240,5 @@ We skimmed over seven examples, ranging from literals to branching, to lists, to
 
 ## 4. Conclusion
 
-The Symp core provides a deliberately minimal foundation for symbolic computation. Its strict S-expression syntax, fixed-arity functions, and small set of primitives allow users to construct predictable and transparent computational structures. Although the core itself is intentionally sparse, it serves as the stable backbone for the richer paradigms defined in the broader Symp system. By separating pure computation from stateful device interactions, Symp core maintains conceptual clarity while remaining extensible. The examples provided illustrate how expressive behavior can emerge from a compact symbolic substrate.
+The Symp core provides a deliberately minimal foundation for symbolic computation. Its strict S-expression syntax, fixed-arity functions, and small set of primitives allow users to construct predictable and transparent computational structures. Although the core itself is intentionally sparse, it serves as the stable backbone for the richer paradigms defined in the broader Symp system. The examples provided illustrate how expressive behavior can emerge from a core symbolic substrate.
 
