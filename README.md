@@ -54,7 +54,7 @@ Devices may communicate to each other using the core as a mediating environment 
 
 The core is pure, stateless, and referentially transparent computing unit, while devices may maintain states during their life cycle.
 
-Together, they form an integrated system capable of performing any kind of computation we may require as their users.
+Together, they form an integrated system capable of performing any kind of computation we may require as its users.
 
 ---
 
