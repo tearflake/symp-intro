@@ -85,8 +85,6 @@ It is optimized for clarity, exactness, and inspectability.
 * [Symp Specs]
     * [Core Specs](docs/core)
     * [Devices Specs]
-        * [Pagefront Specs]
-* [What Does AI Say About Symp?]
 
 ```
 // WORK IN PROGRESS //
