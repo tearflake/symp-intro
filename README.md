@@ -84,7 +84,7 @@ It is optimized for clarity, exactness, and inspectability.
 
 * [Symp Specs]
     * [Core Specs](docs/core)
-    * [Devices Specs]
+    * [Pagefront Specs](docs/pagefront)
 
 ```
 // WORK IN PROGRESS //
