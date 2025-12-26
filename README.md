@@ -54,34 +54,25 @@ Devices may communicate to each other using the core as a mediating environment 
 
 The core is pure, stateless, and referentially transparent computing unit, while devices may maintain states during their life cycle.
 
-Together, they form an integrated system capable of performing any kind of computation we may require as its users.
+Together, they form an integrated system capable of performing any kind of computation we may require as their users.
 
 ---
 
-#### About The Core
+#### What can Symp be used for?
 
-Symp core is an S-expression based programming framework.\
-It is austere and minimalist although computationally complete.\
-A tool for building programming frameworks as well as writing in them.
+Symp is designed for problems where structure matters more than presentation.
 
----
+It is especially suited for:
 
-#### What You Can Build
+* Designing small languages and interpreters
+* Encoding knowledge as executable structure
+* Building rule-based reasoning systems
+* Meta-programming and symbolic transformation
+* Creating deterministic cores inside larger systems
+* Learning computation from first principles
 
-Symp is tiny, but composable.\
-It’s a playground for symbolic systems:
-
-* Domain specific interpreters
-* Meta-compilers and term rewriters
-* Theorem provers and logic engines
-
-Anything computable using strict rules.
-
----
-
-#### Inspiration
-
-Symp is mostly inspired by relation between stateless vs. stateful programming. Modern programming technologies also influenced Symp appearance to a great extent.
+Symp is not optimized for speed, graphics, or mass-market applications.
+It is optimized for clarity, exactness, and inspectability.
 
 ---
 
@@ -94,9 +85,9 @@ Symp is mostly inspired by relation between stateless vs. stateful programming. 
 * [Symp Specs]
     * [Core Specs](docs/core)
     * [Devices Specs]
+        * [Pagefront Specs]
 * [What Does AI Say About Symp?]
 
 ```
 // WORK IN PROGRESS //
 ```
-
