@@ -27,7 +27,7 @@ layout: docs
 
 The Symp core is designed as a small, self-contained language for symbolic computation. It provides only the essential constructs needed to define functions, structure data, and evaluate expressions. The intention is not to recreate a full programming language, but to offer a foundational substrate upon which more elaborate paradigms—imperative, functional, and rewriting systems—can be layered.
 
-The design emphasizes simplicity, referential transparency, and structural clarity. Each program is an ordered collection of named functions, each with fixed arity and a single result expression. Evaluation proceeds through nested S-expressions, with no state, mutation, or side effects. The resulting system is predictable, deterministic, and amenable to formal reasoning, while still being expressive enough to define a wide range of symbolic transformations.
+The design emphasizes simplicity, referential transparency, and structural clarity. Each program is a collection of named constants and functions, each with fixed arity and a single result expression. Evaluation proceeds through nested S-expressions, with no state, mutation, or side effects. The resulting system is predictable, deterministic, and amenable to formal reasoning, while still being expressive enough to define a wide range of symbolic transformations.
 
 ## 2. Theoretical Background
 
