@@ -31,16 +31,21 @@ The design emphasizes simplicity, referential transparency, and structural clari
 
 ## 2. Theoretical Background
 
-The Symp core rests on a formal syntactic structure that defines what constitutes a valid program, and an informal semantic model describing how such programs are evaluated. Although small, the system is computationally complete when combined with the six built-in primitive functions. This section introduces the grammar used in Symp core, its conventions, and the semantics guiding the evaluation process.
+The Symp core rests on a formal syntactic structure that defines what constitutes a valid program, and an informal semantic model describing how such programs are evaluated. Although small, the system is computationally complete when combined with the nine built-in primitive functions. This section introduces the grammar used in Symp core, its conventions, and the semantics guiding the evaluation process.
 
 ### 2.1. Formal Syntax
 
 In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language. Symp core language itself resembles a kind of S-expression. S-expressions consist of lists of atoms or other S-expressions where lists are surrounded by parenthesis. In Symp core, the first list element to the left determines a type of a list. There are a few predefined list types depicted by the following relaxed kind of Backus-Naur form syntax rules:
 
 ```
-<start> := (CORE (USING (ALIAS <ATOMIC> <ATOMIC>)+)? <func>+)
+<start> := (SYMP <elem>+)
 
-<func> := (FUNCTION <ATOMIC> (PARAMS <ATOMIC>+)? (RESULT <ANY>))
+<elem> := (FUNCTION <ATOMIC> (PARAMS <ATOMIC>+) (RESULT <ANY>))
+        | (CONSTANT <ATOMIC> <ANY>)
+        | (ALIAS <ATOMIC> <rec>)
+
+<rec> := <start>
+       | (FILE <ATOMIC>)
 ```
 
 The above grammar defines the syntax of Symp core. To interpret these grammar rules, we use special symbols: `<...>` for noting identifiers, `... := ...` for expressing assignment, `...+` for one or more occurrences, `...*` for zero or more occurrences, `...?` for optional appearance, and `... | ...` for alternation between expressions. All other symbols are considered parts of the Symp core grammar.
@@ -53,7 +58,7 @@ We will be using the same syntax definition nomenclature throughout the accompan
 
 ### 2.2 Informal Semantics
 
-Semantics of Symp core is inspired by the functional programming paradigm and Lisp primitives. It is meant to be a very minimalist, but still practical computing environment. Program written in Symp core is a set of referentially transparent functions with a fixed arity. Each function returns an arbitrary S-expression evaluated using other functions or primitives. There are six built-in primitive functions which make Symp core a Turing complete computing environment:
+Semantics of Symp core is inspired by the functional programming paradigm and Lisp primitives. It is meant to be a very minimalist, but still practical computing environment. Program written in Symp core is a set of constants or referentially transparent functions with a fixed arity. Each constant or function returns an arbitrary S-expression evaluated using other functions or primitives. There are nine built-in primitive functions which make Symp core a Turing complete computing environment:
 
 - `CALL`: two or more parameters. calls a function named by the first parameter, possibly with arguments from the second parameter onward.
 - `IF`: three parameters. If the first parameter is `true`, it returns the second one. If not, it returns the third one. 
@@ -61,8 +66,11 @@ Semantics of Symp core is inspired by the functional programming paradigm and Li
 - `HEAD`: one parameter as a list. Returns the first list element.
 - `TAIL`: one parameter as a list. Returns the list without the first element.
 - `CONS`: two parameters. The second parameter is a list. Returns a new list, placing the first parameter at the beginning of the second parameter list
+- `ISATOM`: one parameter. Returns `true` if the parameter is an atom, otherwise `false.
+- `TOATOM`: one parameter. Converts to an atom a right recursive list consisting of atom's characters, ending with an empty list.
+- `TOLIST`: one parameter. Converts an atom to a right recursive list consisting of atom's characters, ending with an empty list.
 
-Symp core program may import other programs stored in separate files, by `USING` section. Each program is given a unique name within `ALIAS` sections where the first parameter determines a referent name while the second parameter points to a separate Symp core file. Functions of imported programs are called by noting the referent name followed by the `.` and the function name.
+Symp core program may import other programs stored in separate files, using the `ALIAS` section with the `FILE` section. Each program is given a unique alias name where the first parameter determines a referent name while the second parameter points to a `SYMP` file. Functions of imported programs are called by noting the referent name followed by the `.` and the function name. Also, instead of importing a file, we can simply inline the `SYMP` section with all the functions, keeping them all in the same file.
 
 ## 3. Examples
 
@@ -73,8 +81,8 @@ We present seven examples each one building on the previous. Every example will 
 The absolute simplest Symp program: returns a hardcoded value.
 
 ```
-(CORE
-    (FUNCTION answer (PARAMS) (RESULT 42))
+(SYMP
+    (CONSTANT answer 42)
 )
 ```
 
@@ -93,7 +101,7 @@ Calling:
 A function with one parameter.
 
 ```
-(CORE
+(SYMP
     (FUNCTION id
         (PARAMS x)
         (RESULT x))
@@ -115,7 +123,7 @@ Call:
 Use of built-in `IF`.
 
 ```
-(CORE
+(SYMP
     (FUNCTION is-hello
         (PARAMS x)
         (RESULT
@@ -140,7 +148,7 @@ Call:
 A function that returns the first element of a list.
 
 ```
-(CORE
+(SYMP
     (FUNCTION first
         (PARAMS xs)
         (RESULT
@@ -163,16 +171,16 @@ Call:
 A classic example showing recursion.
 
 ```
-(CORE
+(SYMP
     (FUNCTION length (PARAMS xs)
         (RESULT
             (IF (EQ xs ())
-                ()
-                (CONS 1 (CALL length (TAIL xs))))))
+                zero
+                (CONS one (CALL length (TAIL xs))))))
 )
 ```
 
-This returns a unary count like `(1 1 1)` rather than a decimal number.
+This returns a unary count like `(one (one (one zero)))` rather than a decimal number.
 
 Call:
 
@@ -180,7 +188,7 @@ Call:
 (CALL length (a b c))
 ```
 
-→ `(1 1 1)`
+→ `(one (one (one zero)))`
 
 ---
 
@@ -189,7 +197,7 @@ Call:
 Using symbolic numbers.
 
 ```
-(CORE
+(SYMP
     (FUNCTION factorial (PARAMS n)
         (RESULT
             (IF (EQ n 0)
@@ -217,7 +225,7 @@ Using symbolic numbers.
 A higher-order structure without higher-order functions — you explicitly pass the function name.
 
 ```
-(CORE
+(SYMP
     (FUNCTION map (PARAMS f xs)
         (RESULT
             (IF (EQ xs ())
@@ -241,4 +249,4 @@ We skimmed over seven examples, ranging from literals to branching, to lists, to
 ## 4. Conclusion
 
 The Symp core provides a deliberately minimal foundation for symbolic computation. Its strict S-expression syntax, fixed-arity functions, and small set of primitives allow users to construct predictable and transparent computational structures. Although the core itself is intentionally sparse, it serves as the stable backbone for the richer paradigms defined in the broader Symp system. The examples provided illustrate how expressive behavior can emerge from a core symbolic substrate.
-
+ 
