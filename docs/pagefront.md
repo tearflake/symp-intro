@@ -15,17 +15,17 @@ layout: docs
 
 ## table of contents
 
-- [1. introduction](#1-introduction)  
-- [2. syntax](#2-syntax)
-- [3. semantics](#3-semantics)  
-- [4. example](#4-example)  
-- [5. conclusion](#5-conclusion)  
+- [1. Introduction](#1-introduction)  
+- [2. Syntax](#2-syntax)
+- [3. Semantics](#3-semantics)  
+- [4. Example](#4-example)  
+- [5. Conclusion](#5-conclusion)  
 
-## 1. introduction
+## 1. Introduction
 
 Pagefront is a symbolic markup format designed to describe simple textual user interfaces in a structured, text-based form. It uses a uniform S-expression notation to define hierarchical layouts, interactive elements, and textual content. Its purpose is to provide a lightweight, extensible, and easily parsable format that can serve as an alternative to HTML in environments where symbolic representation and compact syntax are preferred.
 
-## 2. syntax
+## 2. Syntax
 
 These are the syntax rules of Pagefront:
 
@@ -70,7 +70,7 @@ These are the syntax rules of Pagefront:
 
 We apply the same syntax definition nomenclature as noted in Symp specification document. In addition, we reserve some freedom to make an order of some sections arbitrary where appropriate.
 
-## 3. semantics
+## 3. Semantics
 
 Here, we shortly enumerate the components which may form the GUI of your application:
 
@@ -93,7 +93,7 @@ Here, we shortly enumerate the components which may form the GUI of your applica
 
 Buttons in `HBLIST` and `HVLIST`, when clicked, send to the core a message in a form of function/constant call. The core may respond in sending back a target id bundled with a new content of the referred element. 
 
-## 4. example
+## 4. Example
 
 The following example demonstrates a simple Pagefront document describing a small user interface with headers, text, an image, and a simple form.
 
@@ -134,7 +134,7 @@ The following example demonstrates a simple Pagefront document describing a smal
 
 This example defines a page where the main area is divided into a vertical frame with a header, central frame, and footer. A simple interactive form is included, demonstrating checkboxes, radio buttons, text input, and a navigation button. The button, once clicked, sends a message to the core, and the core is responsible of what happens next.
 
-## 5. conclusion
+## 5. Conclusion
 
 Pagefront provides a structured, S-expression-based representation of GUI documents suitable for deterministic parsing and compact storage. It offers basic layout and interactivity features inspired by HTML, yet remains minimal and adaptable for embedded or symbolic systems.
 
