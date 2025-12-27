@@ -68,7 +68,6 @@ It is especially suited for:
 * Encoding knowledge as executable structure
 * Building rule-based reasoning systems
 * Meta-programming and symbolic transformation
-* Creating deterministic cores inside larger systems
 * Learning computation from first principles
 
 Symp is not optimized for speed, graphics, or mass-market applications.
